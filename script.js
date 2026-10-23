@@ -143,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {}
 
       const gamesText = selectedGames.length > 0 ? selectedGames.join(', ') : 'Alle kommenden Titel';
-      portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).<br>Die ersten interaktiven Testspiele starten ab <strong>Januar 2027</strong> — du wirst rechtzeitig benachrichtigt!`;
+      portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).<br>Mit einer frühen Alpha ist ab <strong>2027</strong> zu rechnen — du wirst rechtzeitig benachrichtigt!`;
       portalFeedback.style.display = 'block';
       portalEmailInput.value = '';
     });
