@@ -478,6 +478,13 @@ a:hover {
   margin-bottom: 16px;
 }
 
+.lead-options-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 .lead-sublabel {
   font-family: var(--font-oswald);
   font-size: 0.84rem;
@@ -862,6 +869,37 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 26px;
+}
+
+.games-bento-grid.single-focus-grid {
+  grid-template-columns: 1fr;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.vanguard-spotlight-card .game-card-visual {
+  height: 280px;
+}
+
+.vanguard-pillars-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.vanguard-pillars-list li {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  padding: 10px 14px;
+  background: rgba(12, 10, 8, 0.72);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 6px 6px 0;
+}
+
+.vanguard-pillars-list li strong {
+  color: var(--text-primary);
 }
 
 .game-bento-card {

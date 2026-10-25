@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('baalphemor_gaming_leads', JSON.stringify(list));
       } catch (err) {}
 
-      const gamesText = selectedGames.length > 0 ? selectedGames.join(', ') : 'Alle kommenden Titel in Auritan';
+      const gamesText = selectedGames.length > 0 ? selectedGames.join(', ') : 'Auritan: Vanguard';
 
       if (wantsRigging) {
         const subject = encodeURIComponent('3D-Rigging Unterstützung — BAALPHEMOR GAMING / Auritan');
