@@ -1,57 +1,12 @@
 // ========================================================
-// BAALPHEMOR GAMING — PRE-LAUNCH LANDINGPAGE (baalphemor-gaming.de)
-// Style Switcher (Classic vs Modern Cockpit), Pre-Launch Lead Capture,
-// Locked-Release Notice Modal & DSGVO Cookie Consent
+// BAALPHEMOR GAMING — PRE-LAUNCH PORTAL (baalphemor-gaming.de)
+// Welt Auritan · Lead Capture & 3D-Rigging Callout · Wiki & Legal Modals · DSGVO Consent
 // ========================================================
 
 document.addEventListener('DOMContentLoaded', () => {
 
   // ========================================================
-  // 1. UI STYLE (CLASSIC vs MODERN COCKPIT) & COLOR THEME SWITCHER
-  // ========================================================
-  const styleButtons = document.querySelectorAll('[data-set-style]');
-  const themeDots = document.querySelectorAll('[data-set-theme]');
-
-  function applyUiStyle(styleName) {
-    const valid = styleName === 'modern' ? 'modern' : 'classic';
-    document.body.setAttribute('data-ui-style', valid);
-    styleButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.getAttribute('data-set-style') === valid);
-    });
-    try {
-      localStorage.setItem('baalphemor_gaming_ui_style', valid);
-    } catch (e) {}
-  }
-
-  function applyColorTheme(themeName) {
-    const allowed = ['gold', 'nautical', 'crimson', 'cream'];
-    const valid = allowed.includes(themeName) ? themeName : 'gold';
-    document.body.setAttribute('data-color-theme', valid);
-    themeDots.forEach(dot => {
-      dot.classList.toggle('active', dot.getAttribute('data-set-theme') === valid);
-    });
-    try {
-      localStorage.setItem('baalphemor_gaming_color_theme', valid);
-    } catch (e) {}
-  }
-
-  try {
-    const savedStyle = localStorage.getItem('baalphemor_gaming_ui_style');
-    const savedTheme = localStorage.getItem('baalphemor_gaming_color_theme');
-    if (savedStyle) applyUiStyle(savedStyle);
-    if (savedTheme) applyColorTheme(savedTheme);
-  } catch (e) {}
-
-  styleButtons.forEach(btn => {
-    btn.addEventListener('click', () => applyUiStyle(btn.getAttribute('data-set-style')));
-  });
-
-  themeDots.forEach(dot => {
-    dot.addEventListener('click', () => applyColorTheme(dot.getAttribute('data-set-theme')));
-  });
-
-  // ========================================================
-  // 2. MODALS (PRE-LAUNCH NOTICE, IMPRESSUM, DATENSCHUTZ, DISCLAIMER)
+  // 1. MODALS (PRE-LAUNCH NOTICE, WIKI ARCHIVES, IMPRESSUM, DATENSCHUTZ, DISCLAIMER)
   // ========================================================
   function openModal(modalId) {
     const modal = document.getElementById(modalId);
@@ -73,6 +28,22 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       openModal('modal-locked-portal');
     });
+  });
+
+  const wikiTriggers = [
+    document.getElementById('nav-wiki-btn'),
+    document.getElementById('mobile-wiki-btn'),
+    document.getElementById('wiki-teaser-btn'),
+    ...document.querySelectorAll('.open-wiki-modal-link')
+  ];
+
+  wikiTriggers.forEach(btn => {
+    if (btn) {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openModal('modal-wiki-notice');
+      });
+    }
   });
 
   document.querySelectorAll('.modal-trigger').forEach(trigger => {
@@ -102,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ========================================================
-  // 3. MOBILE MENU & PRE-LAUNCH LEAD CAPTURE
+  // 2. MOBILE MENU DRAWER
   // ========================================================
   const mobileBtn = document.getElementById('mobile-menu-btn');
   const mobileDrawer = document.getElementById('mobile-drawer');
@@ -112,6 +83,21 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileDrawer.querySelectorAll('.mobile-link').forEach(l => {
       l.addEventListener('click', () => mobileDrawer.classList.remove('is-open'));
     });
+  }
+
+  // ========================================================
+  // 3. PRE-LAUNCH VORMERKUNG & 3D-RIGGING UNTERSTÜTZUNG
+  // ========================================================
+  const optRigging = document.getElementById('opt-rigging');
+  const riggingDetailsWrap = document.getElementById('rigging-details-wrap');
+  const riggingNoteInput = document.getElementById('portal-rigging-note');
+
+  if (optRigging && riggingDetailsWrap) {
+    const syncRiggingField = () => {
+      riggingDetailsWrap.classList.toggle('is-visible', optRigging.checked);
+    };
+    optRigging.addEventListener('change', syncRiggingField);
+    syncRiggingField();
   }
 
   const portalSignupForm = document.getElementById('portal-signup-form');
@@ -128,6 +114,8 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(cb => cb.value);
       const selectedGames = Array.from(portalSignupForm.querySelectorAll('input[name="game_interest"]:checked'))
         .map(cb => cb.value);
+      const wantsRigging = optRigging ? optRigging.checked : false;
+      const riggingNote = riggingNoteInput ? riggingNoteInput.value.trim() : '';
 
       try {
         const raw = localStorage.getItem('baalphemor_gaming_leads');
@@ -136,21 +124,42 @@ document.addEventListener('DOMContentLoaded', () => {
           email,
           types: selectedTypes,
           games: selectedGames,
+          wantsRigging,
+          riggingNote,
           timestamp: new Date().toISOString(),
           source: 'baalphemor-gaming.de pre-launch'
         });
         localStorage.setItem('baalphemor_gaming_leads', JSON.stringify(list));
       } catch (err) {}
 
-      const gamesText = selectedGames.length > 0 ? selectedGames.join(', ') : 'Alle kommenden Titel';
-      portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).<br>Mit einer frühen Alpha ist ab <strong>2027</strong> zu rechnen — du wirst rechtzeitig benachrichtigt!`;
+      const gamesText = selectedGames.length > 0 ? selectedGames.join(', ') : 'Alle kommenden Titel in Auritan';
+
+      if (wantsRigging) {
+        const subject = encodeURIComponent('3D-Rigging Unterstützung — BAALPHEMOR GAMING / Auritan');
+        const bodyLines = [
+          'Hallo Michael,',
+          '',
+          'ich möchte euch gerne beim 3D-Rigging (Skelett für Bewegungsabläufe) für Auritan / BAALPHEMOR GAMING unterstützen!',
+          `Meine E-Mail: ${email}`,
+          riggingNote ? `Hinweis / Tools / Portfolio: ${riggingNote}` : '',
+          '',
+          'Viele Grüße'
+        ].filter(Boolean).join('\n');
+        const mailHref = `mailto:info@baalphemor.de?subject=${subject}&body=${encodeURIComponent(bodyLines)}`;
+
+        portalFeedback.innerHTML = `🦴 <strong>Stark — danke für dein Interesse am 3D-Rigging!</strong> Deine Vormerkung (<em>${email}</em> · <strong>${gamesText}</strong>) ist gespeichert.<br>Damit wir uns direkt zu deinen 3D-Rigs & Tools austauschen können, schick uns gerne mit einem Klick eine kurze Mail: <a href="${mailHref}" style="color:#ffd700; font-weight:700; text-decoration:underline;">Direkt an info@baalphemor.de senden ➔</a>`;
+      } else {
+        portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).<br>Mit einer frühen Alpha ist ab <strong>2027</strong> zu rechnen — du wirst rechtzeitig benachrichtigt!`;
+      }
+
       portalFeedback.style.display = 'block';
       portalEmailInput.value = '';
+      if (riggingNoteInput) riggingNoteInput.value = '';
     });
   }
 
   // ========================================================
-  // 4. COOKIE CONSENT BANNER
+  // 4. DSGVO COOKIE CONSENT BANNER
   // ========================================================
   const cookieBanner = document.getElementById('cookie-banner');
   const btnNecessary = document.getElementById('cookie-necessary-btn');
