@@ -332,9 +332,28 @@ a:hover {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 920px;
+  max-width: 1120px;
   margin: 0 auto;
   width: 100%;
+}
+
+.hero-showcase-wrap {
+  max-width: 1080px;
+  margin: 8px auto 0;
+}
+
+.lead-capture-section {
+  padding: 44px 24px 72px;
+  background: var(--bg-deep);
+}
+
+#alpha,
+#rigging-box,
+#projekte,
+#vanguard,
+#welt,
+#vision {
+  scroll-margin-top: 84px;
 }
 
 .hero-status-pill {
