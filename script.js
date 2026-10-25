@@ -86,18 +86,31 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ========================================================
-  // 3. PRE-LAUNCH VORMERKUNG & 3D-RIGGING UNTERSTÜTZUNG
+  // 3. PRE-LAUNCH VORMERKUNG & MITWIRKUNG (3D-RIGGING & STORYWRITING)
   // ========================================================
   const optRigging = document.getElementById('opt-rigging');
+  const optStory = document.getElementById('opt-story');
   const riggingDetailsWrap = document.getElementById('rigging-details-wrap');
   const riggingNoteInput = document.getElementById('portal-rigging-note');
 
-  if (optRigging && riggingDetailsWrap) {
-    const syncRiggingField = () => {
-      riggingDetailsWrap.classList.toggle('is-visible', optRigging.checked);
+  if ((optRigging || optStory) && riggingDetailsWrap) {
+    const syncCollabField = () => {
+      const wantR = optRigging ? optRigging.checked : false;
+      const wantS = optStory ? optStory.checked : false;
+      riggingDetailsWrap.classList.toggle('is-visible', wantR || wantS);
+      if (riggingNoteInput) {
+        if (wantR && wantS) {
+          riggingNoteInput.placeholder = 'Optional: Kurze Notiz zu 3D-Rigging & Storywriting (Tools, Ideen oder Portfolio-Link)...';
+        } else if (wantS) {
+          riggingNoteInput.placeholder = 'Optional: Schreibst du lieber kleine Erzählungen oder epische Schlachten? (Notiz / Leseprobe)...';
+        } else {
+          riggingNoteInput.placeholder = 'Optional: Dein Tool (z. B. Blender), kurze Notiz oder Portfolio-Link...';
+        }
+      }
     };
-    optRigging.addEventListener('change', syncRiggingField);
-    syncRiggingField();
+    if (optRigging) optRigging.addEventListener('change', syncCollabField);
+    if (optStory) optStory.addEventListener('change', syncCollabField);
+    syncCollabField();
   }
 
   const portalSignupForm = document.getElementById('portal-signup-form');
@@ -115,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const selectedGames = Array.from(portalSignupForm.querySelectorAll('input[name="game_interest"]:checked'))
         .map(cb => cb.value);
       const wantsRigging = optRigging ? optRigging.checked : false;
+      const wantsStory = optStory ? optStory.checked : false;
       const riggingNote = riggingNoteInput ? riggingNoteInput.value.trim() : '';
 
       try {
@@ -125,7 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
           types: selectedTypes,
           games: selectedGames,
           wantsRigging,
-          riggingNote,
+          wantsStory,
+          collabNote: riggingNote,
           timestamp: new Date().toISOString(),
           source: 'baalphemor-gaming.de pre-launch'
         });
@@ -134,20 +149,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const gamesText = selectedGames.length > 0 ? selectedGames.join(', ') : 'Auritan: Vanguard';
 
-      if (wantsRigging) {
-        const subject = encodeURIComponent('3D-Rigging Unterstützung — BAALPHEMOR GAMING / Auritan');
+      if (wantsRigging || wantsStory) {
+        const roles = [];
+        if (wantsRigging) roles.push('3D-Rigging (Skelett & Bewegungsabläufe)');
+        if (wantsStory) roles.push('Stories, kleine Erzählungen & epische Schlachten');
+        const rolesLabel = roles.join(' & ');
+
+        const subject = encodeURIComponent(`Mitwirkung (${rolesLabel}) — BAALPHEMOR GAMING / Auritan`);
         const bodyLines = [
           'Hallo Michael,',
           '',
-          'ich möchte euch gerne beim 3D-Rigging (Skelett für Bewegungsabläufe) für Auritan / BAALPHEMOR GAMING unterstützen!',
+          `ich möchte gerne bei Auritan / BAALPHEMOR GAMING mitwirken (${rolesLabel})!`,
           `Meine E-Mail: ${email}`,
-          riggingNote ? `Hinweis / Tools / Portfolio: ${riggingNote}` : '',
+          riggingNote ? `Hinweis / Ideen / Portfolio: ${riggingNote}` : '',
           '',
           'Viele Grüße'
         ].filter(Boolean).join('\n');
         const mailHref = `mailto:info@baalphemor.de?subject=${subject}&body=${encodeURIComponent(bodyLines)}`;
 
-        portalFeedback.innerHTML = `🦴 <strong>Stark — danke für dein Interesse am 3D-Rigging!</strong> Deine Vormerkung (<em>${email}</em> · <strong>${gamesText}</strong>) ist gespeichert.<br>Damit wir uns direkt zu deinen 3D-Rigs & Tools austauschen können, schick uns gerne mit einem Klick eine kurze Mail: <a href="${mailHref}" style="color:#ffd700; font-weight:700; text-decoration:underline;">Direkt an info@baalphemor.de senden ➔</a>`;
+        portalFeedback.innerHTML = `🤝 <strong>Stark — danke für dein Interesse an der Mitwirkung (${rolesLabel})!</strong> Deine Vormerkung (<em>${email}</em> · <strong>${gamesText}</strong>) ist gespeichert.<br>Damit wir uns direkt austauschen können, schick uns gerne mit einem Klick eine kurze Mail: <a href="${mailHref}" style="color:#ffd700; font-weight:700; text-decoration:underline;">Direkt an info@baalphemor.de senden ➔</a>`;
       } else {
         portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).<br>Mit einer frühen Alpha ist ab <strong>2027</strong> zu rechnen — du wirst rechtzeitig benachrichtigt!`;
       }
