@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-label="Band-Portal Logo">
+  <defs>
+    <radialGradient id="bpBg" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#2b1d12"/>
+      <stop offset="100%" stop-color="#0b0907"/>
+    </radialGradient>
+    <linearGradient id="bpGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a"/>
+      <stop offset="48%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#b45309"/>
+    </linearGradient>
+    <linearGradient id="bpRim" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#facc15"/>
+      <stop offset="50%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#78350f"/>
+    </linearGradient>
+    <filter id="bpShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.85"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Rounded Badge -->
+  <rect x="12" y="12" width="232" height="232" rx="44" fill="url(#bpBg)" stroke="#050403" stroke-width="6"/>
+  <rect x="18" y="18" width="220" height="220" rx="38" fill="none" stroke="url(#bpRim)" stroke-width="3.5" opacity="0.85"/>
+
+  <!-- Subtle Network-Logistics Nodes & Routing Lines -->
+  <g stroke="#d97706" stroke-width="1.8" opacity="0.22" fill="none">
+    <line x1="38" y1="48" x2="88" y2="38"/>
+    <line x1="88" y1="38" x2="168" y2="38"/>
+    <line x1="168" y1="38" x2="218" y2="48"/>
+    <line x1="42" y1="212" x2="96" y2="220"/>
+    <line x1="96" y1="220" x2="160" y2="220"/>
+    <line x1="160" y1="220" x2="214" y2="212"/>
+  </g>
+  <g fill="#f59e0b" opacity="0.32">
+    <circle cx="38" cy="48" r="3.5"/>
+    <circle cx="88" cy="38" r="3"/>
+    <circle cx="168" cy="38" r="3"/>
+    <circle cx="218" cy="48" r="3.5"/>
+    <circle cx="42" cy="212" r="3.5"/>
+    <circle cx="96" cy="220" r="3"/>
+    <circle cx="160" cy="220" r="3"/>
+    <circle cx="214" cy="212" r="3.5"/>
+  </g>
+
+  <!-- Top Rock Lightning Accent -->
+  <path d="M133 26 L119 46 H129 L123 61 L141 40 H131 Z"
+        fill="url(#bpGold)" stroke="#090705" stroke-width="6" stroke-linejoin="round" paint-order="stroke fill"/>
+
+  <!-- Stylized Chiseled Rock "BP" Monogram -->
+  <g filter="url(#bpShadow)" fill="url(#bpGold)" fill-rule="evenodd" stroke="#090705" stroke-width="10" stroke-linejoin="round" paint-order="stroke fill">
+    <!-- Letter B -->
+    <path d="M 40 70 L 100 70 L 118 86 L 118 116 L 105 128 L 122 142 L 122 174 L 102 192 L 40 192 L 46 180 L 46 82 Z
+             M 72 91 L 90 91 L 95 96 L 95 112 L 90 117 L 72 117 Z
+             M 72 139 L 93 139 L 99 145 L 99 165 L 93 170 L 72 170 Z"/>
+
+    <!-- Letter P -->
+    <path d="M 134 70 L 196 70 L 216 88 L 216 126 L 196 144 L 166 144 L 166 180 L 172 192 L 134 192 L 140 180 L 140 82 Z
+             M 166 91 L 186 91 L 192 97 L 192 117 L 186 123 L 166 123 Z"/>
+  </g>
+</svg>
