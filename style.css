@@ -469,11 +469,27 @@ a:hover {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
+  align-items: stretch;
   margin-bottom: 18px;
+  position: relative;
 }
 
-.lead-input-row input {
-  flex: 1 1 300px;
+.lead-input-fields {
+  flex: 1 1 280px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+@media (min-width: 720px) {
+  .lead-input-fields {
+    grid-template-columns: 1fr 1.15fr;
+  }
+}
+
+.lead-input-fields input,
+.lead-input-row input[type="email"] {
+  width: 100%;
   padding: 14px 20px;
   background: rgba(8, 7, 5, 0.95);
   border: 1px solid var(--border-iron);
@@ -483,11 +499,19 @@ a:hover {
   font-family: var(--font-inter);
   outline: none;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
-.lead-input-row input:focus {
+.lead-input-fields input:focus,
+.lead-input-row input[type="email"]:focus {
   border-color: var(--gold-bright);
   box-shadow: 0 0 12px rgba(255, 215, 0, 0.35);
+}
+
+.lead-input-row .btn-primary {
+  flex: 0 0 auto;
+  align-self: center;
+  min-height: 52px;
 }
 
 .lead-options-grid {
