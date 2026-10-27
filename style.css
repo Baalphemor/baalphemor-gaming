@@ -1644,3 +1644,64 @@ a:hover {
     font-size: 1.05rem;
   }
 }
+
+/* ========================================================
+   DISCORD COMMUNITY GATEKEEPER CTA (BEITRITT ANFRAGEN)
+   ======================================================== */
+.lead-discord-cta-row {
+  margin: 16px 0 14px;
+  padding: 13px 16px;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.14) 0%, rgba(16, 14, 12, 0.92) 100%);
+  border: 1px solid rgba(129, 140, 248, 0.38);
+  border-radius: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.btn-discord-request {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 11px 18px;
+  border-radius: 7px;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.32) 0%, rgba(30, 27, 75, 0.94) 100%);
+  border: 1px solid rgba(165, 180, 252, 0.52);
+  color: #f8fafc !important;
+  font-family: var(--font-oswald);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none !important;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+  transition: all 0.2s ease;
+}
+
+.btn-discord-request:hover {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.5) 0%, rgba(49, 46, 129, 0.98) 100%);
+  border-color: var(--gold-bright);
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 8px 22px rgba(88, 101, 242, 0.32);
+}
+
+.lead-discord-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+}
+
+.footer-pill-discord {
+  border-color: rgba(129, 140, 248, 0.45) !important;
+  background: rgba(88, 101, 242, 0.16) !important;
+  color: #eef2ff !important;
+}
+
+.footer-pill-discord:hover {
+  border-color: var(--gold-bright) !important;
+  background: rgba(88, 101, 242, 0.3) !important;
+}
+

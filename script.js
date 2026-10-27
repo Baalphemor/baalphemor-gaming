@@ -170,6 +170,22 @@ document.addEventListener('DOMContentLoaded', () => {
   const portalNameInput = document.getElementById('portal-name-input');
   const portalHpWebsite = document.getElementById('portal-hp-website');
   const portalFeedback = document.getElementById('portal-lead-feedback');
+  const portalDiscordBtn = document.getElementById('portal-discord-request-btn');
+
+  if (portalDiscordBtn) {
+    portalDiscordBtn.addEventListener('click', () => {
+      try {
+        const u = new URL('https://www.baalphemor.de/discord/');
+        u.searchParams.set('world', 'gaming');
+        u.searchParams.set('from', 'baalphemor-gaming.de');
+        const n = portalNameInput ? portalNameInput.value.trim() : '';
+        const m = portalEmailInput ? portalEmailInput.value.trim() : '';
+        if (n) u.searchParams.set('name', n);
+        if (m) u.searchParams.set('email', m);
+        portalDiscordBtn.href = u.toString();
+      } catch (_) {}
+    });
+  }
 
   if (portalSignupForm && portalEmailInput && portalFeedback) {
     portalSignupForm.addEventListener('submit', async (e) => {
@@ -257,9 +273,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ].filter(Boolean).join('\n');
         const mailHref = `mailto:info@baalphemor.de?subject=${subject}&body=${encodeURIComponent(bodyLines)}`;
 
-        portalFeedback.innerHTML = `🤝 <strong>Stark — danke für dein Interesse an der Mitwirkung (${rolesLabel})!</strong> Deine Vormerkung (<em>${email}</em> · <strong>${gamesText}</strong>) ist gespeichert.${relayLine}<br>Optional mit Dateianhang oder Portfolio: <a href="${mailHref}" style="color:#ffd700; font-weight:700; text-decoration:underline;">Direkt an info@baalphemor.de senden ➔</a>`;
+        const dcUrl = `https://www.baalphemor.de/discord/?world=gaming&from=baalphemor-gaming.de&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+        const dcActionHtml = `<div style="margin-top:12px;"><a href="${dcUrl}" target="_blank" rel="noopener noreferrer" class="btn-discord-request"><span>🛡️ Beitritt zur Discord Community anfragen</span><span class="btn-arrow">➔</span></a></div>`;
+        portalFeedback.innerHTML = `🤝 <strong>Stark — danke für dein Interesse an der Mitwirkung (${rolesLabel})!</strong> Deine Vormerkung (<em>${email}</em> · <strong>${gamesText}</strong>) ist gespeichert.${relayLine}<br>Optional mit Dateianhang oder Portfolio: <a href="${mailHref}" style="color:#ffd700; font-weight:700; text-decoration:underline;">Direkt an info@baalphemor.de senden ➔</a>${dcActionHtml}`;
       } else {
-        portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).${relayLine}<br>Mit einer frühen Alpha ist ab <strong>2027</strong> zu rechnen — du wirst rechtzeitig benachrichtigt!`;
+        const dcUrl = `https://www.baalphemor.de/discord/?world=gaming&from=baalphemor-gaming.de&name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}`;
+        const dcActionHtml = `<div style="margin-top:12px;"><a href="${dcUrl}" target="_blank" rel="noopener noreferrer" class="btn-discord-request"><span>🛡️ Beitritt zur Discord Community anfragen</span><span class="btn-arrow">➔</span></a></div>`;
+        portalFeedback.innerHTML = `⚔️ <strong>Vormerkung erfolgreich:</strong> Deine Adresse (<em>${email}</em>) ist für die Pre-Launch-Liste eingetragen (<strong>${gamesText}</strong>).${relayLine}<br>Mit einer frühen Alpha ist ab <strong>2027</strong> zu rechnen — du wirst rechtzeitig benachrichtigt!${dcActionHtml}`;
       }
 
       portalFeedback.style.display = 'block';
