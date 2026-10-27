@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loyalitäts-System & LP-Liste | BAALPHEMOR GAMING</title>
+  <meta name="description" content="Offizielle Übersicht der Loyalitätspunkte (LP), Treue-Runen, Stimmrechte, Shop-Rabatte und Unterstützer-Boni für BAALPHEMOR GAMING und Rohals Schwarzes Auge.">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://baalphemor-gaming.de/loyalitaet/">
+  <meta property="og:title" content="Loyalitäts-System & LP-Liste — BAALPHEMOR">
+  <meta property="og:description" content="1 € Support = 1 LP (verfällt nie). Sieh auf einen Blick alle Stufen, Treue-Runen, Rabatte, das 2x-Stimmrecht und das 250-LP-Ehrenbanner.">
+  <meta property="og:image" content="https://baalphemor-gaming.de/assets/meta_cover_banner_v2.jpg">
+
+  <link rel="icon" type="image/png" href="../assets/balphemor_shield.png">
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    .lp-hero {
+      position: relative;
+      padding: 72px 24px 52px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(216, 176, 101, 0.16) 0%, rgba(9, 8, 7, 0.94) 68%),
+        linear-gradient(180deg, #13100c 0%, #090807 100%);
+      border-bottom: 1px solid var(--border-iron);
+    }
+    .lp-container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    .lp-kicker {
+      display: inline-block;
+      font-family: var(--font-oswald);
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(216, 176, 101, 0.1);
+      border: 1px solid var(--border-gold);
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 18px;
+    }
+    .lp-hero h1 {
+      font-family: var(--font-cinzel);
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      line-height: 1.18;
+      margin-bottom: 16px;
+      color: #fff;
+    }
+    .lp-hero-lead {
+      max-width: 780px;
+      margin: 0 auto 26px;
+      color: var(--text-muted);
+      font-size: 1.05rem;
+    }
+    .lp-pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      max-width: 980px;
+      margin: 28px auto 0;
+      text-align: left;
+    }
+    .lp-pillar-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-iron);
+      border-top: 2px solid var(--gold-dim);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .lp-pillar-card strong {
+      display: block;
+      font-family: var(--font-cinzel);
+      color: var(--gold-bright);
+      font-size: 0.98rem;
+      margin-bottom: 6px;
+    }
+    .lp-pillar-card span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .lp-section {
+      padding: 58px 0;
+      border-bottom: 1px solid var(--border-iron);
+    }
+    .lp-section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 36px;
+    }
+    .lp-section-header h2 {
+      font-family: var(--font-cinzel);
+      font-size: clamp(1.45rem, 3vw, 2.15rem);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .lp-section-header p {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+    }
+
+    /* Interaktiver LP-Rechner */
+    .calc-panel {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      background: linear-gradient(145deg, #191511 0%, #110f0c 100%);
+      border: 1px solid var(--border-gold);
+      border-radius: 14px;
+      padding: 28px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+    @media (max-width: 860px) {
+      .calc-panel { grid-template-columns: 1fr; padding: 20px; }
+    }
+    .calc-tier-btns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+    @media (max-width: 560px) {
+      .calc-tier-btns { grid-template-columns: 1fr; }
+    }
+    .calc-tier-btn {
+      background: var(--bg-deep);
+      border: 1px solid var(--border-iron);
+      color: var(--text-primary);
+      padding: 12px 10px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-family: var(--font-cinzel);
+      font-size: 0.92rem;
+      transition: all 0.2s ease;
+      text-align: center;
+    }
+    .calc-tier-btn small {
+      display: block;
+      font-family: var(--font-inter);
+      color: var(--text-muted);
+      font-size: 0.78rem;
+      margin-top: 3px;
+    }
+    .calc-tier-btn.is-active {
+      border-color: var(--gold-bright);
+      background: rgba(216, 176, 101, 0.14);
+      box-shadow: var(--glow-gold);
+    }
+    .calc-slider-wrap {
+      margin-bottom: 20px;
+    }
+    .calc-slider-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+    .calc-slider-label strong {
+      color: var(--gold-bright);
+      font-family: var(--font-oswald);
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+    }
+    input[type="range"].lp-slider {
+      width: 100%;
+      accent-color: #d8b065;
+      cursor: pointer;
+      height: 8px;
+    }
+    .calc-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .calc-stat-box {
+      background: rgba(9, 8, 7, 0.72);
+      border: 1px solid var(--border-iron);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .calc-stat-box .lbl {
+      display: block;
+      font-size: 0.76rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-dim);
+      margin-bottom: 4px;
+    }
+    .calc-stat-box .val {
+      font-family: var(--font-oswald);
+      font-size: 1.2rem;
+      color: var(--text-primary);
+    }
+    .calc-stat-box .val.highlight {
+      color: var(--gold-bright);
+    }
+
+    /* Rahmen-Vorschau rechts */
+    .frame-preview-box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: radial-gradient(circle at center, rgba(216, 176, 101, 0.1) 0%, rgba(9, 8, 7, 0.85) 75%);
+      border: 1px solid var(--border-iron);
+      border-radius: 12px;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    .portrait-ring {
+      width: 126px;
+      height: 126px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      transition: all 0.25s ease;
+      background: #0d0b09;
+      position: relative;
+    }
+    .portrait-ring img {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+    }
+    .portrait-ring.metal-bronze {
+      border: 4px solid #b87333;
+      box-shadow: 0 0 18px rgba(184, 115, 51, 0.35), inset 0 0 12px rgba(184, 115, 51, 0.25);
+    }
+    .portrait-ring.metal-silver {
+      border: 4px solid #cbd5e1;
+      box-shadow: 0 0 22px rgba(203, 213, 225, 0.4), inset 0 0 14px rgba(203, 213, 225, 0.25);
+    }
+    .portrait-ring.metal-gold {
+      border: 4px solid #ffd700;
+      box-shadow: 0 0 28px rgba(255, 215, 0, 0.55), inset 0 0 16px rgba(255, 215, 0, 0.35);
+    }
+    .rune-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 10px;
+    }
+    .rune-gem {
+      width: 18px;
+      height: 18px;
+      transform: rotate(45deg);
+      border: 1px solid var(--gold-dim);
+      background: #16130f;
+      transition: all 0.25s ease;
+    }
+    .rune-gem.lit {
+      background: linear-gradient(135deg, #fff3b0 0%, #ffd700 55%, #b8860b 100%);
+      border-color: #fff;
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.75);
+    }
+    .rank-title {
+      font-family: var(--font-cinzel);
+      font-size: 1.08rem;
+      color: var(--gold-bright);
+      margin-top: 6px;
+    }
+    .banner-unlock-pill {
+      margin-top: 12px;
+      font-size: 0.82rem;
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border-iron);
+      color: var(--text-muted);
+      background: rgba(0, 0, 0, 0.45);
+    }
+    .banner-unlock-pill.unlocked {
+      border-color: var(--gold-bright);
+      color: #111;
+      background: linear-gradient(90deg, #d8b065, #ffd700);
+      font-weight: 700;
+    }
+
+    /* LP Meilenstein Tabelle */
+    .lp-table-wrap {
+      overflow-x: auto;
+      background: var(--bg-card);
+      border: 1px solid var(--border-iron);
+      border-radius: 12px;
+    }
+    table.lp-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+    }
+    table.lp-table th,
+    table.lp-table td {
+      padding: 15px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-iron);
+      font-size: 0.94rem;
+    }
+    table.lp-table th {
+      font-family: var(--font-cinzel);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: rgba(9, 8, 7, 0.85);
+    }
+    table.lp-table tr:last-child td { border-bottom: none; }
+    table.lp-table tr.milestone-major {
+      background: rgba(216, 176, 101, 0.07);
+    }
+    .lp-badge {
+      display: inline-block;
+      font-family: var(--font-oswald);
+      font-weight: 700;
+      color: var(--gold-bright);
+      background: rgba(216, 176, 101, 0.13);
+      border: 1px solid var(--border-gold);
+      padding: 3px 10px;
+      border-radius: 6px;
+      white-space: nowrap;
+    }
+
+    /* 3 Tiers Grid */
+    .tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 960px) {
+      .tiers-grid { grid-template-columns: 1fr; }
+    }
+    .tier-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-iron);
+      border-radius: 14px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .tier-card.tier-gold {
+      border-color: var(--gold);
+      background: linear-gradient(165deg, #211b13 0%, #15120e 100%);
+      box-shadow: var(--glow-gold);
+    }
+    .tier-head {
+      border-bottom: 1px solid var(--border-iron);
+      padding-bottom: 16px;
+      margin-bottom: 16px;
+    }
+    .tier-name {
+      font-family: var(--font-cinzel);
+      font-size: 1.35rem;
+      color: #fff;
+    }
+    .tier-price {
+      font-family: var(--font-oswald);
+      font-size: 1.55rem;
+      color: var(--gold-bright);
+      margin-top: 4px;
+    }
+    .tier-price span {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+    .tier-group-title {
+      font-family: var(--font-oswald);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 14px 0 8px;
+    }
+    .tier-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .tier-list li {
+      font-size: 0.9rem;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      padding-left: 18px;
+      position: relative;
+    }
+    .tier-list li::before {
+      content: "◆";
+      position: absolute;
+      left: 0;
+      top: 1px;
+      font-size: 0.72rem;
+      color: var(--gold);
+    }
+    .tier-note {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      background: rgba(9, 8, 7, 0.6);
+      border-left: 2px solid var(--gold-dim);
+      padding: 8px 10px;
+      margin-top: 8px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .transparency-box {
+      max-width: 920px;
+      margin: 34px auto 0;
+      background: rgba(18, 16, 13, 0.9);
+      border: 1px solid var(--border-iron);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 20px 24px;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+    .transparency-box strong { color: var(--text-primary); }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../index.html" class="brand-logo" title="Zurück zur BAALPHEMOR GAMING Startseite">
+        <img src="../assets/balphemor_shield.png" alt="BAALPHEMOR Schild" class="brand-shield-nav">
+        <div class="brand-text-wrap">
+          <span class="brand-title-main">BAALPHEMOR</span>
+          <span class="brand-title-sub">LOYALITÄTS-SYSTEM · LP-LISTE</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="desktop-nav">
+        <a href="../index.html">← Startseite</a>
+        <a href="#rechner">LP-Rechner</a>
+        <a href="#lp-tabelle">LP-Liste</a>
+        <a href="#stufen">Unterstützer-Stufen</a>
+        <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="nav-btn-highlight">Zu Patreon ➔</a>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="../index.html" class="mobile-link">← Zurück zur Startseite</a>
+      <a href="#rechner" class="mobile-link">🧮 Interaktiver LP-Rechner</a>
+      <a href="#lp-tabelle" class="mobile-link">📜 Komplette LP-Meilenstein-Liste</a>
+      <a href="#stufen" class="mobile-link">🛡️ Die 3 Unterstützer-Stufen</a>
+      <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="btn-primary mobile-link" style="text-align:center; margin-top:12px;">Auf Patreon unterstützen ➔</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- HERO -->
+    <section class="lp-hero">
+      <div class="lp-container">
+        <span class="lp-kicker">UNTERSTÜTZER-CHRONIK · KEIN PAY-TO-WIN</span>
+        <h1>Das <span class="text-gold">BAALPHEMOR</span> Loyalitäts-System</h1>
+        <p class="lp-hero-lead">
+          Jeder Euro deiner Unterstützung auf Patreon bringt dir automatisch <strong>1 Loyalitätspunkt (LP)</strong>.
+          Deine gesammelten LP verfallen niemals und schalten Schritt für Schritt sichtbare Treue-Runen, höhere Stimmwertung,
+          Shop-Rabatte und das legendäre 250-LP-Ehrenbanner frei.
+        </p>
+        <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="btn-primary">Auf Patreon beitreten ➔</a>
+          <a href="#lp-tabelle" class="btn-secondary">Direkt zur LP-Tabelle ↓</a>
+        </div>
+
+        <div class="lp-pillars">
+          <div class="lp-pillar-card">
+            <strong>1 € Support = 1 LP (Dauerhaft)</strong>
+            <span>Deine Punkte summieren sich über deine gesamte Unterstützungszeit automatisch auf und gehen selbst bei einer Pause niemals verloren.</span>
+          </div>
+          <div class="lp-pillar-card">
+            <strong>Kombi-Rahmen & Runen</strong>
+            <span>Deine aktive Stufe bestimmt das Metall deines Portraitrahmens (Bronze, Silber, Gold) – deine LP schmücken ihn mit bis zu 5 leuchtenden Treue-Runen.</span>
+          </div>
+          <div class="lp-pillar-card">
+            <strong>Abspann nur auf Wunsch (Opt-in)</strong>
+            <span>Da mehrere Themenkanäle betrieben werden, erscheint kein Name ungefragt automatisch – du wählst selbst, ob und auf welchem Kanal du genannt werden möchtest.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERAKTIVER LP RECHNER -->
+    <section class="lp-section" id="rechner">
+      <div class="lp-container">
+        <div class="lp-section-header">
+          <h2>Interaktiver <span class="text-gold">LP- & Bonus-Rechner</span></h2>
+          <p>Wähle eine Unterstützer-Stufe und bewege den Regler, um direkt zu sehen, wann du welche Boni erreichst.</p>
+        </div>
+
+        <div class="calc-panel">
+          <div>
+            <div class="calc-tier-btns" role="group" aria-label="Stufe wählen">
+              <button type="button" class="calc-tier-btn" data-eur="1" data-metal="bronze" data-name="Gefolge" data-slots="+2 Slots">
+                Gefolge
+                <small>1 € / Monat (+1 LP)</small>
+              </button>
+              <button type="button" class="calc-tier-btn" data-eur="4" data-metal="silver" data-name="Gefährte" data-slots="+5 Slots">
+                Gefährte
+                <small>4 € / Monat (+4 LP)</small>
+              </button>
+              <button type="button" class="calc-tier-btn is-active" data-eur="12" data-metal="gold" data-name="Bannerträger" data-slots="+12 Slots">
+                Bannerträger
+                <small>12 € / Monat (+12 LP)</small>
+              </button>
+            </div>
+
+            <div class="calc-slider-wrap">
+              <div class="calc-slider-label">
+                <span>Unterstützungsdauer:</span>
+                <strong id="calc-months-label">9 Monate</strong>
+              </div>
+              <input type="range" id="calc-months-slider" class="lp-slider" min="1" max="36" value="9">
+            </div>
+
+            <div class="calc-stats-grid">
+              <div class="calc-stat-box">
+                <span class="lbl">Gesammelte Punkte</span>
+                <span class="val highlight" id="calc-lp-val">108 LP</span>
+              </div>
+              <div class="calc-stat-box">
+                <span class="lbl">Kosmetik-Shop-Rabatt</span>
+                <span class="val highlight" id="calc-discount-val">7 % Rabatt</span>
+              </div>
+              <div class="calc-stat-box">
+                <span class="lbl">Stimmwertung bei Umfragen</span>
+                <span class="val" id="calc-vote-val">2× Doppelte Wertung</span>
+              </div>
+              <div class="calc-stat-box">
+                <span class="lbl">Cloud-Speicherplätze</span>
+                <span class="val" id="calc-slots-val">+12 Slots</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="frame-preview-box">
+            <div class="portrait-ring metal-gold" id="calc-ring">
+              <img src="../assets/balphemor_shield.png" alt="BAALPHEMOR Wappen">
+            </div>
+            <div class="rune-bar" aria-label="Freigeschaltete Treue-Runen">
+              <div class="rune-gem lit"></div>
+              <div class="rune-gem lit"></div>
+              <div class="rune-gem lit"></div>
+              <div class="rune-gem lit"></div>
+              <div class="rune-gem"></div>
+            </div>
+            <div style="font-size:0.8rem; color:var(--text-muted);" id="calc-metal-label">Gold-Rahmen · 4 von 5 Treue-Runen</div>
+            <div class="rank-title" id="calc-rank-label">Rang: Ordensmeister</div>
+            <div class="banner-unlock-pill" id="calc-banner-pill">Noch 142 LP bis zum Besonderen 250-LP-Ehrenbanner</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KOMPLETTE LP LISTE -->
+    <section class="lp-section" id="lp-tabelle">
+      <div class="lp-container">
+        <div class="lp-section-header">
+          <h2>Die komplette <span class="text-gold">LP-Meilenstein-Liste</span></h2>
+          <p>So schalten sich deine Treue-Runen, Shop-Rabatte (Formel: 5 % ab 10 LP, danach +1 % je 50 LP bis max. 50 %) und Meilensteine frei:</p>
+        </div>
+
+        <div class="lp-table-wrap">
+          <table class="lp-table">
+            <thead>
+              <tr>
+                <th>Schwelle</th>
+                <th>Treue-Rang & Runen</th>
+                <th>Shop-Rabatt</th>
+                <th>Stimmrecht</th>
+                <th>Freigeschaltete Treue-Vorteile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="lp-badge">Ab 1 LP</span></td>
+                <td><strong>Gefährte des Aufbruchs</strong><br><small style="color:var(--text-muted);">Basis-Metallrahmen deiner Stufe</small></td>
+                <td>0 %</td>
+                <td>1× Wertung</td>
+                <td>Aktiver Bronze-, Silber- oder Gold-Rahmen, Discord-Rolle, bevorzugte Themen-Wunschliste & YouTube-Abspann auf Wunsch.</td>
+              </tr>
+              <tr class="milestone-major">
+                <td><span class="lp-badge">Ab 10 LP</span></td>
+                <td><strong>Eingeweihter</strong><br><small style="color:var(--gold);">◆ 1. Treue-Rune am Rahmen</small></td>
+                <td><strong>5 % Rabatt</strong></td>
+                <td>1× Wertung</td>
+                <td>Dauerhafter Einstieg in den Kosmetik-Shop-Rabatt *(als Bannerträger sofort im 1. Monat aktiv, als Gefährte ab Monat 3)*.</td>
+              </tr>
+              <tr>
+                <td><span class="lp-badge">Ab 25 LP</span></td>
+                <td><strong>Veteran</strong><br><small style="color:var(--gold);">◆◆ 2. Treue-Rune am Rahmen</small></td>
+                <td>5 % Rabatt</td>
+                <td>1× Wertung</td>
+                <td>Zweite leuchtende Treue-Rune am Portraitrahmen + erweitertes Wappen-Hintergrundset für dein Profil.</td>
+              </tr>
+              <tr>
+                <td><span class="lp-badge">Ab 50 LP</span></td>
+                <td><strong>Schildwache</strong><br><small style="color:var(--gold);">◆◆◆ 3. Treue-Rune am Rahmen</small></td>
+                <td><strong>6 % Rabatt</strong></td>
+                <td>1× Wertung</td>
+                <td>Dritte Treue-Rune am Rahmen + erste automatische Rabatt-Erhöhung im Kosmetik-Shop.</td>
+              </tr>
+              <tr class="milestone-major">
+                <td><span class="lp-badge">Ab 100 LP</span></td>
+                <td><strong>Ordensmeister</strong><br><small style="color:var(--gold);">◆◆◆◆ 4. Treue-Rune / Meister-Insignie</small></td>
+                <td><strong>7 % Rabatt</strong></td>
+                <td><strong style="color:var(--gold-bright);">2× Doppelte Wertung</strong></td>
+                <td>Deine Stimme zählt bei <strong>allen</strong> Community-, Feature- und Themen-Abstimmungen (Gaming & Rohals Schwarzes Auge) <strong>doppelt (2×)</strong>!</td>
+              </tr>
+              <tr>
+                <td><span class="lp-badge">Ab 150 / 200 LP</span></td>
+                <td><strong>Hoher Ordensmeister</strong><br><small style="color:var(--gold);">◆◆◆◆ 4 Treue-Runen</small></td>
+                <td><strong>8 % / 9 % Rabatt</strong></td>
+                <td>2× Wertung</td>
+                <td>Kontinuierlicher Treue-Anstieg um +1 % Shop-Rabatt je 50 gesammelte LP.</td>
+              </tr>
+              <tr class="milestone-major">
+                <td><span class="lp-badge">Ab 250 LP</span></td>
+                <td><strong>Legende</strong><br><small style="color:var(--gold-bright);">◆◆◆◆◆ Volle 5-Runen-Krone</small></td>
+                <td><strong>10 % Rabatt</strong></td>
+                <td><strong style="color:var(--gold-bright);">2× Doppelte Wertung</strong></td>
+                <td>
+                  Freischaltung des <strong>Besonderen Ehrenbanners</strong> (3-fach nutzbar in BAALPHEMOR Gaming):<br>
+                  1. Als Standarten-Banner neben deinem Spielerprofil<br>
+                  2. Physisch aufstellbar im eigenen Lager / Startbereich<br>
+                  3. Tragbar durch deinen eigenen Bannerträger im Gefolge!
+                </td>
+              </tr>
+              <tr>
+                <td><span class="lp-badge">Alle +50 LP</span></td>
+                <td><strong>Ewige Garde</strong></td>
+                <td><strong>+1 % je 50 LP</strong><br><small style="color:var(--text-muted);">(bis max. 50 %)</small></td>
+                <td>2× Wertung</td>
+                <td>Dein Shop-Rabatt wächst alle weiteren 50 LP um +1 % weiter (fair gedeckelt bei maximal 50 %).</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p style="margin-top:14px; font-size:0.86rem; color:var(--text-dim); text-align:center;">
+          Hinweis: Deine gesammelten LP bleiben lebenslang erhalten. Laufende Vorteile (Rahmen-Metall, aktiver Shop-Rabatt, 2×-Stimmwertung & Wunschlisten-Vorrang) sind jeweils während einer aktiven Patreon-Mitgliedschaft freigeschaltet.
+        </p>
+      </div>
+    </section>
+
+    <!-- DIE 3 PATREON TIERS IM DETAIL -->
+    <section class="lp-section" id="stufen" style="border-bottom:none;">
+      <div class="lp-container">
+        <div class="lp-section-header">
+          <h2>Die 3 <span class="text-gold">Unterstützer-Stufen</span> im Überblick</h2>
+          <p>Klar gegliedert in projektübergreifende Allgemeine Boni, Rohals Schwarzes Auge und BAALPHEMOR Gaming.</p>
+        </div>
+
+        <div class="tiers-grid">
+          <!-- TIER 1 -->
+          <article class="tier-card">
+            <div>
+              <div class="tier-head">
+                <div class="tier-name">🛡️ Gefolge</div>
+                <div class="tier-price">1,00 € <span>/ Monat · +1 LP</span></div>
+              </div>
+
+              <div class="tier-group-title">🌟 Allgemeine Boni</div>
+              <ul class="tier-list">
+                <li>Exklusive Discord-Rolle („Gefolge“) – vollautomatisch verknüpft</li>
+                <li><strong>Nennung im YouTube-Abspann auf Wunsch:</strong> Du wählst selbst, ob und auf welchem Kanal dein Name erscheint</li>
+                <li>Stimmrecht bei Community- & Themen-Umfragen *(ab 100 LP: 2× Wertung)*</li>
+              </ul>
+
+              <div class="tier-group-title">🦉 Rohals Schwarzes Auge</div>
+              <ul class="tier-list">
+                <li><strong>Bevorzugte Wunschliste:</strong> Ideen zu Epochen, Regionen oder Sidequests einreichen – Patreon-Wünsche werden bevorzugt!</li>
+              </ul>
+
+              <div class="tier-group-title">⚔️ BAALPHEMOR Gaming</div>
+              <ul class="tier-list">
+                <li><strong>Bronze-Portraitrahmen</strong> (Web & Co-op-Lobby) + exklusive Profil-Hintergründe</li>
+                <li><strong>+2 zusätzliche Cloud-Speicherplätze</strong> für Builds & Vorlagen</li>
+              </ul>
+            </div>
+            <div style="margin-top:20px;">
+              <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="btn-secondary" style="width:100%; display:block; text-align:center;">Gefolge wählen ➔</a>
+            </div>
+          </article>
+
+          <!-- TIER 2 -->
+          <article class="tier-card">
+            <div>
+              <div class="tier-head">
+                <div class="tier-name">⚔️ Gefährte</div>
+                <div class="tier-price">4,00 € <span>/ Monat · +4 LP</span></div>
+              </div>
+
+              <div class="tier-group-title">🌟 Allgemeine Boni (alles aus Gefolge +)</div>
+              <ul class="tier-list">
+                <li>Exklusive Discord-Rolle („Gefährte“) – vollautomatisch verknüpft</li>
+                <li><strong>Nennung im YouTube-Abspann auf Wunsch</strong> (gezielt für deinen Wunsch-Kanal)</li>
+              </ul>
+
+              <div class="tier-group-title">🦉 Rohals Schwarzes Auge</div>
+              <ul class="tier-list">
+                <li><strong>Hohe Wunschlisten-Priorität & Perspektiven-Wahl:</strong> Bestimme bevorzugt mit über Perspektivenwechsel, Fortsetzungen & Nebenhandlungen!</li>
+              </ul>
+
+              <div class="tier-group-title">⚔️ BAALPHEMOR Gaming</div>
+              <ul class="tier-list">
+                <li><strong>Silber-Portraitrahmen</strong> & erweiterte Hintergrund-Auswahl</li>
+                <li><strong>+5 zusätzliche Cloud-Speicherplätze</strong></li>
+                <li>Eintrag in der offiziellen Web-„Hall of Fame“ *(auf Wunsch)*</li>
+              </ul>
+            </div>
+            <div style="margin-top:20px;">
+              <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="btn-secondary" style="width:100%; display:block; text-align:center;">Gefährte wählen ➔</a>
+            </div>
+          </article>
+
+          <!-- TIER 3 -->
+          <article class="tier-card tier-gold">
+            <div>
+              <div class="tier-head">
+                <div class="tier-name">👑 Bannerträger</div>
+                <div class="tier-price">12,00 € <span>/ Monat · +12 LP</span></div>
+              </div>
+
+              <div class="tier-group-title">🌟 Allgemeine Boni (alles aus Gefährte +)</div>
+              <ul class="tier-list">
+                <li>Exklusive Discord-Rolle („Bannerträger“) – vollautomatisch verknüpft</li>
+                <li><strong>Prominente Einzel-Nennung im Abspann auf Wunsch</strong> als „Executive Supporter / Bannerträger“ auf deinem Wunsch-Kanal</li>
+                <li>Auf Wunsch: Exklusives <strong>VIP-Supporter-Badge</strong> auf <code>band-portal.de</code></li>
+              </ul>
+
+              <div class="tier-group-title">🦉 Rohals Schwarzes Auge & Tischrunden</div>
+              <ul class="tier-list">
+                <li><strong>VIP-Priorität auf der Wunschliste</strong></li>
+                <li><strong>Mögliche Option – Gemeinsame Hörbuch- & Dauerprojekte:</strong> Nach gemeinsamer Absprache können bestimmte Tischrollenspiel-Kampagnen oder Heldengeschichten eurer Runde als fortlaufendes Dauerprojekt mehrstimmig vertont werden – öffentlich als eigene separate Kanal-Playlist für alle Zuhörer oder privat nur für euren Eigenbedarf!</li>
+              </ul>
+              <div class="tier-note">
+                <strong>Hinweis zur Umsetzung:</strong> Mögliche Option nach Absprache und <strong>keine 1:1-Aufnahme</strong>. Eure Rollenspiel-Sitzung dient nur als <strong>Skript-Grundlage inkl. Off-Topic-Filter</strong> (Nebengespräche & Würfelpausen werden herausgefiltert und zu einem echten Hörbuch verdichtet).
+              </div>
+
+              <div class="tier-group-title">⚔️ BAALPHEMOR Gaming</div>
+              <ul class="tier-list">
+                <li>Prunkvoller <strong>Gold-Portraitrahmen</strong> (mit Glanz-Effekt) & Gold-Profilbanner</li>
+                <li><strong>+12 zusätzliche Cloud-Speicherplätze</strong> + sofort <strong>5 % Shop-Rabatt</strong> ab Monat 1 (`12 LP`)!</li>
+              </ul>
+            </div>
+            <div style="margin-top:20px;">
+              <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="btn-primary" style="width:100%; display:block; text-align:center;">Bannerträger werden ➔</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="transparency-box">
+          <strong>Wichtiger Hinweis & Transparenz zu Rohals Schwarzes Auge:</strong><br>
+          Alle Geschichten und Hörspiele auf <em>Rohals Schwarzes Auge</em> sind und bleiben für alle Zuhörer zu <strong>100 % kostenfrei</strong> und frei zugänglich.
+          Deine freiwillige Unterstützung auf Patreon gilt ausschließlich dem Creator persönlich sowie der Deckung der laufenden Produktions-, Technik- und Serverkosten.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <img src="../assets/balphemor_shield.png" alt="BAALPHEMOR GAMING" class="footer-logo">
+          <div>
+            <span class="footer-brand-title">BAALPHEMOR GAMING</span>
+            <span class="footer-brand-sub">baalphemor-gaming.de</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          Offizielle Spiele-Präsenz von Michael Stahlschmidt — Heimat von <em>Auritan: Vanguard</em> & Übersicht des Unterstützer-Loyalitätssystems.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-nav">
+          <li><a href="../index.html">🏠 Zurück zur Startseite</a></li>
+          <li><a href="#rechner">🧮 Interaktiver LP-Rechner</a></li>
+          <li><a href="#lp-tabelle">📜 Komplette LP-Liste</a></li>
+          <li><a href="#stufen">🛡️ Unterstützer-Stufen</a></li>
+          <li><a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener">⭐ Offizielle Patreon-Seite</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rechtliches & DSGVO</h4>
+        <ul class="footer-nav">
+          <li><a href="#" class="modal-trigger" data-modal="modal-impressum">Impressum (§ 5 DDG)</a></li>
+          <li><a href="#" class="modal-trigger" data-modal="modal-datenschutz">Datenschutzerklärung (DSGVO)</a></li>
+          <li><a href="#" class="modal-trigger" data-modal="modal-disclaimer">Haftungsausschluss & Urheberrecht</a></li>
+          <li><a href="#" id="open-cookie-settings-btn">🍪 Cookie-Einstellungen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>BAALPHEMOR Netzwerk</h4>
+        <div class="footer-social-links">
+          <a href="https://www.patreon.com/balphemor" target="_blank" rel="noopener" class="footer-pill-link">⭐ Patreon</a>
+          <a href="https://www.baalphemor.de" target="_blank" rel="noopener" class="footer-pill-link">🌐 www.baalphemor.de</a>
+          <a href="https://www.band-portal.de" target="_blank" rel="noopener" class="footer-pill-link">🎸 www.band-portal.de</a>
+          <a href="https://auritan.de" target="_blank" rel="noopener" class="footer-pill-link">⚔️ auritan.de</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>BAALPHEMOR GAMING © 2026 Michael Stahlschmidt · Alle Rechte vorbehalten · <a href="https://baalphemor-gaming.de">baalphemor-gaming.de</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Rechtliche Modals -->
+  <div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="modal-impressum-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-impressum-title">Impressum</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h4>
+        <p><strong>Michael Stahlschmidt</strong><br>BAALPHEMOR Medien, Fotografie & Gaming<br>Deutschland</p>
+        <h4>Kontakt:</h4>
+        <p>E-Mail: <a href="mailto:info@baalphemor.de">info@baalphemor.de</a><br>Web: <a href="https://baalphemor-gaming.de">https://baalphemor-gaming.de</a></p>
+        <h4>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h4>
+        <p>Michael Stahlschmidt</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-datenschutz" role="dialog" aria-modal="true" aria-labelledby="modal-datenschutz-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-datenschutz-title">Datenschutzerklärung (DSGVO)</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Verantwortlicher</h4>
+        <p><strong>Michael Stahlschmidt / BAALPHEMOR GAMING</strong> · E-Mail: info@baalphemor.de</p>
+        <h4>2. Kein Werbe-Tracking</h4>
+        <p>Diese Informationsseite berechnet LP-Beispiele rein lokal in deinem Browser und nutzt keinerlei Werbe-Tracker, Google Analytics oder Profiling-Cookies. Beim Klick auf externe Links (z. B. Patreon) gelten die Datenschutzbestimmungen des jeweiligen Anbieters.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="modal-disclaimer" role="dialog" aria-modal="true" aria-labelledby="modal-disclaimer-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-disclaimer-title">Haftungsausschluss & Urheberrecht</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>Sämtliche durch Michael Stahlschmidt unter den Marken <strong>BAALPHEMOR</strong>, <strong>BAALPHEMOR GAMING</strong> und <strong>AURITAN</strong> erstellten Konzepte, Grafiken und Texte unterliegen dem deutschen Urheberrecht. Alle Hörspiele auf <em>Rohals Schwarzes Auge</em> sind ein unkommerzielles, zu 100 % kostenfreies Projekt.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie- und Datenschutzeinstellungen">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <strong>🍪 Privatsphäre auf BAALPHEMOR GAMING:</strong>
+        Diese Seite nutzt ausschließlich technisch notwendige lokale Speicherungen und <strong>kein Werbe-Tracking</strong>.
+        <a href="#" class="modal-trigger cookie-link" data-modal="modal-datenschutz">Datenschutzerklärung</a>
+      </div>
+      <div class="cookie-buttons">
+        <button type="button" id="cookie-necessary-btn" class="btn-secondary btn-sm">Nur Notwendige</button>
+        <button type="button" id="cookie-accept-all-btn" class="btn-primary btn-sm">Verstanden</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js"></script>
+  <script>
+    (function () {
+      const tierBtns = document.querySelectorAll('.calc-tier-btn');
+      const slider = document.getElementById('calc-months-slider');
+      const monthsLbl = document.getElementById('calc-months-label');
+      const lpVal = document.getElementById('calc-lp-val');
+      const discVal = document.getElementById('calc-discount-val');
+      const voteVal = document.getElementById('calc-vote-val');
+      const slotsVal = document.getElementById('calc-slots-val');
+      const ring = document.getElementById('calc-ring');
+      const gems = document.querySelectorAll('.rune-gem');
+      const metalLbl = document.getElementById('calc-metal-label');
+      const rankLbl = document.getElementById('calc-rank-label');
+      const bannerPill = document.getElementById('calc-banner-pill');
+
+      let activeEur = 12;
+      let activeMetal = 'gold';
+      let activeSlots = '+12 Slots';
+
+      const metalNames = { bronze: 'Bronze-Rahmen', silver: 'Silber-Rahmen', gold: 'Gold-Rahmen' };
+
+      function updateCalc() {
+        const months = parseInt(slider.value, 10) || 1;
+        const lp = months * activeEur;
+        monthsLbl.textContent = months === 1 ? '1 Monat' : (months + ' Monate');
+        lpVal.textContent = lp + ' LP';
+        slotsVal.textContent = activeSlots;
+
+        let disc = 0;
+        if (lp >= 10) {
+          disc = Math.min(50, 5 + Math.floor(lp / 50));
+        }
+        discVal.textContent = disc > 0 ? (disc + ' % Rabatt') : 'ab 10 LP (5 %)';
+
+        if (lp >= 100) {
+          voteVal.textContent = '2× Doppelte Wertung';
+          voteVal.classList.add('highlight');
+        } else {
+          voteVal.textContent = '1× Standard (2× ab 100 LP)';
+          voteVal.classList.remove('highlight');
+        }
+
+        let runes = 0;
+        let rank = 'Gefährte des Aufbruchs';
+        if (lp >= 250) { runes = 5; rank = 'Legende (Volle Runen-Krone)'; }
+        else if (lp >= 100) { runes = 4; rank = 'Ordensmeister'; }
+        else if (lp >= 50) { runes = 3; rank = 'Schildwache'; }
+        else if (lp >= 25) { runes = 2; rank = 'Veteran'; }
+        else if (lp >= 10) { runes = 1; rank = 'Eingeweihter'; }
+
+        ring.className = 'portrait-ring metal-' + activeMetal;
+        gems.forEach((g, idx) => g.classList.toggle('lit', idx < runes));
+        metalLbl.textContent = metalNames[activeMetal] + ' · ' + runes + ' von 5 Treue-Runen';
+        rankLbl.textContent = 'Rang: ' + rank;
+
+        if (lp >= 250) {
+          bannerPill.textContent = '🏆 Besonderes 250-LP-Ehrenbanner FREIGESCHALTET!';
+          bannerPill.classList.add('unlocked');
+        } else {
+          bannerPill.textContent = 'Noch ' + (250 - lp) + ' LP bis zum Besonderen 250-LP-Ehrenbanner';
+          bannerPill.classList.remove('unlocked');
+        }
+      }
+
+      tierBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tierBtns.forEach(b => b.classList.remove('is-active'));
+          btn.classList.add('is-active');
+          activeEur = parseInt(btn.getAttribute('data-eur'), 10);
+          activeMetal = btn.getAttribute('data-metal');
+          activeSlots = btn.getAttribute('data-slots');
+          updateCalc();
+        });
+      });
+
+      slider.addEventListener('input', updateCalc);
+      updateCalc();
+    })();
+  </script>
+</body>
+</html>
