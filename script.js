@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const portalSignupForm = document.getElementById('portal-signup-form');
   const portalEmailInput = document.getElementById('portal-email-input');
   const portalNameInput = document.getElementById('portal-name-input');
+  const portalIntroNote = document.getElementById('portal-intro-note');
   const portalHpWebsite = document.getElementById('portal-hp-website');
   const portalFeedback = document.getElementById('portal-lead-feedback');
   const portalDiscordBtn = document.getElementById('portal-discord-request-btn');
@@ -202,7 +203,11 @@ document.addEventListener('DOMContentLoaded', () => {
         .map(cb => cb.value);
       const wantsRigging = optRigging ? optRigging.checked : false;
       const wantsStory = optStory ? optStory.checked : false;
+      const introNote = portalIntroNote ? portalIntroNote.value.trim() : '';
       const riggingNote = riggingNoteInput ? riggingNoteInput.value.trim() : '';
+      const combinedNote = introNote && riggingNote
+        ? `${introNote}\n[Mitwirkung: ${riggingNote}]`
+        : (introNote || riggingNote);
 
       const submitBtn = portalSignupForm.querySelector('button[type="submit"]');
       const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
@@ -222,7 +227,7 @@ document.addEventListener('DOMContentLoaded', () => {
             source: 'baalphemor-gaming.de',
             interests: selectedTypes,
             games: selectedGames,
-            note: riggingNote,
+            note: combinedNote,
             website,
           }),
         });
@@ -241,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
           games: selectedGames,
           wantsRigging,
           wantsStory,
+          note: combinedNote,
           collabNote: riggingNote,
           timestamp: new Date().toISOString(),
           source: 'baalphemor-gaming.de',
@@ -285,6 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
       portalFeedback.style.display = 'block';
       portalEmailInput.value = '';
       if (portalNameInput) portalNameInput.value = '';
+      if (portalIntroNote) portalIntroNote.value = '';
       if (riggingNoteInput) riggingNoteInput.value = '';
       if (portalHpWebsite) portalHpWebsite.value = '';
 
