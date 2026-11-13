@@ -1,6 +1,6 @@
 # BAALPHEMOR GAMING — Cloudflare R2 Asset-CDN & Hub-Architektur (`baalphemor-gaming.de` & `auritan.de`)
 
-**Status (05.11.2026):** ✅ **Cloudflare R2 Bucket `baalphemor-gaming-assets` aktiv & synchronisiert (`2.152 Dateien / 419 MB`)** | ✅ **Vite Slim-Build & Vercel-Backup-Bremse aktiv**
+**Status (10.11.2026):** ✅ **Cloudflare R2 Bucket `baalphemor-gaming-assets` aktiv & synchronisiert (`2.510 Dateien / 778,6 MB`)** | ✅ **R2 Public CDN live (`https://pub-c383b4e0b43d4191ae726141ddfc8db5.r2.dev`)** | ✅ **Vite Slim-Build (`vercel.json` + Auto-CDN-Plugin) aktiv**
 
 ---
 

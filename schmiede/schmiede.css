@@ -1,0 +1,665 @@
+/* ========================================================
+   BAALPHEMOR GAMING — MINIATUREN-SCHMIEDE & 3D-ERSCHAFFUNGSMODUL
+   100 % Deutsch · Grimdark & Sci-Fi Ready · DSGVO-konform lokal
+   ======================================================== */
+
+.forge-page {
+  background-color: var(--bg-deep);
+}
+.forge-page .nav-container {
+  max-width: 1360px;
+  gap: 14px;
+}
+.forge-page .brand-title-sub {
+  white-space: nowrap;
+  font-size: 0.64rem;
+}
+.forge-page .nav-links {
+  gap: 14px;
+}
+.forge-page .nav-links a {
+  white-space: nowrap;
+  font-size: 0.82rem;
+}
+
+/* Durchgängiges Beta-Hinweisbanner unter der Kopfzeile */
+.forge-beta-ribbon {
+  background: linear-gradient(90deg, rgba(145, 25, 18, 0.92), rgba(44, 28, 12, 0.95), rgba(145, 25, 18, 0.92));
+  border-bottom: 1px solid var(--gold);
+  padding: 9px 20px;
+  text-align: center;
+  font-size: 0.84rem;
+  color: #fff5e1;
+}
+.forge-beta-ribbon strong {
+  color: var(--gold-bright);
+  letter-spacing: 0.04em;
+}
+.forge-beta-ribbon a {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: underline;
+  margin-left: 6px;
+}
+
+/* Auslastungs-Ampel in der Kopfzeile */
+.oven-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 13px;
+  border-radius: 999px;
+  background: rgba(18, 42, 28, 0.72);
+  border: 1px solid rgba(62, 230, 125, 0.42);
+  font-size: 0.78rem;
+  color: #d7fce5;
+  white-space: nowrap;
+}
+.oven-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 10px var(--emerald);
+}
+
+/* Hero & Gründer-Vitrine */
+.forge-hero {
+  padding: 64px 24px 54px;
+  background:
+    radial-gradient(circle at 18% 15%, rgba(216, 176, 101, 0.13), transparent 48%),
+    radial-gradient(circle at 85% 30%, rgba(168, 36, 29, 0.14), transparent 50%),
+    var(--bg-deep);
+  border-bottom: 1px solid var(--border-iron);
+}
+.forge-hero-grid {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 36px;
+  align-items: center;
+}
+.forge-hero h1 {
+  font-family: var(--font-cinzel);
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  line-height: 1.16;
+  color: #fff;
+  margin: 12px 0 16px;
+}
+.forge-hero-lead {
+  font-size: 1.04rem;
+  color: var(--text-muted);
+  margin-bottom: 18px;
+}
+.vtt-compat-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+.vtt-chip {
+  font-family: var(--font-oswald);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  padding: 5px 11px;
+  border-radius: 6px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-bright);
+}
+
+/* Gründer-Video-Karte ("Baal vor der Vitrine") */
+.founder-video-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+}
+.founder-video-stage {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background:
+    linear-gradient(180deg, rgba(9, 8, 7, 0.25) 0%, rgba(9, 8, 7, 0.88) 100%),
+    url('../assets/schmiede/drache_vorher_nachher.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+.founder-video-badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: rgba(9, 8, 7, 0.86);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-bright);
+  font-family: var(--font-oswald);
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+.founder-quote-box {
+  padding: 18px 20px;
+  border-top: 1px solid var(--border-iron);
+  font-size: 0.91rem;
+  color: var(--text-muted);
+}
+.founder-quote-box strong {
+  color: #fff;
+}
+
+/* ========================================================
+   LIVE 3D-ERSCHAFFUNGSMODUL (WEBGL STUDIO)
+   ======================================================== */
+.creator-section {
+  padding: 76px 24px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-iron);
+}
+.creator-tabs-bar {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  max-width: 1240px;
+  margin: 28px auto 20px;
+}
+.creator-tab-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-iron);
+  border-radius: 10px;
+  padding: 13px 14px;
+  color: var(--text-muted);
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  transition: all 0.18s ease;
+}
+.creator-tab-btn span.tab-sub {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-dim);
+}
+.creator-tab-btn:hover {
+  border-color: var(--border-gold);
+  color: #fff;
+}
+.creator-tab-btn.is-active {
+  background: linear-gradient(145deg, rgba(48, 35, 18, 0.95), rgba(24, 19, 14, 0.95));
+  border-color: var(--gold-bright);
+  color: #fff;
+  box-shadow: var(--glow-gold);
+}
+.creator-tab-btn.is-active span.tab-sub {
+  color: var(--gold);
+}
+
+.creator-workbench {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 24px;
+  align-items: stretch;
+}
+.creator-viewport-wrap {
+  position: relative;
+  background: radial-gradient(circle at 50% 42%, #1d1b22 0%, #0b0a0d 85%);
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  min-height: 510px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+#forge-3d-canvas {
+  width: 100%;
+  height: 450px;
+  display: block;
+  cursor: grab;
+}
+#forge-3d-canvas:active {
+  cursor: grabbing;
+}
+.viewport-hud-top {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+  gap: 8px;
+}
+.hud-pill {
+  background: rgba(9, 8, 7, 0.82);
+  border: 1px solid var(--border-iron);
+  border-radius: 8px;
+  padding: 5px 10px;
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  backdrop-filter: blur(6px);
+}
+.hud-pill strong {
+  color: var(--gold-bright);
+}
+.viewport-toolbar-bottom {
+  margin-top: auto;
+  padding: 12px 16px;
+  background: rgba(9, 8, 7, 0.92);
+  border-top: 1px solid var(--border-iron);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.export-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.btn-tool-action {
+  background: rgba(216, 176, 101, 0.14);
+  border: 1px solid var(--border-gold);
+  color: var(--gold-bright);
+  padding: 7px 12px;
+  border-radius: 8px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+.btn-tool-action:hover {
+  background: rgba(216, 176, 101, 0.28);
+  color: #fff;
+}
+
+.creator-controls-panel {
+  background: var(--bg-card);
+  border: 1px solid var(--border-iron);
+  border-radius: 16px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.control-group label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--gold);
+  display: flex;
+  justify-content: space-between;
+}
+.control-group select,
+.control-group input[type="text"],
+.control-group input[type="number"] {
+  width: 100%;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-iron);
+  border-radius: 8px;
+  padding: 9px 12px;
+  color: var(--text-primary);
+  font-family: var(--font-inter);
+  font-size: 0.9rem;
+}
+.control-group select:focus,
+.control-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.control-group input[type="range"] {
+  width: 100%;
+  accent-color: var(--gold-bright);
+}
+.creator-price-tag-box {
+  margin-top: auto;
+  padding: 14px;
+  border-radius: 10px;
+  background: rgba(9, 8, 7, 0.7);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.creator-price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.9rem;
+}
+.creator-coin-val {
+  font-family: var(--font-oswald);
+  font-size: 1.12rem;
+  color: var(--gold-bright);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ========================================================
+   VORHER/NACHHER VITRINE & MARKTVERGLEICH
+   ======================================================== */
+.showcase-section {
+  padding: 76px 24px;
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--border-iron);
+}
+.pipeline-showcase-shell {
+  max-width: 1240px;
+  margin: 28px auto 34px;
+  display: grid;
+  grid-template-columns: 1.16fr 0.84fr;
+  gap: 24px;
+  align-items: start;
+  background: linear-gradient(145deg, rgba(24, 21, 19, 0.94), rgba(14, 13, 12, 0.96));
+  border: 1px solid var(--border-gold);
+  border-radius: 16px;
+  padding: 22px;
+  box-shadow: 0 18px 46px rgba(0, 0, 0, 0.52);
+}
+.pipeline-showcase-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.pipeline-video-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-iron);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.pipeline-video-tag {
+  font-family: var(--font-oswald);
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: var(--gold-bright);
+  text-transform: uppercase;
+}
+.pipeline-video-card video {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border-iron);
+  background: #0b0d12;
+  display: block;
+}
+.pipeline-video-card p {
+  font-size: 0.84rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.45;
+}
+.pipeline-cta-box {
+  background: linear-gradient(135deg, rgba(168, 36, 29, 0.22), rgba(216, 176, 101, 0.13));
+  border: 1px solid rgba(216, 176, 101, 0.45);
+  border-radius: 12px;
+  padding: 15px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--text-primary);
+}
+.pipeline-cta-box strong {
+  font-family: var(--font-cinzel);
+  color: #fff;
+  font-size: 1.02rem;
+}
+.sample-cards-grid {
+  max-width: 1240px;
+  margin: 32px auto 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.72fr;
+  gap: 22px;
+}
+.sample-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-iron);
+  border-radius: 14px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.sample-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9.5;
+  object-fit: cover;
+  border-bottom: 1px solid var(--border-iron);
+}
+.sample-card.token-card img {
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  padding: 18px;
+  background:
+    linear-gradient(45deg, #161412 25%, transparent 25%),
+    linear-gradient(-45deg, #161412 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #161412 75%),
+    linear-gradient(-45deg, transparent 75%, #161412 75%);
+  background-size: 24px 24px;
+  background-position: 0 0, 0 12px, 12px -12px, -12px 0;
+}
+.sample-card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+}
+.sample-card-body h3 {
+  font-family: var(--font-cinzel);
+  font-size: 1.12rem;
+  color: #fff;
+}
+.sample-meta {
+  font-size: 0.82rem;
+  color: var(--gold);
+  font-family: var(--font-oswald);
+  letter-spacing: 0.05em;
+}
+.sample-card-body p {
+  font-size: 0.89rem;
+  color: var(--text-muted);
+  flex: 1;
+}
+
+/* Preisvergleichs-Tabelle */
+.comparison-wrap {
+  max-width: 1240px;
+  margin: 52px auto 0;
+  overflow-x: auto;
+}
+.forge-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--bg-card);
+  border: 1px solid var(--border-iron);
+  border-radius: 12px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+.forge-table th,
+.forge-table td {
+  padding: 13px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-iron);
+}
+.forge-table th {
+  background: #110f0c;
+  font-family: var(--font-oswald);
+  letter-spacing: 0.06em;
+  color: var(--gold);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+.forge-table tr.is-baalphemor-row {
+  background: linear-gradient(90deg, rgba(216, 176, 101, 0.16), rgba(216, 176, 101, 0.05));
+}
+.forge-table tr.is-baalphemor-row td {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* ========================================================
+   MÜNZ- & DIREKTZAHLUNGS-RECHNER
+   ======================================================== */
+.calculator-section {
+  padding: 76px 24px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--border-iron);
+}
+.calc-grid {
+  max-width: 1140px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 26px;
+}
+.calc-inputs-card,
+.calc-summary-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-iron);
+  border-radius: 16px;
+  padding: 24px;
+}
+.calc-summary-card {
+  border-color: var(--border-gold);
+}
+.calc-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+.calc-row:last-child {
+  border-bottom: none;
+}
+.calc-row-info strong {
+  display: block;
+  color: #fff;
+  font-size: 0.95rem;
+}
+.calc-row-info span {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+.calc-qty-input {
+  width: 78px;
+  background: var(--bg-deep);
+  border: 1px solid var(--border-gold);
+  border-radius: 8px;
+  padding: 8px 10px;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+}
+.checkout-option-box {
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid var(--border-iron);
+  background: var(--bg-deep);
+  margin-bottom: 14px;
+}
+.checkout-option-box.recommended {
+  border-color: var(--gold-bright);
+  background: linear-gradient(145deg, rgba(46, 35, 17, 0.78), rgba(15, 12, 9, 0.9));
+}
+.bulk-delay-warning {
+  display: none;
+  margin-top: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(217, 45, 33, 0.14);
+  border: 1px solid rgba(217, 45, 33, 0.48);
+  color: #ffd3cf;
+  font-size: 0.85rem;
+}
+.bulk-delay-warning.is-visible {
+  display: block;
+}
+
+/* ========================================================
+   BETA-TESTER & AUFTRAGS-SEKTION
+   ======================================================== */
+.beta-section {
+  padding: 80px 24px;
+  background: radial-gradient(circle at 50% 0%, rgba(168, 36, 29, 0.16), transparent 60%), var(--bg-deep);
+}
+.beta-form-card {
+  max-width: 920px;
+  margin: 0 auto;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.7);
+}
+.beta-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+.beta-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.beta-field label {
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+.beta-field input,
+.beta-field select,
+.beta-field textarea {
+  background: var(--bg-deep);
+  border: 1px solid var(--border-iron);
+  border-radius: 8px;
+  padding: 11px 13px;
+  color: var(--text-primary);
+  font-family: var(--font-inter);
+  font-size: 0.93rem;
+}
+.beta-rights-check {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 16px 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+.beta-rights-check input {
+  margin-top: 4px;
+  accent-color: var(--gold-bright);
+}
+
+@media (max-width: 980px) {
+  .forge-hero-grid,
+  .creator-tabs-bar,
+  .creator-workbench,
+  .pipeline-showcase-shell,
+  .sample-cards-grid,
+  .calc-grid,
+  .beta-grid-2 {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miniaturen-Schmiede &amp; 3D-Baukasten | BAALPHEMOR GAMING</title>
+  <meta name="description" content="Die Miniaturen-Schmiede von BAALPHEMOR GAMING: Kundendateien in alle Richtungen umbauen (3D-Druck ⇄ VTT), STL-Konverter, Digitaler Malkasten (Sundrop &amp; Wunschfarben), Living-Miniatures und interaktiver 3D-Baukasten für Marker, Wappen-Flaggen &amp; Möbel — kompatibel mit Tabletop Simulator &amp; Foundry VTT.">
+  <meta name="keywords" content="BAALPHEMOR GAMING, Miniaturen-Schmiede, Miniaturen Schmiede, STL zu Tabletop Simulator, Foundry VTT 3D Token, Tabletop Marker erstellen, 3D Schreibtisch Tabletop, Digitaler Malkasten Miniaturen, Living Miniature">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://baalphemor-gaming.de/schmiede/">
+  <meta property="og:title" content="Miniaturen-Schmiede &amp; 3D-Erschaffungsmodul — BAALPHEMOR GAMING">
+  <meta property="og:description" content="Fremde Kundendateien in alle Richtungen umbauen (Druck ⇄ VTT), Living-Miniatures, edles Sundrop Shading + 360°-Prüfung &amp; Live-3D-Baukasten.">
+  <meta property="og:image" content="https://baalphemor-gaming.de/assets/schmiede/drache_vorher_nachher.png">
+
+  <link rel="icon" type="image/png" href="../assets/balphemor_shield.png">
+  <link rel="stylesheet" href="../assets/fonts/fonts.css">
+  <link rel="stylesheet" href="../style.css?v=20261113_ms2">
+  <link rel="stylesheet" href="schmiede.css?v=20261113_ms2">
+
+  <!-- 100 % Lokale Three.js ES-Module (DSGVO-konform ohne Drittanbieter-CDNs) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "../assets/vendor/three/three.module.min.js",
+        "three/addons/": "../assets/vendor/three/addons/"
+      }
+    }
+  </script>
+</head>
+<body class="forge-page">
+
+  <!-- ========================================================
+       STICKY HEADER MIT AUSLASTUNGS-AMPEL
+       ======================================================== -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="../" class="brand-logo" title="Zurück zur BAALPHEMOR GAMING Hauptseite">
+        <img src="../assets/balphemor_shield.png" alt="BAALPHEMOR Schild" class="brand-shield-nav">
+        <div class="brand-text-wrap">
+          <span class="brand-title-main">BAALPHEMOR <span class="badge-beta-live">BETA</span></span>
+          <span class="brand-title-sub">MINIATUREN-SCHMIEDE · BETA-VERSION</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="desktop-nav">
+        <a href="../">← Hauptportal</a>
+        <a href="#erschaffung">🛠️ 3D-Prüfung &amp; Baukasten</a>
+        <a href="#gratis-muster">📦 Muster &amp; Vergleich</a>
+        <a href="#preisrechner">🪙 Münz-Rechner</a>
+        <span class="oven-status-badge" title="Persönlich geprüfte Bearbeitung durch Baal von BAALPHEMOR">
+          <span class="oven-dot"></span>
+          <span>Schmiedeofen frei · bis 72 Std.</span>
+        </span>
+        <a href="#beta-test" class="nav-btn-highlight">🎁 5 Figuren Gratis-Beta</a>
+      </nav>
+
+      <button class="mobile-menu-toggle" id="mobile-menu-btn" aria-label="Menü öffnen">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <nav class="mobile-nav-links">
+      <a href="../" class="mobile-link">← Zurück zum BAALPHEMOR GAMING Hauptportal</a>
+      <a href="#gruender" class="mobile-link">🎙️ Warum es die Schmiede gibt (Baal)</a>
+      <a href="#erschaffung" class="mobile-link balphemor-special">🛠️ 3D-Dateiprüfung &amp; Baukasten (Live)</a>
+      <a href="#gratis-muster" class="mobile-link">📦 Vorher/Nachher &amp; Gratis-Musterdatei</a>
+      <a href="#preisrechner" class="mobile-link">🪙 Münz- &amp; Direktzahlungs-Rechner</a>
+      <a href="#beta-test" class="btn-primary mobile-link" style="text-align:center; margin-top:12px;">🎁 Jetzt für 5 Gratis-Figuren bewerben</a>
+    </nav>
+  </div>
+
+  <main>
+    <!-- Durchgängiges Beta-Hinweisbanner für diesen Seitenbereich -->
+    <div class="forge-beta-ribbon" role="status">
+      🧪 <strong>OFFENE BETA-VERSION:</strong> Dieser Bereich (Miniaturen-Schmiede &amp; 3D-Erschaffungsmodul) befindet sich im aktiven Aufbau — probiere den 3D-Baukasten und die 360°-Dateiprüfung live aus und hilf uns mit deinem Feedback!
+      <a href="#beta-test">Bis zu 5 Figuren kostenlos als Beta-Tester umbauen lassen ➔</a>
+    </div>
+
+    <!-- ========================================================
+         1. HERO & GRÜNDER-VITRINE ("BAAL VOR DER VITRINE")
+         ======================================================== -->
+    <section class="forge-hero" id="gruender">
+      <div class="forge-hero-grid">
+        <div>
+          <div class="section-kicker-row">
+            <span class="section-kicker">SÄULE 03 · OFFENE BETA-PHASE · HANDWERK STATT MASSENWARE</span>
+            <span class="status-pill-active pill-beta-glow">🧪 BETA · Bearbeitung bis 72 Std.</span>
+          </div>
+
+          <h1>
+            Die <span class="text-gold">Miniaturen-Schmiede</span> &amp; dein 3D-Erschaffungsmodul <span class="badge-beta-section">BETA</span>
+          </h1>
+
+          <p class="forge-hero-lead">
+            Du hast geniale 3D-Druckdateien auf der Festplatte oder möchtest digitale VTT-Modelle drucken? In unserer <strong>Miniaturen-Schmiede</strong> bauen wir fremde Kundendateien in <strong>alle Richtungen</strong> professionell um: 
+            Druckdatei (<code>.STL</code> / <code>.OBJ</code>) ➔ spielfertig für den virtuellen Spieltisch, 
+            virtuelles 3D-Modell (<code>.GLB</code> / TTS) ➔ wasserdichte 3D-Druck-<code>.STL</code> inkl. auto-generierten Baumstützen, 
+            oder als lebendige <strong>Living Miniature</strong> mit dezenter Mikro-Animation. 
+            Prüfe deine Dateien direkt hier im <strong>interaktiven 360°-Prüffenster</strong>!
+          </p>
+
+          <div class="vtt-compat-strip" aria-label="Unterstützte Spieltische und Transformationen">
+            <span class="vtt-chip">🎲 Tabletop Simulator (.OBJ + Konvex-Kollision &lt;255 Tris)</span>
+            <span class="vtt-chip">🗺️ Kompatibel mit Foundry VTT (3D .GLB &amp; 2D Token)</span>
+            <span class="vtt-chip">🖨️ Druckfertige .STL (0 Non-Manifold + Auto-Baumstützen)</span>
+            <span class="vtt-chip">✨ Living-Miniatures (Mikro-Animation ohne Verformung)</span>
+            <span class="vtt-chip">🔍 360°-Echtzeitprüfung im Browser (DSGVO-lokal)</span>
+          </div>
+
+          <div class="forge-home-actions">
+            <a href="#erschaffung" class="btn-primary">
+              <span>🔍 Eigene Datei prüfen &amp; 3D-Baukasten</span>
+              <span class="btn-arrow">➔</span>
+            </a>
+            <a href="#beta-test" class="btn-secondary">
+              <span>🎁 5 eigene Figuren kostenlos testen (Beta)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Gründer-Karte: Baal vor seiner echten Miniaturen-Vitrine -->
+        <aside class="founder-video-card" aria-label="Vorstellung durch Gründer Baal von BAALPHEMOR">
+          <div class="founder-video-stage">
+            <span class="founder-video-badge">🎙️ AUS DER WERKSTATT · BAAL VON BAALPHEMOR</span>
+            <div style="background: rgba(9, 8, 7, 0.84); border: 1px solid var(--border-gold); border-radius: 12px; padding: 14px 16px; backdrop-filter: blur(6px);">
+              <p style="font-family: var(--font-cinzel); color: var(--gold-bright); font-size: 0.96rem; margin-bottom: 6px;">
+                „Vom eigenen Spieltisch-Frust zur offenen Schmiede“
+              </p>
+              <p style="font-size: 0.85rem; color: var(--text-primary); margin-bottom: 10px;">
+                Vorstellungsvideo vor meiner Miniaturen-Vitrine (Kameradreh in Vorbereitung) — lies schon jetzt die Geschichte hinter dem Projekt:
+              </p>
+              <button type="button" class="btn-tool-action modal-trigger" data-modal="modal-founder-story" id="btn-open-video-preview">
+                🎬 Gründer-Vorstellung &amp; Ablauf ansehen
+              </button>
+            </div>
+          </div>
+          <div class="founder-quote-box">
+            <strong>„Hey Leute, ich bin der Baal von BAALPHEMOR.“</strong> Neben Konzertfotografie und Medien bin ich ein riesiger Tabletop-Nerd. Mich hat es jahrelang geärgert, dass gekaufte virtuelle Figuren in einem System gefangen sind oder mir die Farben nicht passen. Deshalb läuft hier kein blinder Sekunden-Bot durch: Wir nehmen uns <strong>bis zu 72 Stunden Zeit</strong> (bei gezielten Wunschfarben <strong>+48 Stunden</strong>), damit jede Figur sauber geprüft auf deinem Tisch steht.
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         2. AUSGEARBEITETES 3D-ERSCHAFFUNGSMODUL (LIVE WEBGL STUDIO)
+         ======================================================== -->
+    <section class="creator-section" id="erschaffung">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-kicker-row">
+            <span class="section-kicker">LIVE IM BROWSER (BETA) · STUFE 1 AKTIV + AUSBLICK AUF STUFEN 2 &amp; 3</span>
+            <span class="status-pill-active">Inkl. Gratis .STL &amp; .GLB Test-Download</span>
+          </div>
+          <h2>Das 3D-Erschaffungsmodul <span class="badge-beta-section">BETA</span></h2>
+          <p class="section-lead">
+            Drehe, beschrifte und kombiniere <strong>Tabletop-Marker</strong> (z. B. mit Feuer-Symbol oder eigenem Wunschtext), <strong>Landmarken &amp; Flaggen mit Wappen</strong>, <strong>individuelle Schreibtische, Schränke &amp; Sci-Fi-Objekte</strong> sowie eine Vorschau unseres kommenden <strong>Figuren-Baukastens</strong>.
+          </p>
+        </div>
+
+        <!-- 5 Modul-Reiter -->
+        <div class="creator-tabs-bar" role="tablist" aria-label="Kategorien im 3D-Erschaffungsmodul">
+          <button type="button" class="creator-tab-btn is-active" role="tab" aria-selected="true" data-tab="kundendatei">
+            <span>🔍 1. Eigene Datei prüfen &amp; umbauen (360°)</span>
+            <span class="tab-sub">Eigene .STL, .OBJ oder .GLB live prüfen &amp; Geometrie-Check</span>
+          </button>
+          <button type="button" class="creator-tab-btn" role="tab" aria-selected="false" data-tab="marker">
+            <span>🔥 2. Tabletop-Marker &amp; Tokens</span>
+            <span class="tab-sub">Zum Beschriften, Feuer, Fluch &amp; Ziele (Gratis-Export!)</span>
+          </button>
+          <button type="button" class="creator-tab-btn" role="tab" aria-selected="false" data-tab="flagge">
+            <span>🚩 3. Landmarken &amp; Flaggen</span>
+            <span class="tab-sub">Kriegsbanner, Wappen &amp; Sci-Fi-Sektorflaggen</span>
+          </button>
+          <button type="button" class="creator-tab-btn" role="tab" aria-selected="false" data-tab="moebel">
+            <span>🪑 4. Schreibtische, Schränke &amp; Sci-Fi</span>
+            <span class="tab-sub">Maßgeschneiderte Dungeon- &amp; Raumschiff-Möbel</span>
+          </button>
+          <button type="button" class="creator-tab-btn" role="tab" aria-selected="false" data-tab="figur">
+            <span>⚔️ 5. Figuren-Baukasten (Ausblick)</span>
+            <span class="tab-sub">Mensch, Zwerg, Elf, Oger, Löwenkrieger &amp; Sci-Fi</span>
+          </button>
+        </div>
+
+        <!-- 3D-Werkbank -->
+        <div class="creator-workbench">
+          <!-- Linke Seite: Interaktiver 360° 3D-Spieltisch -->
+          <div class="creator-viewport-wrap">
+            <div class="viewport-hud-top">
+              <div class="hud-pill">
+                Modus: <strong id="hud-active-mode">Eigene Datei prüfen (360°)</strong>
+              </div>
+              <div class="hud-pill">
+                Geometrie: <strong id="hud-tri-count">—</strong> Tris · <span style="color:#7ef2a6;">VTT- &amp; Druck-bereit</span>
+              </div>
+            </div>
+
+            <canvas id="forge-3d-canvas" aria-label="Interaktive 3D-Vorschau der Miniaturen-Schmiede"></canvas>
+
+            <div class="viewport-toolbar-bottom">
+              <div class="export-btn-group">
+                <button type="button" class="btn-tool-action" id="btn-cam-reset" title="Kamera zurücksetzen">🎯 Zentrieren</button>
+                <button type="button" class="btn-tool-action" id="btn-toggle-spin" title="Automatische Drehung umschalten">🔄 Drehteller: An</button>
+                <button type="button" class="btn-tool-action" id="btn-toggle-wire" title="Polygon-Gitternetz prüfen">🕸️ Gitternetz</button>
+              </div>
+              <div class="export-btn-group">
+                <button type="button" class="btn-tool-action" id="btn-export-stl" title="Aktuelles 3D-Modell kostenlos als druckbare .STL herunterladen">
+                  💾 .STL laden (3D-Druck)
+                </button>
+                <button type="button" class="btn-tool-action" id="btn-export-glb" title="Aktuelles 3D-Modell als .GLB für Foundry VTT (3D) &amp; Blender herunterladen">
+                  📦 .GLB laden (3D-VTT)
+                </button>
+                <button type="button" class="btn-tool-action" id="btn-export-png" title="2D-Vorschau als PNG speichern">
+                  🖼️ .PNG Bild
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rechte Seite: Parameter-Steuerung -->
+          <div class="creator-controls-panel">
+            <h3 style="font-family: var(--font-cinzel); color: #fff; font-size: 1.12rem; border-bottom: 1px solid var(--border-iron); padding-bottom: 10px;">
+              ⚙️ Werkstück anpassen
+            </h3>
+
+            <!-- Gemeinsame Farb- & Materialwahl -->
+            <div class="control-group">
+              <label for="ctrl-color-scheme">
+                <span>🎨 Farb- &amp; Oberflächen-Stil</span>
+                <span style="color: var(--text-dim); font-weight: 400;">Live-Vorschau</span>
+              </label>
+              <select id="ctrl-color-scheme">
+                <option value="original_tex">Original-Textur behalten (bei .GLB)</option>
+                <option value="sundrop" selected>Edles Knochen-Sundrop (Brettspiel-Stil)</option>
+                <option value="glutrot">Glutrot, Schmiedeeisen &amp; Messing</option>
+                <option value="blau_rot">Königsblau, Karmesinrot &amp; Gold</option>
+                <option value="eiche_eisen">Dunkle Eiche, Leder &amp; Eisenbeschlag</option>
+                <option value="arkan_cyan">Sci-Fi Titanstahl &amp; Holo-Cyan</option>
+                <option value="giftgruen">Seuchen-/Giftgrün &amp; Dunkelbronze</option>
+                <option value="roh_grau">Unbemaltes Rein-Clay / Harz-Grau (Qualitäts-Check)</option>
+              </select>
+            </div>
+
+            <!-- PANEL 0: KUNDENDATEI PRÜFEN & UMBAUEN (360°) -->
+            <div id="panel-kundendatei" class="tab-control-stack" style="display:flex; flex-direction:column; gap:14px;">
+              <div class="control-group">
+                <label for="cust-file-input">
+                  <span>📂 Eigene 3D-Datei laden (.STL / .OBJ / .GLB)</span>
+                  <span style="color:#7ef2a6; font-weight:600; font-size:0.78rem;">🔒 100 % lokal &amp; DSGVO-sicher</span>
+                </label>
+                <input type="file" id="cust-file-input" accept=".stl,.obj,.glb,.gltf" style="background:var(--bg-deep); border:1px dashed var(--border-gold); padding:10px; border-radius:8px; color:#fff; width:100%; cursor:pointer;">
+                <p style="font-size:0.77rem; color:var(--text-muted); margin:4px 0 0 0;">
+                  Deine Datei wird ausschließlich lokal in deinem Browser gerendert und nicht vorab hochgeladen.
+                </p>
+              </div>
+
+              <div style="display:flex; gap:8px;">
+                <button type="button" class="btn-tool-action" id="btn-cust-reset-demo" style="flex:1;">
+                  ↺ Beispiel-Miniatur zurücksetzen
+                </button>
+              </div>
+
+              <!-- Geometrie- & VTT-Tauglichkeits-Anzeige -->
+              <div class="cust-analysis-card" style="background:rgba(9,8,7,0.7); border:1px solid var(--border-iron); border-radius:8px; padding:12px; display:flex; flex-direction:column; gap:8px;">
+                <div style="font-family:var(--font-cinzel); color:var(--gold-bright); font-size:0.9rem; font-weight:700; border-bottom:1px solid rgba(255,255,255,0.08); padding-bottom:6px;">
+                  📊 Erkannte Geometrie &amp; VTT-Status
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.83rem;">
+                  <span style="color:var(--text-muted);">Erkannte Dreiecke:</span>
+                  <strong id="cust-tri-count" style="color:#fff;">15.694 Tris (VTT-ideal)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.83rem;">
+                  <span style="color:var(--text-muted);">Proportionales Verhältnis (B×T×H):</span>
+                  <strong id="cust-dimensions" style="color:#fff;">1,0 : 0,9 : 1,4</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.83rem;">
+                  <span style="color:var(--text-muted);">Empfohlene Größenklasse:</span>
+                  <strong id="cust-size-class" style="color:var(--gold);">Standard (25–32 mm)</strong>
+                </div>
+                <div style="display:flex; justify-content:space-between; font-size:0.83rem;">
+                  <span style="color:var(--text-muted);">VTT- &amp; Druck-Tauglichkeit:</span>
+                  <strong id="cust-vtt-verdict" style="color:#7ef2a6;">Bereit für TTS &amp; Foundry VTT</strong>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label for="cust-target-transform">🎯 Gewünschte Transformation</label>
+                <select id="cust-target-transform">
+                  <option value="stl_to_vtt">Druckdatei (.STL/.OBJ) ➔ Spielfertig für TTS &amp; Foundry VTT (.GLB + 2D-Token)</option>
+                  <option value="vtt_to_stl">VTT-Modell (.GLB/TTS) ➔ Wasserdichte 3D-Druck-.STL + Auto-Baumstützen</option>
+                  <option value="living_mini">Living-Miniature Mikro-Animation (Atem &amp; Waffenruhe für 3D-VTT)</option>
+                  <option value="recolor_sundrop">Farbveredelung: Knochen-Sundrop Shading</option>
+                  <option value="custom_paint">Farbveredelung: Gezielte Wunschfarben (+48 Std.)</option>
+                  <option value="full_package">Komplettpaket (Alle VTTs + Living Mini + 3D-Druck-STL mit Stützen)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="cust-base-plate">⭕ Virtueller Sockel (Base)</label>
+                <select id="cust-base-plate">
+                  <option value="round_stone">Rund-Base (Klassischer Tabletop-Steinsockel)</option>
+                  <option value="hex_slate">Hex-Base (Taktik- &amp; Auritan-Schieferplatte)</option>
+                  <option value="none">Kein Sockel (Freistehendes Original)</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- PANEL 1: TABLETOP-MARKER & TOKENS -->
+            <div id="panel-marker" class="tab-control-stack" style="display:none; flex-direction:column; gap:14px;">
+              <div class="control-group">
+                <label for="marker-symbol">🔥 Marker-Aufsatz / Effekt-Symbol</label>
+                <select id="marker-symbol">
+                  <option value="fire">🔥 Feuer-Symbol / Brandherd (3D-Flamme)</option>
+                  <option value="label_sign">🏷️ Freier Beschriftungs-Aufsteller (Spielleiter-Schild)</option>
+                  <option value="skull">💀 Totenkopf / Fluch- &amp; Verwundungs-Marker</option>
+                  <option value="obelisk">💎 Arkaner Missionsziel-Obelisk</option>
+                  <option value="shield">🛡️ Wappenschild- &amp; Verteidigungs-Marker</option>
+                  <option value="scifi_beacon">⚡ Sci-Fi Energie- &amp; Sektor-Bake</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="marker-base-shape">⭕ Sockel-Form (Base)</label>
+                <select id="marker-base-shape">
+                  <option value="round">Rund-Base (Klassisches Tabletop 25–50 mm)</option>
+                  <option value="hex">Hex-Base (Taktik- &amp; Auritan-Raster)</option>
+                  <option value="octagon">Schwerer Achteck-Steinsockel</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="marker-label-text">
+                  <span>✍️ Freie Beschriftung (Live auf Plakette)</span>
+                  <span style="color: var(--text-dim); font-weight: 400;">max. 18 Zeichen</span>
+                </label>
+                <input type="text" id="marker-label-text" maxlength="18" value="BRENNT" placeholder="z. B. BRENNT, ZIEL A, GIFT, WACHE...">
+              </div>
+
+              <div class="control-group">
+                <label for="marker-size-mm">
+                  <span>📏 Sockel-Größe</span>
+                  <span id="val-marker-size">32 mm</span>
+                </label>
+                <input type="range" id="marker-size-mm" min="25" max="50" step="1" value="32">
+              </div>
+            </div>
+
+            <!-- PANEL 2: LANDMARKEN & WAPPEN-FLAGGEN -->
+            <div id="panel-flagge" class="tab-control-stack" style="display:none; flex-direction:column; gap:14px;">
+              <div class="control-group">
+                <label for="flag-style">🚩 Standarten- &amp; Flaggen-Bauform</label>
+                <select id="flag-style">
+                  <option value="cross_banner">Hängendes Kreuzbanner (Ritter &amp; Orden)</option>
+                  <option value="war_standard">Wehende Kriegsflagge am Speerschaft</option>
+                  <option value="scifi_holo">Sci-Fi Sektor- &amp; Laser-Holoflagge</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="flag-emblem">🦅 Wappen-Symbol im Zentrum</label>
+                <select id="flag-emblem">
+                  <option value="swords">⚔️ Gekreuzte Klingen &amp; Lorbeer</option>
+                  <option value="lion">🦁 Gekröntes Löwenwappen</option>
+                  <option value="skull_crown">💀 Inquisitions-Schädelkrone</option>
+                  <option value="flame_chalice">🔥 Ewige Schmiedeflamme</option>
+                  <option value="star_wing">🚀 Sci-Fi Flotten-Sternenemblem</option>
+                  <option value="rune_shield">🛡️ Zwergische Schutzrune</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="flag-motto">
+                  <span>📜 Spruchband / Regimentsname</span>
+                  <span style="color: var(--text-dim); font-weight: 400;">max. 16 Zeichen</span>
+                </label>
+                <input type="text" id="flag-motto" maxlength="16" value="VORHUT I" placeholder="z. B. AURITAN, NORDWACHT, SEKTOR 7">
+              </div>
+
+              <div class="control-group">
+                <label for="flag-wind">
+                  <span>💨 Windbewegung im Fahnentuch</span>
+                  <span id="val-flag-wind">45 %</span>
+                </label>
+                <input type="range" id="flag-wind" min="0" max="100" step="5" value="45">
+              </div>
+            </div>
+
+            <!-- PANEL 3: SCHREIBTISCHE, SCHRÄNKE & SCI-FI-MÖBEL -->
+            <div id="panel-moebel" class="tab-control-stack" style="display:none; flex-direction:column; gap:14px;">
+              <div class="control-group">
+                <label for="furn-type">🪑 Möbelstück / Raum-Objekt</label>
+                <select id="furn-type">
+                  <option value="scholar_desk">📜 Individueller Gelehrten- &amp; Alchemisten-Schreibtisch</option>
+                  <option value="scifi_desk">🖥️ Sci-Fi Holo-Kommandotisch &amp; Brücke</option>
+                  <option value="bookcase">📚 Großer Folianten- &amp; Bücherschrank</option>
+                  <option value="wardrobe">🗄️ Massiver Rüstungs- &amp; Doppelschrank</option>
+                  <option value="scifi_locker">🔋 Sci-Fi Waffen- &amp; Stase-Spind</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="furn-width">
+                  <span>↔️ Individuelle Breite</span>
+                  <span id="val-furn-width">100 %</span>
+                </label>
+                <input type="range" id="furn-width" min="70" max="160" step="5" value="100">
+              </div>
+
+              <div class="control-group">
+                <label for="furn-height">
+                  <span>↕️ Aufbau / Fachböden-Stufe</span>
+                  <span id="val-furn-height">3 Ebenen</span>
+                </label>
+                <input type="range" id="furn-height" min="2" max="5" step="1" value="3">
+              </div>
+
+              <div class="control-group">
+                <label for="furn-clutter">
+                  <span>🕯️ Tisch- &amp; Schrank-Ausstattung (Bücher, Kerzen, Holo)</span>
+                  <span id="val-furn-clutter">75 %</span>
+                </label>
+                <input type="range" id="furn-clutter" min="0" max="100" step="25" value="75">
+              </div>
+            </div>
+
+            <!-- PANEL 4: FIGUREN-BAUKASTEN (VORSCHAU STUFEN 2 & 3) -->
+            <div id="panel-figur" class="tab-control-stack" style="display:none; flex-direction:column; gap:14px;">
+              <div class="control-group">
+                <label for="char-body">🧬 Körperform / Volk (Eigene Schmiede-Archetypen)</label>
+                <select id="char-body">
+                  <option value="human">Menschlicher Recke / Söldner</option>
+                  <option value="dwarf">Zwergen-Eisenwache (kompakt &amp; breit)</option>
+                  <option value="elf">Elfen-Kundschafter (schlank &amp; hochgewachsen)</option>
+                  <option value="ogre">Schwerer Oger-Brecher (Großkreatur)</option>
+                  <option value="lionfolk">Löwenkopf-Krieger (Mähne &amp; Bestienhaupt)</option>
+                  <option value="scifi_trooper">Sci-Fi Sturm-Gardist (Visierhelm &amp; Reaktor)</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="char-weapon">⚔️ Hauptwaffe (Rechte Hand)</label>
+                <select id="char-weapon">
+                  <option value="sword">Ritter-Breitschwert</option>
+                  <option value="hammer">Schwerer Zweihand-Kriegshammer</option>
+                  <option value="axe">Zwergische Bartaxt</option>
+                  <option value="staff">Arkaner Kristallstab</option>
+                  <option value="plasma_rifle">Sci-Fi Impuls- &amp; Plasmagewehr</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="char-offhand">🛡️ Nebenhand / Rücken-Ausrüstung</label>
+                <select id="char-offhand">
+                  <option value="shield">Schwerer Wappenschild</option>
+                  <option value="torch">Brennende Dungeon-Fackel</option>
+                  <option value="back_banner">Rücken-Standarte des Anführers</option>
+                  <option value="none">Freie Kampfeinsatz-Hand</option>
+                </select>
+              </div>
+
+              <div class="control-group">
+                <label for="char-pose">🕺 Standpose auf dem Sockel</label>
+                <select id="char-pose">
+                  <option value="heroic">Heldenhafte Bereitschaft</option>
+                  <option value="guard">Schildwall / Defensive Wache</option>
+                  <option value="march">Vorstoß / Angriffsschritt</option>
+                </select>
+              </div>
+            </div>
+
+            <!-- Preis- & Übernahme-Box -->
+            <div class="creator-price-tag-box">
+              <div class="creator-price-row">
+                <span id="creator-item-summary" style="color:#fff; font-weight:600;">Marker: Feuer-Symbol („BRENNT“)</span>
+                <span class="creator-coin-val" id="creator-coin-cost">150 Münzen / Set</span>
+              </div>
+              <p id="creator-export-hint" style="font-size: 0.79rem; color: var(--text-muted); margin: 0;">
+                💡 <strong>Tipp:</strong> Du kannst dieses Modell links unten sofort <strong>kostenlos als .STL oder .GLB</strong> zum Testen herunterladen — oder als voll ausgearbeitetes High-Detail-Set bei uns anfragen!
+              </p>
+              <button type="button" class="btn-primary btn-sm" id="btn-add-to-order" style="width:100%; justify-content:center; margin-top:4px;">
+                <span>➕ Entwurf in Münz-Rechner &amp; Anfrage übernehmen</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         3. VORHER/NACHHER VITRINE, GRATIS-MUSTER & MARKTVERGLEICH
+         ======================================================== -->
+    <section class="showcase-section" id="gratis-muster">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-kicker-row">
+            <span class="section-kicker">ECHTE SCHMIEDE-ERGEBNISSE · KEINE LEEREN VERSPRECHEN</span>
+            <span class="status-pill-active">4-Stufen-Durchlauf &amp; 12,5 MB Gratis-Musterpaket</span>
+          </div>
+          <h2>Von der Rohdatei in alle 4 Zielformate</h2>
+          <p class="section-lead">
+            Egal ob du eine graue Druckdatei bemalt auf deinen Spieltisch bringen willst oder ein Spielmodell druckfertig mit Stützstreben für deinen Resin-Drucker brauchst: Hier siehst du unseren <strong>echten 4-Stufen-Qualitätsdurchlauf an einem einzigen Modell</strong> — inklusive ungeschminkter Rein-Clay-Prüfung und 360°-Drehteller!
+          </p>
+        </div>
+
+        <!-- Flaggschiff: 4-Stufen-Komplettbeispiel + 360° Live-Videos -->
+        <div class="pipeline-showcase-shell" id="komplettbeispiel">
+          <div class="pipeline-showcase-poster">
+            <a href="#" class="forge-4stage-trigger modal-trigger" data-modal="modal-showcase-4stufen" title="In voller Originalauflösung vergrößern">
+              <img src="../assets/schmiede/miniaturen_schmiede_4_stufen_showcase.webp" alt="4-Stufen-Komplettbeispiel der Miniaturen-Schmiede: 360-Grad Rein-Clay Prüfung, Tabletop Simulator und Foundry VTT Paket inklusive 2D-Token, Living-Miniature Animation und wasserdichter 3D-Druck mit Auto-Baumstützen" loading="lazy">
+              <span class="forge-zoom-pill">🔍 Vollbild-Ansicht öffnen (1480 px Detailprüfung)</span>
+            </a>
+          </div>
+
+          <div class="pipeline-showcase-side">
+            <div class="pipeline-video-card">
+              <div class="pipeline-video-tag">✨ SCHRITT 3 LIVE · LIVING-MINIATURE MIKRO-ANIMATION (360°)</div>
+              <video src="../assets/schmiede/warrok_living_360_hp.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+              <p>Dezenter Atem &amp; ruhige Präsenz auf dem 3D-Spieltisch (<strong>Foundry VTT</strong>) — 0,00 mm Sockel-Wackeln und formstabile Kopf-/Rüstungspartie.</p>
+            </div>
+
+            <div class="pipeline-video-card">
+              <div class="pipeline-video-tag">🌳 SCHRITT 4 LIVE · DRUCK-STL, INSEL-RADAR &amp; AUTO-BAUMSTÜTZEN (360°)</div>
+              <video src="../assets/schmiede/warrok_print_supports_360_hp.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+              <p>Links wasserdichtes STL (0 Non-Manifold), mittig automatische Rückenneigung &amp; Überhang-Radar, rechts feine 0,34-mm-Sollbruchspitzen — <strong>Gesicht &amp; Brust bleiben 100 % frei!</strong></p>
+            </div>
+
+            <div class="pipeline-cta-box">
+              <strong>Bereit für deine eigenen Figuren?</strong>
+              <span>Teste deine Datei oben live im 360°-Prüfer oder sichere dir direkt einen der 15 Gratis-Betaplätze!</span>
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:6px;">
+                <a href="#beta-test" class="btn-primary btn-sm"><span>🎁 5 Figuren Gratis-Beta anfragen</span></a>
+                <a href="#erschaffung" class="btn-secondary btn-sm"><span>🔍 Eigene Datei oben prüfen</span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sample-cards-grid">
+          <!-- Karte 1: Boss-Drache -->
+          <article class="sample-card">
+            <img src="../assets/schmiede/drache_vorher_nachher.png" alt="Vorher graue Drachen-STL mit 250.000 Polygonen, nachher edles Knochen-Sundrop Modell mit 15.694 Polygonen" loading="lazy">
+            <div class="sample-card-body">
+              <span class="sample-meta">STUFE 1 · AUTOMATISCHES KNOCHEN-SUNDROP · 250 MÜNZEN (GROSSMODELL)</span>
+              <h3>Uralter Boss-Drache (250k ➔ 15.694 Tris)</h3>
+              <p>
+                Aus einer riesigen 3D-Druckdatei entsteht ein flüssig spielbares Boss-Modell mit sauber gebackener 2K-Schatten- &amp; Normal-Textur, abgerundeter Spielbase und absturzsicherer Konvex-Kollisionshülle (&lt;180 Tris) für den Tabletop Simulator.
+              </p>
+            </div>
+          </article>
+
+          <!-- Karte 2: Ritter Wunschfarben -->
+          <article class="sample-card">
+            <img src="../assets/schmiede/ritter_vorher_nachher.png" alt="Vorher einfarbig grauer Ritter, nachher bemalter Ritter in Königsblau, Karmesinrot, Stahl und Gold" loading="lazy">
+            <div class="sample-card-body">
+              <span class="sample-meta">STUFE 2 · DIGITALER MALKASTEN (+48 STD.) · GEZIELTE WUNSCHFARBEN</span>
+              <h3>Helden-Ritter in Königsblau &amp; Karmesinrot</h3>
+              <p>
+                Du schreibst uns z. B. <em>„Helm, Umhang &amp; Schild in Karmesinrot, Schulterpanzer in Königsblau, Parierstange in Gold“</em> — wir legen die Farbzonen gezielt für dich an und prüfen den Sitz von Hand vor der Auslieferung.
+              </p>
+            </div>
+          </article>
+
+          <!-- Karte 3: 2D Token + Gratis-ZIP -->
+          <article class="sample-card token-card">
+            <img src="../assets/schmiede/ritter_token_2d.webp" alt="Freigestellter 1024x1024 Top-Down VTT Token des Ritters" loading="lazy">
+            <div class="sample-card-body">
+              <span class="sample-meta">ALL-VTT KOMPLETTPAKET · SOFORT TESTEN</span>
+              <h3>Gratis-Musterpaket laden</h3>
+              <p>
+                Überzeuge dich selbst auf deinem eigenen Spieltisch! Enthält den fertigen Ritter für <strong>Tabletop Simulator</strong>, die 3D-<code>.glb</code>-Datei (kompatibel mit <strong>Foundry VTT</strong> 3D-Modulen) sowie den transparenten 2D-Token.
+              </p>
+              <a href="../assets/schmiede/BAALPHEMOR_Muster_Ritter_All_VTT.zip" download class="btn-primary btn-sm" style="justify-content:center; text-align:center;">
+                <span>📦 Muster-ZIP herunterladen (12,5 MB)</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Ehrlicher Markt- & Preisvergleich -->
+        <div class="comparison-wrap">
+          <h3 style="font-family: var(--font-cinzel); color: #fff; font-size: 1.28rem; margin-bottom: 14px; text-align: center;">
+            ⚖️ Ehrlicher Marktvergleich: Warum sich die Schmiede für Spielleiter &amp; Armeen lohnt
+          </h3>
+          <table class="forge-table">
+            <thead>
+              <tr>
+                <th>Anbieter / Weg</th>
+                <th>Eigene fremde STLs umbauen?</th>
+                <th>TTS + Foundry VTT (.GLB) + 2D Token?</th>
+                <th>Farbgebung</th>
+                <th>Typischer Preis pro Figur</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-baalphemor-row">
+                <td>⚒️ BAALPHEMOR Miniaturen-Schmiede</td>
+                <td>✅ Ja (alle legal gekauften STLs + eigener Baukasten)</td>
+                <td>✅ Alles in 1 Paket enthalten</td>
+                <td>✅ Edles Sundrop inklusive · Wunschfarben optional (+48 Std.)</td>
+                <td><strong>ab 0,75 € – 1,00 €</strong> (Sundrop) · ca. 3,50 € (Wunschfarben)</td>
+              </tr>
+              <tr>
+                <td>Hero Forge (3D Digital Download)</td>
+                <td>❌ Nein (nur im eigenen geschlossenen Editor)</td>
+                <td>⚠️ Nur 3D-VTT-Format, keine fremden STLs</td>
+                <td>✅ Im Editor einfärbbar</td>
+                <td>ca. 7,99 € pro Einzelfigur</td>
+              </tr>
+              <tr>
+                <td>Eldritch Foundry / TitanCraft</td>
+                <td>❌ Nein (nur eigene Baukasten-Teile)</td>
+                <td>⚠️ Meist nur Roh-STL zum Selbst-Konvertieren</td>
+                <td>❌ Oft unbemalt / grau</td>
+                <td>ca. 4,00 € – 5,00 € bzw. Monats-Abo</td>
+              </tr>
+              <tr>
+                <td>Manueller Freelancer (z. B. Fiverr)</td>
+                <td>✅ Ja (Einzelabsprache auf Englisch)</td>
+                <td>⚠️ Oft Aufpreis je Zielsystem</td>
+                <td>✅ Handarbeit, aber teuer bei Gruppen</td>
+                <td>ca. 15,00 € – 45,00 € pro Modell</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         4. MÜNZ- & DIREKTZAHLUNGS-RECHNER (KEIN ABO-ZWANG!)
+         ======================================================== -->
+    <section class="calculator-section" id="preisrechner">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-kicker-row">
+            <span class="section-kicker">1 SCHMIEDEMÜNZE = 1 CENT BASISWERT · MÜNZEN VERFALLEN NIE</span>
+            <span class="status-pill-active">Einmalzahlung ODER Spar-Münzbeutel</span>
+          </div>
+          <h2>Fairer Münz- &amp; Direktzahlungs-Rechner</h2>
+          <p class="section-lead">
+            Du hast die volle Wahl: Zahle einen einzelnen Auftrag <strong>passgenau als Einmalzahlung</strong> — oder sichere dir für Heldengruppen und ganze Armeen ein <strong>nicht verfallendes Münzpaket mit bis zu 25,5 % Mengenrabatt</strong>. Große Monster und Panzer berechnen wir transparent nach echtem Rechen- und Prüfaufwand.
+          </p>
+        </div>
+
+        <div class="calc-grid">
+          <!-- Linke Karte: Mengen eingeben -->
+          <div class="calc-inputs-card">
+            <h3 style="font-family: var(--font-cinzel); color: #fff; font-size: 1.15rem; margin-bottom: 12px;">
+              1. Was soll in den Schmiedeofen?
+            </h3>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>🛡️ Menschengroße Helden &amp; Infanterie</strong>
+                <span>Inkl. Polygon-Reduktion, Konvex-Kollision, Sundrop, TTS + .GLB + 2D Token (100 Münzen)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-standard" min="0" max="500" value="5" aria-label="Anzahl Standard-Figuren">
+            </div>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>👹 Oger, Kavallerie &amp; Große Kreaturen</strong>
+                <span>Größere Base &amp; höheres Textur-Volumen beim Schattieren (150 Münzen)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-large" min="0" max="200" value="2" aria-label="Anzahl Oger oder Kavallerie">
+            </div>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>🐉 Riesen, Drachen, Monster &amp; Panzer</strong>
+                <span>Mehrteilige Hüllen-Prüfung, komplexe Überhänge &amp; 2K-Boss-Aufbereitung (250 Münzen)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-colossus" min="0" max="100" value="0" aria-label="Anzahl Riesen, Drachen oder Panzer">
+            </div>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>🎨 Aufpreis: Gezielte Wunschfarben (Digitaler Malkasten)</strong>
+                <span>z. B. „Rüstung Blau &amp; Rot“ inkl. manueller Nachkontrolle (+250 Münzen / Modell · +48 Std.)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-custom-paint" min="0" max="200" value="1" aria-label="Anzahl Modelle mit gezielten Wunschfarben">
+            </div>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>✨ Aufpreis: Living-Miniature Mikro-Animation</strong>
+                <span>Dezenter Atem &amp; Waffenruhe für 3D-VTTs wie Foundry VTT (+150 Münzen / Modell)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-living-anim" min="0" max="200" value="0" aria-label="Anzahl Living-Miniature Animationen">
+            </div>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>🌳 Aufpreis: Wasserdichte 3D-Druck-.STL inkl. Auto-Baumstützen</strong>
+                <span>0 Non-Manifold + frontfreie Resin-Baumstützen zum Direktdruck (+150 Münzen / Modell)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-print-supports" min="0" max="200" value="0" aria-label="Anzahl druckfertige STLs mit Baumstützen">
+            </div>
+
+            <div class="calc-row">
+              <div class="calc-row-info">
+                <strong>🪑 Individuelles Möbel- / Flaggen- / Marker-Set</strong>
+                <span>Ausgearbeitetes Paket aus dem 3D-Erschaffungsmodul für Druck &amp; VTT (150 Münzen / Set)</span>
+              </div>
+              <input type="number" class="calc-qty-input" id="qty-baukasten-set" min="0" max="100" value="1" aria-label="Anzahl Baukasten-Sets">
+            </div>
+
+            <!-- Aktionscode-Feld -->
+            <div style="margin-top: 18px; padding-top: 14px; border-top: 1px solid var(--border-iron);">
+              <label for="promo-code-input" style="font-size: 0.82rem; font-weight: 600; color: var(--gold); display: block; margin-bottom: 6px;">
+                🎟️ Aktionscode für Bonus-Münzen testen (z. B. <code>SCHMIEDESTART</code>):
+              </label>
+              <div style="display: flex; gap: 8px;">
+                <input type="text" id="promo-code-input" placeholder="Aktionscode eingeben..." style="flex:1; background: var(--bg-deep); border: 1px solid var(--border-iron); border-radius: 8px; padding: 9px 12px; color: #fff;">
+                <button type="button" class="btn-tool-action" id="btn-apply-promo">Einlösen</button>
+              </div>
+              <p id="promo-feedback" style="font-size: 0.8rem; color: var(--emerald); margin-top: 6px; display: none;"></p>
+            </div>
+          </div>
+
+          <!-- Rechte Karte: Vergleich Direktzahlung vs. Münzpaket -->
+          <div class="calc-summary-card">
+            <h3 style="font-family: var(--font-cinzel); color: #fff; font-size: 1.15rem; margin-bottom: 12px;">
+              2. Dein transparenter Preis- &amp; Zeitüberblick
+            </h3>
+
+            <div style="display:flex; justify-content:space-between; padding:10px 14px; background:var(--bg-deep); border-radius:10px; border:1px solid var(--border-iron); margin-bottom:14px;">
+              <div>
+                <span style="font-size:0.78rem; color:var(--text-muted); display:block;">Umfang deines Projekts</span>
+                <strong id="calc-total-models" style="color:#fff; font-size:1.05rem;">8 Werkstücke</strong>
+              </div>
+              <div style="text-align:right;">
+                <span style="font-size:0.78rem; color:var(--text-muted); display:block;">Benötigte Schmiedemünzen</span>
+                <strong id="calc-total-coins" style="color:var(--gold-bright); font-family:var(--font-oswald); font-size:1.25rem;">1.200 Münzen</strong>
+              </div>
+            </div>
+
+            <!-- Option A: Passgenaue Einmalzahlung -->
+            <div class="checkout-option-box">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <strong style="color:#fff;">Option A: Passgenaue Direktzahlung</strong>
+                <span id="calc-direct-eur" style="font-family:var(--font-oswald); font-size:1.22rem; color:#fff;">12,00 €</span>
+              </div>
+              <p style="font-size:0.82rem; color:var(--text-muted); margin:0;">
+                Kein Münzkonto nötig — du zahlst exakt diesen Einzelauftrag (Mindestbetrag bei Kleinstaufträgen: 2,99 € wegen Zahlungsgebühren).
+              </p>
+            </div>
+
+            <!-- Option B: Nicht verfallendes Münzpaket -->
+            <div class="checkout-option-box recommended">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                <strong style="color:var(--gold-bright);">🪙 Option B: Spar-Münzpaket (verfällt nie!)</strong>
+                <span id="calc-pack-eur" style="font-family:var(--font-oswald); font-size:1.3rem; color:var(--gold-bright);">13,49 €</span>
+              </div>
+              <p id="calc-pack-name" style="font-size:0.88rem; color:#fff; font-weight:600; margin-bottom:4px;">
+                Empfehlung: Heldengruppen-Beutel (1.500 Münzen · 10 % Rabatt)
+              </p>
+              <p id="calc-pack-savings" style="font-size:0.82rem; color:#9df5bc; margin:0;">
+                Effektiv nur 0,90 € pro 100 Münzen — und dir bleiben <strong id="calc-leftover-coins">300 Münzen</strong> dauerhaft für künftige Figuren erhalten!
+              </p>
+            </div>
+
+            <!-- Alle 4 Münzstaffeln auf einen Blick -->
+            <div style="font-size:0.79rem; color:var(--text-muted); padding:10px 12px; background:rgba(9,8,7,0.55); border-radius:8px; margin-bottom:12px;">
+              <strong style="color:var(--gold);">Alle Münzpakete (kein Verfall):</strong>
+              600 M. = 5,49 € (-8,5 %) · 1.500 M. = 13,49 € (-10 %) · 5.000 M. = 41,99 € (-16 %) · <strong>20.000 M. Armee-Paket = 149,00 € (-25,5 %)</strong>
+            </div>
+
+            <!-- Bearbeitungszeit-Anzeige -->
+            <div style="font-size:0.85rem; color:var(--text-primary); padding:10px 12px; border-left:3px solid var(--gold); background:rgba(216,176,101,0.08); border-radius:6px;">
+              ⏱️ <strong>Voraussichtliche Schmiedezeit:</strong> <span id="calc-turnaround-text">bis zu 72 Std. + 48 Std. (Wunschfarben-Prüfung)</span>
+            </div>
+
+            <!-- Automatischer Großauftrags-Schutzhinweis (ab >15 Modellen oder Armee-Paket) -->
+            <div class="bulk-delay-warning" id="calc-bulk-warning" role="status">
+              ⚠️ <strong>Fairer Hinweis für Großaufträge &amp; 20.000-Münzen-Armeen:</strong> Da Baal jedes Paket persönlich am Werkrechner prüft, werden Großaufträge ab über 15 Figuren in sauberen Wellen abgearbeitet. Plane je weiteren 25 Modellen bitte ca. <strong>+24 bis +48 Stunden zusätzliche Bearbeitungszeit</strong> ein — du erhältst deine fertigen Trupps gerne schon etappenweise vorab!
+            </div>
+
+            <button type="button" class="btn-primary" id="btn-transfer-calc-to-beta" style="width:100%; justify-content:center; margin-top:16px;">
+              <span>📨 Diese Zusammenstellung unten anfragen / Beta nutzen</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
+         5. GRATIS-BETA-BEWERBUNG & AUFTRAGS-ANFRAGE
+         ======================================================== -->
+    <section class="beta-section" id="beta-test">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-kicker-row">
+            <span class="section-kicker">OFFENE BETA-PHASE · 15 TEST-PLÄTZE VERFÜGBAR</span>
+            <span class="status-pill-active">Kostenlos gegen ehrliches Feedback</span>
+          </div>
+          <h2>Teste die Schmiede mit deinen eigenen Figuren</h2>
+          <p class="section-lead">
+            Bevor der automatisierte Münz-Checkout startet, lade ich <strong>15 Spielleiter, Tabletop-Vereine und VTT-Runden</strong> ein: Ich baue dir <strong>bis zu 5 eigene Figuren komplett kostenlos</strong> um (inkl. Sundrop oder 1 Wunschfarb-Test) — im Gegenzug sagst du mir ehrlich, wie sie sich an deinem Spieltisch schlagen!
+          </p>
+        </div>
+
+        <div class="beta-form-card">
+          <form id="schmiede-order-form">
+            <!-- Honeypot gegen Bots -->
+            <input type="text" name="website" id="beta-hp-website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute; left:-9999px; opacity:0; pointer-events:none;">
+
+            <div class="beta-grid-2">
+              <div class="beta-field">
+                <label for="beta-name">Dein Name / Spielleiter-Alias *</label>
+                <input type="text" id="beta-name" required maxlength="100" placeholder="z. B. Markus / DM_Schattenwald">
+              </div>
+              <div class="beta-field">
+                <label for="beta-email">Deine E-Mail-Adresse für den Download-Link *</label>
+                <input type="email" id="beta-email" required maxlength="160" placeholder="deine@mail.de">
+              </div>
+            </div>
+
+            <div class="beta-grid-2">
+              <div class="beta-field">
+                <label for="beta-vtt-target">Dein Haupt-Spieltisch / Zielsystem</label>
+                <select id="beta-vtt-target">
+                  <option value="Tabletop Simulator">🎲 Tabletop Simulator (Steam)</option>
+                  <option value="Foundry VTT (3D &amp; 2D)">🗺️ Foundry VTT (3D-Canvas .GLB &amp; 2D-Token)</option>
+                  <option value="Beides: Tabletop Simulator + Foundry VTT">⚔️ Beides (Tabletop Simulator + Foundry VTT)</option>
+                  <option value="Roll20 / Owlbear Rodeo (2D Top-Down)">🖼️ Roll20 / Owlbear Rodeo (2D Top-Down-Tokens)</option>
+                  <option value="3D-Druck (.STL) + VTT-Gegenstück">🖨️ Physischer 3D-Druck (.STL) + digitales VTT-Gegenstück</option>
+                  <option value="VTT / Spielmodell (.GLB / TTS) -> Wasserdichte 3D-Druck-.STL (inkl. Baumstützen)">🌳 VTT / Spielmodell (.GLB / TTS) ➔ Wasserdichte 3D-Druck-.STL (inkl. Baumstützen)</option>
+                  <option value="Komplettpaket: Alle VTTs + Living Miniature + Druckfertige .STL">👑 Komplettpaket: Alle VTTs + Living Miniature + Druckfertige .STL</option>
+                </select>
+              </div>
+              <div class="beta-field">
+                <label for="beta-order-mode">Art deiner Anfrage</label>
+                <select id="beta-order-mode">
+                  <option value="Gratis-Beta (bis zu 5 Figuren gegen Feedback)">🎁 Gratis-Beta: Bis zu 5 Figuren kostenlos gegen Feedback</option>
+                  <option value="3D-Baukasten Wunsch (Marker / Flaggen / Möbel)">🪑 Wunsch-Modell aus dem 3D-Erschaffungsmodul</option>
+                  <option value="Reguläre Auftrags-Vormerkung / Armee-Projekt">🪙 Vormerkung für regulären Auftrag / Münzpaket</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="beta-field">
+              <label for="beta-model-notes">Welche Figuren, Marker oder Möbel möchtest du umbauen / erschaffen lassen? (Optional mit Cloud-Link &amp; Farbwunsch)</label>
+              <textarea id="beta-model-notes" rows="4" maxlength="2000" placeholder="Beschreibe kurz deine Figuren (z. B. 4 Helden + 1 Oger), etwaige Wunschfarben (z. B. Rüstung Blau &amp; Rot) oder füge deine Auswahl aus dem 3D-Baukasten ein. Einen WeTransfer-/Drive-Link zu deinen STLs kannst du direkt hier oder nach meiner Antwort schicken!"></textarea>
+            </div>
+
+            <label class="beta-rights-check">
+              <input type="checkbox" id="beta-rights-confirm" required>
+              <span>
+                <strong>Urheberrechts-Bestätigung:</strong> Sofern ich eigene 3D-Dateien (<code>.stl</code> / <code>.obj</code>) einreiche, bestätige ich, dass ich diese rechtmäßig erworben oder selbst erstellt habe und ausschließlich zur privaten Nutzung in meiner eigenen Spielrunde aufbereiten lasse.
+              </span>
+            </label>
+
+            <label class="beta-rights-check" style="margin-top: 6px;">
+              <input type="checkbox" id="beta-privacy-confirm" required>
+              <span>
+                Ich stimme zu, dass meine Angaben zur Bearbeitung meiner Schmiede-Anfrage gemäß der <a href="#" class="modal-trigger" data-modal="modal-datenschutz" style="color:var(--gold-bright);">Datenschutzerklärung</a> verarbeitet werden (kein Werbe-Spam, jederzeit widerrufbar).
+              </span>
+            </label>
+
+            <button type="submit" class="btn-primary" style="width:100%; justify-content:center; margin-top:8px;">
+              <span>⚒️ Anfrage direkt an Baals Schmiede senden</span>
+              <span class="btn-arrow">➔</span>
+            </button>
+
+            <div class="lead-feedback" id="beta-form-feedback" role="alert" aria-live="polite" style="margin-top:16px;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================
+       FOOTER MIT RECHTLICHER ABSICHERUNG & MARKENHINWEIS
+       ======================================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-col brand-col">
+        <div class="footer-brand">
+          <img src="../assets/balphemor_shield.png" alt="BAALPHEMOR GAMING" class="footer-logo">
+          <div>
+            <span class="footer-brand-title">BAALPHEMOR GAMING</span>
+            <span class="footer-brand-sub">baalphemor-gaming.de/schmiede</span>
+          </div>
+        </div>
+        <p class="footer-tagline">
+          Die unabhängige deutsche Spiele-Werkstatt &amp; Miniaturen-Schmiede von Michael „Baal“ Stahlschmidt.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Schmiede &amp; Portal</h4>
+        <ul class="footer-nav">
+          <li><a href="../">🛡️ Zurück zum Hauptportal</a></li>
+          <li><a href="#erschaffung">🛠️ 3D-Dateiprüfung &amp; Baukasten</a></li>
+          <li><a href="#gratis-muster">📦 Gratis-Musterdatei (.ZIP)</a></li>
+          <li><a href="#preisrechner">🪙 Münz- &amp; Preisrechner</a></li>
+          <li><a href="#beta-test">🎁 Gratis-Beta (5 Figuren)</a></li>
+          <li><a href="../loyalitaet/">⭐ Unterstützer &amp; LP-Liste</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Rechtliches &amp; DSGVO</h4>
+        <ul class="footer-nav">
+          <li><a href="#" class="modal-trigger" data-modal="modal-impressum">Impressum (§ 5 DDG)</a></li>
+          <li><a href="#" class="modal-trigger" data-modal="modal-datenschutz">Datenschutzerklärung (DSGVO)</a></li>
+          <li><a href="#" class="modal-trigger" data-modal="modal-disclaimer">Urheberrecht &amp; VTT-Markenhinweis</a></li>
+          <li><a href="#" id="open-cookie-settings-btn">🍪 Cookie-Einstellungen</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>BAALPHEMOR Netzwerk</h4>
+        <p class="footer-subtext">Direkter Draht in die Werkstatt &amp; Community:</p>
+        <div class="footer-social-links">
+          <a href="https://www.baalphemor.de/discord/?world=gaming&amp;from=baalphemor-gaming.de-schmiede" target="_blank" rel="noopener noreferrer" class="footer-pill-link footer-pill-discord">🛡️ Discord Community anfragen</a>
+          <a href="https://www.baalphemor.de" target="_blank" rel="noopener" class="footer-pill-link">🌐 www.baalphemor.de</a>
+          <a href="https://auritan.de" target="_blank" rel="noopener" class="footer-pill-link">⚔️ auritan.de</a>
+          <a href="mailto:info@baalphemor.de?subject=Miniaturen-Schmiede%20%E2%80%94%20BAALPHEMOR%20GAMING" class="footer-pill-link">✉️ info@baalphemor.de</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p>
+          BAALPHEMOR GAMING © 2026 Michael Stahlschmidt · Unabhängiger Konvertierungs- &amp; 3D-Gestaltungsservice. 
+          <em>Tabletop Simulator</em> und <em>Foundry Virtual Tabletop (Foundry VTT)</em> sind Marken ihrer jeweiligen Inhaber; es besteht keine gesellschaftsrechtliche Verbindung oder offizielle Partnerschaft.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================
+       MODALS: GRÜNDER-STORY & RECHTLICHES
+       ======================================================== -->
+
+  <!-- Modal: Gründer-Vorstellung ("Baal vor der Vitrine") -->
+  <div class="modal-overlay" id="modal-founder-story" role="dialog" aria-modal="true" aria-labelledby="modal-founder-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-founder-title">🎙️ Hey Leute, ich bin Baal von BAALPHEMOR!</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p>
+          Neben Konzertfotografie, Musikvideos und Medienproduktion schlägt mein Herz seit Jahren für echte Miniaturen in der Vitrine — und für lange Taktik-Abende am digitalen Spieltisch.
+        </p>
+        <p style="margin-top: 12px;">
+          <strong>Warum ich diese Schmiede gebaut habe:</strong> Immer wieder stand ich vor demselben Problem: Man kauft sich großartige virtuelle Modelle oder STL-Pakete, aber sie lassen sich nur in <em>einem</em> System nutzen, sprengen im Tabletop Simulator den Arbeitsspeicher oder gefallen einem farblich überhaupt nicht.
+        </p>
+        <p style="margin-top: 12px;">
+          Aus genau diesem Frust ist unsere <strong>Miniaturen-Schmiede</strong> entstanden:
+        </p>
+        <ul style="margin: 12px 0 16px 20px; color: var(--text-muted); line-height: 1.65;">
+          <li><strong>Transport zwischen den Systemen:</strong> Einmal aufbereitet, spielbar in Tabletop Simulator, kompatibel mit Foundry VTT (3D &amp; 2D) und als Token für Roll20/Owlbear Rodeo.</li>
+          <li><strong>Digitaler Malkasten:</strong> Schluss mit nacktem Grau — inklusive edlem Sundrop-Wash oder gezielten Wunschfarben nach deinen Vorgaben.</li>
+          <li><strong>Echte Sorgfalt (bis 72 Std. / +48 Std. für Wunschfarben):</strong> Ich prüfe die Ergebnisse an meinem eigenen Rechner gegen, damit Schwerter, Schilde und Sockel wirklich sitzen.</li>
+        </ul>
+        <div style="text-align:center; margin-top:18px;">
+          <a href="#beta-test" class="btn-primary modal-action-btn">🎁 Jetzt mit bis zu 5 Gratis-Figuren testen ➔</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 1: Impressum -->
+  <div class="modal-overlay" id="modal-impressum" role="dialog" aria-modal="true" aria-labelledby="modal-impressum-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-impressum-title">Impressum</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="legal-stand" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Stand: 12. November 2026</p>
+        <h4>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h4>
+        <p>
+          <strong>Michael Stahlschmidt</strong> (BAALPHEMOR)<br>
+          Limbecker Straße 13<br>
+          44388 Dortmund<br>
+          Deutschland
+        </p>
+        <h4>Kontakt:</h4>
+        <p>
+          Telefon: <a href="tel:+491704003003">+49 170 4003003</a><br>
+          E-Mail: <a href="mailto:info@baalphemor.de">info@baalphemor.de</a><br>
+          Web: <a href="https://www.baalphemor.de" target="_blank" rel="noopener">https://www.baalphemor.de</a><br>
+          Gaming-Portal: <a href="https://baalphemor-gaming.de">https://baalphemor-gaming.de</a>
+        </p>
+        <h4>Umsatzsteuer:</h4>
+        <p>
+          Kleinunternehmer gemäß § 19 UStG (es wird keine Umsatzsteuer ausgewiesen, sofern nicht ausdrücklich anders angegeben).
+        </p>
+        <h4>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV:</h4>
+        <p>Michael Stahlschmidt, Limbecker Straße 13, 44388 Dortmund</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Datenschutz (DSGVO) -->
+  <div class="modal-overlay" id="modal-datenschutz" role="dialog" aria-modal="true" aria-labelledby="modal-datenschutz-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-datenschutz-title">Datenschutzerklärung (DSGVO)</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p class="legal-stand" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Stand: 12. November 2026 · Art. 13 &amp; 14 DSGVO</p>
+        <h4>1. Verantwortlicher</h4>
+        <p>
+          <strong>Michael Stahlschmidt</strong> (BAALPHEMOR), Limbecker Straße 13, 44388 Dortmund, Deutschland · E-Mail: <a href="mailto:info@baalphemor.de">info@baalphemor.de</a>
+        </p>
+        <h4>2. 100 % Lokale 3D-Vorschau ohne Drittanbieter-CDNs</h4>
+        <p>
+          Das interaktive 3D-Erschaffungsmodul sowie alle Schriftarten werden vollständig lokal von unserem eigenen Webspace geladen. Beim Drehen, Beschriften oder direkten Exportieren von Test-Markern (<code>.stl</code> / <code>.glb</code>) verbleiben deine Entwürfe ausschließlich lokal in deinem Browser.
+        </p>
+        <h4>3. Bearbeitung von Beta- &amp; Schmiede-Anfragen</h4>
+        <p>
+          Wenn du das Anfrage- oder Beta-Formular absendest, verarbeiten wir deinen Namen/Alias, deine E-Mail-Adresse, das gewählte Zielsystem und deine Projektbeschreibung über das verschlüsselte BAALPHEMOR-Backend (Region Frankfurt/EU), um deine Figuren aufzubereiten und dir den Download-Link zuzusenden (Art. 6 Abs. 1 lit. b &amp; a DSGVO). Eingereichte Kunden-3D-Dateien werden ausschließlich für deinen Auftrag verarbeitet, niemals weiterverkauft und nach Abschluss der Bereitstellungsfrist gelöscht.
+        </p>
+        <h4>4. Betroffenenrechte</h4>
+        <p>
+          Du hast jederzeit das Recht auf Auskunft, Berichtigung, Löschung und Widerruf per E-Mail an <a href="mailto:info@baalphemor.de">info@baalphemor.de</a> sowie ein Beschwerderecht bei der LDI NRW, Düsseldorf.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 3: Urheberrecht, Kunden-Dateien & VTT-Markenhinweis -->
+  <div class="modal-overlay" id="modal-disclaimer" role="dialog" aria-modal="true" aria-labelledby="modal-disclaimer-title">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 id="modal-disclaimer-title">Urheberrecht &amp; VTT-Kompatibilitätshinweis</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h4>1. Auftragsbearbeitung kundeneigener 3D-Dateien (Werkleistung)</h4>
+        <p>
+          Beim Umbau- und Färbeservice der <strong>BAALPHEMOR Miniaturen-Schmiede</strong> erbringen wir eine rein technische Aufbereitungs- und Texturierungs-Dienstleistung an vom Kunden bereitgestellten 3D-Dateien für dessen eigenen Gebrauch. Wir verkaufen keine fremden 3D-Modelle weiter. Der Auftraggeber versichert, zur privaten Nutzung der eingereichten Dateien berechtigt zu sein.
+        </p>
+        <h4 style="margin-top: 14px;">2. Eigene Baukasten-Modelle &amp; Markenunabhängigkeit</h4>
+        <p>
+          Alle im <strong>BAALPHEMOR 3D-Erschaffungsmodul</strong> erzeugten Marker, Flaggen, Möbel und eigenständigen Fantasy-/Sci-Fi-Archetypen sind unabhängige Eigenentwicklungen von Michael Stahlschmidt.
+        </p>
+        <p style="margin-top: 10px;">
+          Nennungen wie <em>„Kompatibel mit Tabletop Simulator“</em>, <em>„Kompatibel mit Foundry VTT / Foundry Virtual Tabletop“</em>, <em>„Roll20“</em> oder <em>„Owlbear Rodeo“</em> dienen ausschließlich der sachlichen Beschreibung der technischen Dateiformat-Kompatibilität (§ 23 Nr. 3 MarkenG). Es besteht keinerlei Lizenzierung oder offizielle Partnerschaft mit Berserk Games oder Foundry Gaming, LLC.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 4: 4-Stufen-Komplettbeispiel Lightbox -->
+  <div class="modal-overlay" id="modal-showcase-4stufen" role="dialog" aria-modal="true" aria-labelledby="modal-showcase-title">
+    <div class="modal-card modal-showcase-wide">
+      <div class="modal-header">
+        <h3 id="modal-showcase-title">⚒️ Miniaturen-Schmiede — Das 4-Stufen-Komplettbeispiel (Originalgröße)</h3>
+        <button class="modal-close" aria-label="Schließen">&times;</button>
+      </div>
+      <div class="modal-body" style="padding:14px; text-align:center;">
+        <img src="../assets/schmiede/miniaturen_schmiede_4_stufen_showcase.webp" alt="Miniaturen-Schmiede 4-Stufen-Komplettbeispiel in voller Auflösung" style="width:100%; height:auto; border-radius:8px; border:1px solid var(--border-iron);">
+      </div>
+    </div>
+  </div>
+
+  <!-- DSGVO Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner" role="region" aria-label="Cookie- und Datenschutzeinstellungen">
+    <div class="cookie-content">
+      <div class="cookie-text">
+        <strong>🍪 Privatsphäre in der Miniaturen-Schmiede:</strong>
+        Diese Seite lädt alle 3D-Module und Schriften zu 100 % lokal und nutzt lediglich technisch notwendigen Browser-Speicher für deine Cookie-Auswahl und Anfragen-Sicherung — <strong>ohne Werbe-Tracking</strong>.
+        <a href="#" class="modal-trigger cookie-link" data-modal="modal-datenschutz">Datenschutzerklärung</a>
+      </div>
+      <div class="cookie-buttons">
+        <button type="button" id="cookie-necessary-btn" class="btn-secondary btn-sm">Nur Notwendige</button>
+        <button type="button" id="cookie-accept-all-btn" class="btn-primary btn-sm">Verstanden &amp; Akzeptieren</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../script.js?v=20261113_ms1"></script>
+  <script type="module" src="schmiede.js?v=20261113_ms1"></script>
+</body>
+</html>
