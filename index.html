@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BAALPHEMOR GAMING — Offizielles Spiele-Portal | Auritan: Vanguard</title>
-  <meta name="description" content="BAALPHEMOR GAMING ist die Indie-Spielemarke von Michael Stahlschmidt. Aktuell in Entwicklung: Auritan: Vanguard — Heldenzentrierte Echtzeitstrategie & Vorhut-Erkundung in der düsteren Welt Auritan.">
-  <meta name="keywords" content="BAALPHEMOR GAMING, BAALPHEMOR, Auritan, Auritan Vanguard, Dark Fantasy, Echtzeitstrategie, Hero-RTS, Taktik, Pre-Launch">
+  <title>BAALPHEMOR GAMING — Offizielles Spiele-Portal | Auritan: Vanguard &amp; 5E-Assets</title>
+  <meta name="description" content="BAALPHEMOR GAMING ist die Indie-Spielemarke von Michael Stahlschmidt: Auritan: Vanguard, zweisprachige 5E-Quellenhefte (Die Hogrur / The Hogrur), Foundry-VTT-Assets &amp; Miniaturen-Schmiede.">
+  <meta name="keywords" content="BAALPHEMOR GAMING, BAALPHEMOR, Auritan, Auritan Vanguard, Die Hogrur, The Hogrur, 5E Quellenheft, Foundry VTT, Dark Fantasy, Echtzeitstrategie">
   
   <!-- Open Graph / Meta -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://baalphemor-gaming.de">
-  <meta property="og:title" content="BAALPHEMOR GAMING — Auritan: Vanguard | Dark Fantasy & Taktik">
-  <meta property="og:description" content="Heldenzentrierte Echtzeitstrategie & Vorhut-Erkundung im düsteren Dark-Fantasy-Universum von Auritan. Mit einer frühen Alpha ist ab 2027 zu rechnen!">
+  <meta property="og:title" content="BAALPHEMOR GAMING — Auritan: Vanguard, 5E-Quellenhefte &amp; Foundry-VTT">
+  <meta property="og:description" content="Heldenzentrierte Echtzeitstrategie in Auritan, zweisprachige 5E-Quellenhefte (DE &amp; EN), animierte Foundry-VTT-Begleitpakete &amp; unsere Miniaturen-Schmiede.">
   <meta property="og:image" content="assets/meta_cover_banner_v2.jpg">
 
   <link rel="icon" type="image/png" href="assets/balphemor_shield.png">
@@ -19,6 +19,200 @@
   
   <!-- Google Fonts: Cinzel für Grimdark-Epik, Oswald für Markantes, Inter für Lesbarkeit -->
   <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+  <style>
+    /* ========================================================
+       5E & TTRPG QUELLENHEFTE & FOUNDRY-VTT-ASSETS SECTION
+       ======================================================== */
+    #ttrpg-assets {
+      scroll-margin-top: 84px;
+    }
+    .ttrpg-sales-section {
+      padding: 88px 24px;
+      background:
+        radial-gradient(ellipse at 50% 0%, rgba(216, 176, 101, 0.12) 0%, transparent 65%),
+        linear-gradient(180deg, #12100d 0%, #090807 100%);
+      border-top: 1px solid var(--border-iron);
+    }
+    .ttrpg-release-spotlight {
+      background: linear-gradient(155deg, rgba(28, 23, 17, 0.97) 0%, rgba(15, 13, 10, 0.98) 100%);
+      border: 2px solid var(--gold);
+      border-radius: 14px;
+      padding: 34px 32px;
+      box-shadow: 0 18px 46px rgba(0, 0, 0, 0.78), var(--glow-gold);
+      margin-bottom: 28px;
+    }
+    @media (max-width: 680px) {
+      .ttrpg-release-spotlight { padding: 24px 18px; }
+    }
+    .ttrpg-release-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .ttrpg-release-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 28px;
+      align-items: center;
+    }
+    @media (max-width: 920px) {
+      .ttrpg-release-grid { grid-template-columns: 1fr; }
+    }
+    .ttrpg-release-title {
+      font-family: var(--font-cinzel);
+      font-size: clamp(1.45rem, 2.7vw, 2.05rem);
+      color: #fff;
+      line-height: 1.24;
+      margin-bottom: 8px;
+    }
+    .ttrpg-release-subtitle {
+      font-family: var(--font-oswald);
+      font-size: 0.92rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+    .ttrpg-release-desc {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.68;
+      margin-bottom: 18px;
+    }
+    .ttrpg-release-desc strong {
+      color: var(--text-primary);
+    }
+    .ttrpg-specs-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .ttrpg-specs-list li {
+      font-size: 0.91rem;
+      color: var(--text-muted);
+      padding: 10px 14px;
+      background: rgba(9, 8, 7, 0.75);
+      border: 1px solid var(--border-iron);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 6px 6px 0;
+    }
+    .ttrpg-specs-list li strong {
+      color: var(--text-primary);
+    }
+    .ttrpg-emblem-panel {
+      background: radial-gradient(circle at center, rgba(216, 176, 101, 0.14) 0%, rgba(9, 8, 7, 0.92) 76%);
+      border: 1px solid var(--border-gold);
+      border-radius: 12px;
+      padding: 28px 22px;
+      text-align: center;
+    }
+    .ttrpg-emblem-panel img {
+      width: 82px;
+      height: 82px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 18px rgba(216, 176, 101, 0.5));
+      margin-bottom: 12px;
+    }
+    .ttrpg-module-badge {
+      display: inline-block;
+      font-family: monospace;
+      font-size: 0.86rem;
+      color: var(--gold-bright);
+      background: rgba(9, 8, 7, 0.95);
+      border: 1px solid var(--border-gold);
+      padding: 5px 12px;
+      border-radius: 6px;
+      margin: 8px 0 12px;
+    }
+    .ttrpg-meta-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .ttrpg-meta-pill {
+      font-family: var(--font-oswald);
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 6px;
+      background: rgba(24, 21, 17, 0.96);
+      border: 1px solid var(--border-iron);
+      color: var(--text-primary);
+    }
+
+    /* 3 Vertriebskanäle Grid */
+    .ttrpg-channels-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+    @media (max-width: 960px) {
+      .ttrpg-channels-grid { grid-template-columns: 1fr; }
+    }
+    .ttrpg-channel-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-iron);
+      border-top: 2px solid var(--gold-dim);
+      border-radius: 12px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.22s ease, border-color 0.22s ease, box-shadow 0.22s ease;
+    }
+    .ttrpg-channel-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold);
+      background: var(--bg-card-lit);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.65), var(--glow-gold);
+    }
+    .ttrpg-channel-card.is-patreon-hub {
+      border-color: rgba(216, 176, 101, 0.6);
+      border-top-color: var(--gold-bright);
+      background: linear-gradient(165deg, #201a12 0%, #14110d 100%);
+    }
+    .ttrpg-channel-kicker {
+      font-family: var(--font-oswald);
+      font-size: 0.74rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+      display: block;
+    }
+    .ttrpg-channel-card h3 {
+      font-family: var(--font-cinzel);
+      font-size: 1.28rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+    .ttrpg-channel-card p {
+      font-size: 0.92rem;
+      color: var(--text-muted);
+      line-height: 1.62;
+      margin-bottom: 20px;
+    }
+    .ttrpg-channel-card p strong {
+      color: var(--text-primary);
+    }
+    .ttrpg-channel-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-iron);
+    }
+  </style>
 </head>
 <body>
 
@@ -35,15 +229,15 @@
 
       <nav class="nav-links" id="desktop-nav">
         <a href="#projekte">Langzeitprojekt</a>
+        <a href="#ttrpg-assets">5E &amp; VTT</a>
         <a href="#spielereien">Zwischendurch</a>
         <a href="schmiede/" class="nav-forge-pill">⚒️ Miniaturen-Schmiede <span class="badge-beta-live">BETA</span></a>
-        <a href="#vision">Philosophie</a>
-        <a href="loyalitaet/">⭐ LP-Liste</a>
+        <a href="https://www.baalphemor.de/supporter-liste/" target="_blank" rel="noopener">⭐ Supporter-Liste</a>
         <a href="https://auritan.de" target="_blank" rel="noopener" class="nav-balphemor-pill" title="Begleitseite zur Welt Auritan öffnen">
           <img src="assets/auritan_logo.png" alt="Auritan" class="nav-pill-shield">
           <span>AURITAN.DE</span>
         </a>
-        <a href="#alpha" class="nav-btn-highlight">Tester & News</a>
+        <a href="#alpha" class="nav-btn-highlight">Tester &amp; News</a>
       </nav>
 
       <!-- Mobile Hamburger -->
@@ -59,11 +253,12 @@
       <a href="#projekte" class="mobile-link">🛡️ 1. Langzeitprojekt: Welt Auritan</a>
       <a href="#spielereien" class="mobile-link">🎲 2. Kleinere Spielereien für zwischendurch</a>
       <a href="schmiede/" class="mobile-link balphemor-special">⚒️ 3. Die große Miniaturen-Schmiede (Beta) ➔</a>
+      <a href="#ttrpg-assets" class="mobile-link">📖 5E &amp; TTRPG Quellenhefte &amp; Foundry-VTT-Assets</a>
       <a href="#welt" class="mobile-link">Hintergrundwelt Auritan</a>
       <a href="#vision" class="mobile-link">Unsere Philosophie</a>
-      <a href="loyalitaet/" class="mobile-link">⭐ Unterstützer & LP-Liste</a>
+      <a href="https://www.baalphemor.de/supporter-liste/" target="_blank" rel="noopener" class="mobile-link">⭐ SL – Supporter-Liste (baalphemor.de) ➔</a>
       <a href="#rigging-box" class="mobile-link">🤝 Mitwirken (Stories &amp; Erzählungen gesucht)</a>
-      <a href="#" class="mobile-link" id="mobile-wiki-btn">📜 Wiki & Chronik (In Kürze)</a>
+      <a href="#" class="mobile-link" id="mobile-wiki-btn">📜 Wiki &amp; Chronik (In Kürze)</a>
       <a href="https://auritan.de" target="_blank" rel="noopener" class="mobile-link balphemor-special">
         <img src="assets/auritan_logo.png" alt="Auritan" style="width:22px; vertical-align:middle; margin-right:8px;">
         Begleitseite auritan.de ➔
@@ -72,10 +267,6 @@
         🌐 Dachmarke www.baalphemor.de ➔
       </a>
       <a href="#alpha" class="btn-primary mobile-link" style="text-align:center; margin-top:12px;">Tester werden / Mitwirken</a>
-      <a href="https://www.baalphemor.de/discord/?world=gaming&amp;from=baalphemor-gaming.de" target="_blank" rel="noopener noreferrer" class="btn-discord-request mobile-link" style="justify-content:center; margin-top:6px;">
-        <span>🛡️ Beitritt zur Discord Community anfragen</span>
-        <span class="btn-arrow">➔</span>
-      </a>
     </nav>
   </div>
 
@@ -92,7 +283,7 @@
         <a href="https://www.baalphemor.de" target="_blank" rel="noopener" class="side-badge-inner" title="Zur Dachmarke www.baalphemor.de">
           <img src="assets/balphemor_shield.png" alt="BAALPHEMOR Siegel" class="side-badge-shield">
           <div class="side-badge-text">
-            <span class="side-badge-prefix">DACHMARKE & MEDIEN</span>
+            <span class="side-badge-prefix">DACHMARKE &amp; MEDIEN</span>
             <span class="side-badge-brand">BAALPHEMOR</span>
             <span class="side-badge-url">www.baalphemor.de ➔</span>
           </div>
@@ -116,7 +307,7 @@
 
         <p class="hero-lead">
           Willkommen in der persönlichen Gaming-Werkstatt von <strong>Michael „Baal“ Stahlschmidt (BAALPHEMOR)</strong> — ehrlich, unabhängig und auf Deutsch. 
-          Hier entstehen mein großes Dark-Fantasy-Langzeitprojekt rund um <strong>Auritan</strong>, kurzweilige <strong>Spielereien für zwischendurch</strong> und unsere <strong>große Miniaturen-Schmiede</strong> für den professionellen Umbau deiner 3D-Miniaturen (Druck ⇄ VTT), Living-Miniatures, Marker und Spieltische.
+          Hier entstehen mein großes Dark-Fantasy-Langzeitprojekt rund um <strong>Auritan</strong>, zweisprachige <strong>5E-Quellenhefte &amp; Foundry-VTT-Assets</strong>, kurzweilige <strong>Spielereien für zwischendurch</strong> und unsere <strong>große Miniaturen-Schmiede</strong> für den professionellen Umbau deiner 3D-Miniaturen (Druck ⇄ VTT).
         </p>
 
         <!-- DIE 3 SÄULEN AUF EINEN BLICK (Direkt-Wegweiser) -->
@@ -196,7 +387,7 @@
                 <span class="custom-checkbox"></span>
                 <span class="option-content">
                   <strong>1. Entwickler-Newsletter</strong>
-                  <span class="option-desc">Neuigkeiten, Artworks, Lore & Meilensteine aus Auritan</span>
+                  <span class="option-desc">Neuigkeiten, Artworks, Lore &amp; Meilensteine aus Auritan</span>
                 </span>
               </label>
 
@@ -205,7 +396,7 @@
                 <span class="custom-checkbox"></span>
                 <span class="option-content">
                   <strong>2. Interesse als Playtester</strong>
-                  <span class="option-desc">Früher Zugang zur kommenden Alpha von Auritan: Vanguard & Feedback</span>
+                  <span class="option-desc">Früher Zugang zur kommenden Alpha von Auritan: Vanguard &amp; Feedback</span>
                 </span>
               </label>
             </div>
@@ -218,7 +409,7 @@
                   <span class="custom-checkbox"></span>
                   <span class="option-content">
                     <span class="rigging-title-row">
-                      <strong>🖋️ 3. Mitwirken: Stories, kleine Erzählungen & epische Schlachten</strong>
+                      <strong>🖋️ 3. Mitwirken: Stories, kleine Erzählungen &amp; epische Schlachten</strong>
                       <span class="rigging-badge">UNTERSTÜTZUNG GESUCHT</span>
                     </span>
                     <span class="option-desc">
@@ -291,17 +482,8 @@
               </span>
             </div>
 
-            <div class="lead-discord-cta-row">
-              <a href="https://www.baalphemor.de/discord/?world=gaming&amp;from=baalphemor-gaming.de" target="_blank" rel="noopener noreferrer" id="portal-discord-request-btn" class="btn-discord-request">
-                <span class="discord-btn-shield">🛡️</span>
-                <span>Beitritt zur Discord Community anfragen</span>
-                <span class="btn-arrow">➔</span>
-              </a>
-              <span class="lead-discord-hint">Geschützter Community-Server · Persönlicher 1×-Einmallink gegen Spam-Bots</span>
-            </div>
-
             <p class="lead-footnote">
-              🔒 100 % vertraulich & werbefrei · Jederzeit mit 1 Klick widerrufbar · Siehe <a href="#" class="modal-trigger" data-modal="modal-datenschutz">Datenschutzerklärung</a>.
+              🔒 100 % vertraulich &amp; werbefrei · Jederzeit mit 1 Klick widerrufbar · Siehe <a href="#" class="modal-trigger" data-modal="modal-datenschutz">Datenschutzerklärung</a>.
             </p>
             <div class="lead-feedback" id="portal-lead-feedback" role="alert" aria-live="polite"></div>
           </form>
@@ -424,7 +606,7 @@
             <div class="game-card-visual visual-rts" style="background-image: url('assets/meta_cover_banner.png');">
               <div class="game-visual-overlay overlay-crimson"></div>
               <div class="game-top-badges">
-                <span class="game-pill pill-crimson">HAUPTPROJEKT · HERO-RTS & ERKUNDUNG</span>
+                <span class="game-pill pill-crimson">HAUPTPROJEKT · HERO-RTS &amp; ERKUNDUNG</span>
                 <span class="game-pill pill-status">🔒 In aktiver Entwicklung · Frühe Alpha ab 2027</span>
               </div>
               <div class="game-visual-brand">
@@ -439,15 +621,15 @@
             <div class="game-card-body">
               <div class="game-title-row">
                 <h3>Auritan: Vanguard</h3>
-                <span class="genre-tag tag-crimson-text">Helden-Echtzeitstrategie & Vorhut-Erkundung</span>
+                <span class="genre-tag tag-crimson-text">Helden-Echtzeitstrategie &amp; Vorhut-Erkundung</span>
               </div>
               <p class="game-desc">
                 Heldenzentrierte Echtzeitstrategie in den düsteren Grenzlanden von <strong>Auritan</strong>: Führe eine handverlesene Vorhut und benannte Helden mit mächtigen Artefakten durch den Nebel des Krieges, sichere strategische Vorposten und trotze dem unerbittlichen Tag-/Nacht-Zyklus einer verfallenen Welt.
               </p>
 
               <ul class="vanguard-pillars-list">
-                <li><strong>⚔️ Benannte Helden & Elite-Vorhut:</strong> Jede Einheit zählt — rüste deine Anführer mit Relikten aus und kombiniere aktive Fähigkeiten im Echtzeit-Gefecht.</li>
-                <li><strong>🕯️ Nebel des Krieges & Tag-/Nacht-Wechsel:</strong> Kundschafte feindselige Landstriche aus, errichte befestigte Lagerfeuer-Vorposten und überlebe die Schatten der Nacht.</li>
+                <li><strong>⚔️ Benannte Helden &amp; Elite-Vorhut:</strong> Jede Einheit zählt — rüste deine Anführer mit Relikten aus und kombiniere aktive Fähigkeiten im Echtzeit-Gefecht.</li>
+                <li><strong>🕯️ Nebel des Krieges &amp; Tag-/Nacht-Wechsel:</strong> Kundschafte feindselige Landstriche aus, errichte befestigte Lagerfeuer-Vorposten und überlebe die Schatten der Nacht.</li>
                 <li><strong>🌐 Sofort im Browser erlebbar:</strong> Entwickelt für flüssige 3D-Taktik ohne riesige Client-Downloads — mit direktem Draht zu unserer Tester-Community.</li>
               </ul>
 
@@ -457,7 +639,7 @@
                   <span>➔</span>
                 </a>
                 <button type="button" class="btn-secondary btn-sm locked-portal-trigger">
-                  🔒 Entwicklungsstatus & Release-Hinweis
+                  🔒 Entwicklungsstatus &amp; Release-Hinweis
                 </button>
               </div>
             </div>
@@ -536,12 +718,12 @@
         <div class="forge-spotlight-shell">
           <div class="forge-spotlight-copy">
             <div class="section-kicker-row" style="justify-content:flex-start;">
-              <span class="section-kicker">SÄULE 03 · BEREICH IN DER BETA-TESTPHASE</span>
-              <span class="status-pill-active pill-beta-glow">🧪 BETA · Aktiv im Aufbau</span>
+              <span class="section-kicker">SÄULE 03 · EIGENSTÄNDIGE SCHWESTER-PLATTFORM</span>
+              <span class="status-pill-active pill-beta-glow">⚒️ miniaturen-schmiede.de · BETA</span>
             </div>
-            <h2>Die große Miniaturen-Schmiede <span class="badge-beta-section">BETA</span></h2>
+            <h2>Miniaturen-Schmiede <span class="badge-beta-section">EIGENE SEITE</span></h2>
             <p class="forge-home-lead">
-              Ob 3D-Druckdatei auf deiner Festplatte oder Spielmodell im virtuellen Spieltisch: In unserer <strong>Miniaturen-Schmiede</strong> verwandeln wir deine fremden Kundendateien in <strong>alle Richtungen</strong> mit persönlicher 360°-Qualitätsprüfung:
+              Ob 3D-Druckdatei auf deiner Festplatte oder Spielmodell im virtuellen Spieltisch: Mit unserer eigenen Fach-Plattform <strong><a href="https://miniaturen-schmiede.de" target="_blank" rel="noopener" style="color:#f0c36d; text-decoration:underline;">miniaturen-schmiede.de</a></strong> verwandeln wir deine fremden Kundendateien in <strong>alle Richtungen</strong> mit persönlicher 360°-Qualitätsprüfung:
             </p>
 
             <ul class="forge-home-list">
@@ -556,12 +738,12 @@
             </div>
 
             <div class="forge-home-actions">
-              <a href="schmiede/" class="btn-primary">
-                <span>⚒️ Zur Miniaturen-Schmiede (Beta) &amp; zur 3D-Prüfung</span>
+              <a href="https://miniaturen-schmiede.de" target="_blank" rel="noopener" class="btn-primary">
+                <span>⚒️ Zu miniaturen-schmiede.de wechseln</span>
                 <span class="btn-arrow">➔</span>
               </a>
-              <a href="schmiede/#gratis-muster" class="btn-secondary">
-                <span>📦 Kostenlose Muster-Figuren laden</span>
+              <a href="schmiede/" class="btn-secondary">
+                <span>🔍 Direkt-Vorschau &amp; Gratis-Muster</span>
               </a>
             </div>
           </div>
@@ -588,12 +770,127 @@
     </section>
 
     <!-- ========================================================
+         NEUE SEKTION: 5E & TTRPG QUELLENHEFTE & FOUNDRY-VTT-ASSETS
+         ======================================================== -->
+    <section class="ttrpg-sales-section" id="ttrpg-assets">
+      <div class="section-container">
+        <div class="section-header">
+          <div class="section-kicker-row">
+            <span class="section-kicker">DIGITALE TTRPG-PUBLIKATIONEN · BAALPHEMOR GAMING</span>
+            <span class="status-pill-active">SRD 5.1 · CC-BY-4.0</span>
+          </div>
+          <h2>5E &amp; TTRPG Quellenhefte &amp; Foundry-VTT-Assets</h2>
+          <p class="section-lead">
+            Handfeste Erweiterungen für deinen analogen und virtuellen Spieltisch: zweisprachige <strong>5E-Quellenhefte (Deutsch &amp; Englisch)</strong> inklusive druckerfreundlicher Ausgaben, kostenlosen Basis-Tokens und animierten <strong>Foundry-VTT-Begleitpaketen</strong>.
+          </p>
+        </div>
+
+        <!-- Release #1 Spotlight: Die Hogrur / The Hogrur -->
+        <article class="ttrpg-release-spotlight" aria-labelledby="hogrur-release-title">
+          <div class="ttrpg-release-top">
+            <span class="game-pill pill-gold">RELEASE #1 · ZWEISPRACHIGES 5E-QUELLENHEFT (DE &amp; EN)</span>
+            <span class="game-pill pill-status">Compatible with 5E · SRD 5.1 / CC-BY-4.0</span>
+          </div>
+
+          <div class="ttrpg-release-grid">
+            <div>
+              <h3 class="ttrpg-release-title" id="hogrur-release-title">
+                Die Hogrur / The Hogrur — Zweisprachiges 5E-Quellenheft
+              </h3>
+              <p class="ttrpg-release-subtitle">
+                Wandernde Schmiede, Kanoniere &amp; Hüter des Schwur-Trosses · Traveling Smiths, Cannoneers &amp; Keepers of the Oath-Train
+              </p>
+              <p class="ttrpg-release-desc">
+                Bringe den Donner geschmiedeter Schwur-Geschütze, schwer gepanzerter Wagenburgen und ehrwürdiger Feldschmiede an deinen 5E-Spieltisch. Unser Auftakt-Quellenheft liefert ein <strong>vollständiges Dual-PDF-Bundle auf Deutsch und Englisch</strong> sowie maßgeschneiderte digitale Assets für <strong>Foundry Virtual Tabletop</strong>.
+              </p>
+
+              <ul class="ttrpg-specs-list">
+                <li><strong>📖 Dual-PDF-Bundle (DE &amp; EN):</strong> Enthält sowohl die stimmungsvoll <strong>Illustrierte Pergament-Edition</strong> als auch eine tintensparende <strong>Printer-Friendly-Edition</strong> für beide Sprachen.</li>
+                <li><strong>⚖️ Offene 5E-Kompatibilität (SRD 5.1 / CC-BY-4.0):</strong> Spielfertige Lore, Charakter- &amp; Fraktionsoptionen, Ausrüstung, Geschütz-Regeln und Begegnungen für düstere Fantasy-Runden.</li>
+                <li><strong>🔥 Foundry-VTT-Begleitpaket (<code>baalphemor-hogrur-5e</code>):</strong> Kostenlose statische Top-Down-PNG-Tokens (2×2 / 1×1) sowie ein animiertes Premium-Modul mit VP9-Alpha-WebM-Tokens, Farbsets &amp; synchronisierten <code>.ogg</code>-Sounds.</li>
+              </ul>
+            </div>
+
+            <div class="ttrpg-emblem-panel">
+              <img src="assets/balphemor_shield.png" alt="BAALPHEMOR GAMING TTRPG Imprint">
+              <div style="font-family:var(--font-cinzel); font-size:1.1rem; color:#fff; font-weight:700;">Foundry-VTT-Begleitmodul</div>
+              <div class="ttrpg-module-badge">baalphemor-hogrur-5e</div>
+              <p style="font-size:0.88rem; color:var(--text-muted); line-height:1.55;">
+                4 PDFs im Bundle (DE/EN Pergament + Printer-Friendly) &amp; nahtlose Anbindung für virtuelle Spieltische.
+              </p>
+              <div class="ttrpg-meta-pills">
+                <span class="ttrpg-meta-pill">DE &amp; EN Dual-PDF</span>
+                <span class="ttrpg-meta-pill">Pergament + Print</span>
+                <span class="ttrpg-meta-pill">VP9 WebM + .ogg</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Die 3 Vertriebskanäle -->
+        <div class="ttrpg-channels-grid">
+          <!-- Kanal 1: DriveThruRPG -->
+          <div class="ttrpg-channel-card">
+            <div>
+              <span class="ttrpg-channel-kicker">VERTRIEBSKANAL 01 · HAUPT-MARKTPLATZ</span>
+              <h3>📜 DriveThruRPG</h3>
+              <p>
+                Unser offizieller Verlags-Store für digitale Rollenspiel-Bücher: Sichere dir das komplette <strong>Dual-PDF-Bundle (DE &amp; EN: Illustrierte Pergament-Edition + Printer-Friendly)</strong> dauerhaft in deiner DriveThruRPG-Bibliothek.
+              </p>
+            </div>
+            <div class="ttrpg-channel-actions">
+              <a href="https://www.drivethrurpg.com/de/publisher/36807/BAALPHEMOR" target="_blank" rel="noopener" class="btn-primary btn-sm" style="justify-content:center;">
+                <span>Auf DriveThruRPG ansehen</span>
+                <span>➔</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kanal 2: Itch.io -->
+          <div class="ttrpg-channel-card">
+            <div>
+              <span class="ttrpg-channel-kicker">VERTRIEBSKANAL 02 · INDIE-TTRPG-STORE</span>
+              <h3>🎲 Itch.io</h3>
+              <p>
+                Direkter Indie-Download ohne DRM und ohne Abo-Zwang unter <strong>baalphemor.itch.io</strong>: Hier erhältst du sowohl das <strong>Dual-PDF-Bundle (DE &amp; EN)</strong> als auch einzelne VTT-Asset- &amp; Begleitpakete zum Einmalkauf.
+              </p>
+            </div>
+            <div class="ttrpg-channel-actions">
+              <a href="https://baalphemor.itch.io" target="_blank" rel="noopener" class="btn-secondary btn-sm" style="justify-content:center;">
+                <span>Zu baalphemor.itch.io ➔</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Kanal 3: Patreon -->
+          <div class="ttrpg-channel-card is-patreon-hub">
+            <div>
+              <span class="ttrpg-channel-kicker">VERTRIEBSKANAL 03 · VTT-HUB &amp; FREE TOKENS</span>
+              <h3>⭐ Patreon</h3>
+              <p>
+                Auf <strong>patreon.com/baalphemor</strong> gibt es <strong>kostenlose Basis-PNG-Tokens</strong> für alle Free Member sowie ab 4 €/Monat das komplette animierte <strong>Foundry-VTT-Begleitpaket <code>baalphemor-hogrur-5e</code></strong> inkl. Aufnahme in unsere zentrale <strong>SL – Supporter-Liste</strong>.
+              </p>
+            </div>
+            <div class="ttrpg-channel-actions">
+              <a href="https://www.patreon.com/baalphemor" target="_blank" rel="noopener" class="btn-primary btn-sm" style="justify-content:center;">
+                <span>Zu patreon.com/baalphemor ➔</span>
+              </a>
+              <a href="https://www.baalphemor.de/supporter-liste/" target="_blank" rel="noopener" class="btn-outline-gold btn-sm" style="text-align:center;">
+                Zur SL – Supporter-Liste ➔
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================
          HINTERGRUNDWELT & LORE (DIE SCHATTEN VON AURITAN)
          ======================================================== -->
     <section class="hub-preview-section" id="welt">
       <div class="section-container">
         <div class="section-header">
-          <p class="section-kicker">Hintergrundwelt & Lore</p>
+          <p class="section-kicker">Hintergrundwelt &amp; Lore</p>
           <h2>Die Schatten von Auritan</h2>
           <p class="section-lead">Eine Welt gezeichnet von uraltem Verfall, fanatischer Inquisition und vergessenen Katakomben.</p>
         </div>
@@ -609,7 +906,7 @@
             <div class="wiki-action-block">
               <button type="button" class="btn-wiki-locked" id="wiki-teaser-btn">
                 <span class="lock-icon">🔒</span>
-                <span>Welten-Kompendium & Wiki</span>
+                <span>Welten-Kompendium &amp; Wiki</span>
                 <span class="locked-tag">In Kürze verfügbar</span>
               </button>
               <p class="wiki-subtext">Die Schreiber der Inquisition versiegeln derzeit die Archive. Das vollständige Online-Wiki öffnet pünktlich zum Start der Closed Alpha.</p>
@@ -654,9 +951,9 @@
 
           <article class="law-card">
             <span class="law-number">🦴</span>
-            <h3>Ehrliches Handwerk & Mitwirkung</h3>
+            <h3>Ehrliches Handwerk &amp; Mitwirkung</h3>
             <p>
-              Kein Pay-to-Win, keine seelenlose Massenware. Unser Projekt wächst im engen Austausch mit der Community — aktuell suchen wir Verstärkung im <strong>3D-Rigging</strong> sowie kreative Köpfe zum <strong>Schreiben kleiner Erzählungen und großer epischer Schlachten</strong>.
+              Kein Pay-to-Win, keine seelenlose Massenware. Unser Projekt wächst im engen Austausch mit unseren Spielern — aktuell suchen wir Verstärkung im <strong>3D-Rigging</strong> sowie kreative Köpfe zum <strong>Schreiben kleiner Erzählungen und großer epischer Schlachten</strong>.
             </p>
           </article>
         </div>
@@ -671,17 +968,17 @@
         <div class="ecosystem-cards-grid">
           <div class="eco-showcase-card">
             <img src="assets/band_portal_logo.svg" alt="Band-Portal.de" class="eco-card-logo">
-            <span class="eco-card-tag">BAND & CREW COCKPIT</span>
+            <span class="eco-card-tag">BAND &amp; CREW COCKPIT</span>
             <h3>Band-Portal.de</h3>
-            <p>Das zentrale Planungs- & Content-Cockpit von <strong>BAALPHEMOR</strong> für Bands, Crew und Festivals — Gigs, Tour-Logistik, Tech-Rider und Releases an einem Ort.</p>
+            <p>Das zentrale Planungs- &amp; Content-Cockpit von <strong>BAALPHEMOR</strong> für Bands, Crew und Festivals — Gigs, Tour-Logistik, Tech-Rider und Releases an einem Ort.</p>
             <a href="https://www.band-portal.de" target="_blank" rel="noopener" class="btn-primary btn-sm">Zu www.band-portal.de wechseln ➔</a>
           </div>
 
           <div class="eco-showcase-card">
             <img src="assets/balphemor_de_logo.png" alt="BAALPHEMOR.de" class="eco-card-logo">
-            <span class="eco-card-tag">DACHMARKE & MEDIEN</span>
+            <span class="eco-card-tag">DACHMARKE &amp; MEDIEN</span>
             <h3>BAALPHEMOR.de</h3>
-            <p>Die Hauptseite von Michael Stahlschmidt für Konzert-, Festival- & Eventfotografie, Medienproduktion und kreative Projekte.</p>
+            <p>Die Hauptseite von Michael Stahlschmidt für Konzert-, Festival- &amp; Eventfotografie, Medienproduktion und kreative Projekte.</p>
             <a href="https://www.baalphemor.de" target="_blank" rel="noopener" class="btn-secondary btn-sm">www.baalphemor.de besuchen ➔</a>
           </div>
         </div>
@@ -703,7 +1000,7 @@
           </div>
         </div>
         <p class="footer-tagline">
-          Offizielle Spiele-Präsenz von Michael Stahlschmidt — Heimat von <em>Auritan: Vanguard</em> im Dark-Fantasy-Universum von Auritan.
+          Offizielle Spiele- &amp; TTRPG-Präsenz von Michael Stahlschmidt — Heimat von <em>Auritan: Vanguard</em>, 5E-Quellenheften &amp; Foundry-VTT-Assets.
         </p>
       </div>
 
@@ -713,19 +1010,20 @@
           <li><a href="#vanguard">🛡️ 1. Langzeitprojekt: Auritan</a></li>
           <li><a href="#spielereien">🎲 2. Kleinere Spielereien</a></li>
           <li><a href="schmiede/">⚒️ 3. Miniaturen-Schmiede (Beta)</a></li>
+          <li><a href="#ttrpg-assets">📖 5E-Quellenhefte &amp; VTT-Assets</a></li>
           <li><a href="#welt">📜 Welt Auritan &amp; Lore</a></li>
           <li><a href="#vision">⚖️ Unsere Philosophie</a></li>
-          <li><a href="loyalitaet/">⭐ Unterstützer &amp; LP-Liste</a></li>
+          <li><a href="https://www.baalphemor.de/supporter-liste/" target="_blank" rel="noopener">⭐ SL – Supporter-Liste</a></li>
           <li><a href="#alpha">📬 Playtester-Vormerkung</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4>Rechtliches & DSGVO</h4>
+        <h4>Rechtliches &amp; DSGVO</h4>
         <ul class="footer-nav">
           <li><a href="#" class="modal-trigger" data-modal="modal-impressum">Impressum (§ 5 DDG)</a></li>
           <li><a href="#" class="modal-trigger" data-modal="modal-datenschutz">Datenschutzerklärung (DSGVO)</a></li>
-          <li><a href="#" class="modal-trigger" data-modal="modal-disclaimer">Haftungsausschluss & Urheberrecht</a></li>
+          <li><a href="#" class="modal-trigger" data-modal="modal-disclaimer">Haftungsausschluss &amp; Urheberrecht</a></li>
           <li><a href="#" class="open-wiki-modal-link">Welten-Wiki (Status)</a></li>
           <li><a href="#" class="locked-portal-trigger">Pre-Alpha Entwicklungsstatus</a></li>
           <li><a href="#" id="open-cookie-settings-btn">🍪 Cookie-Einstellungen</a></li>
@@ -734,9 +1032,10 @@
 
       <div class="footer-col">
         <h4>BAALPHEMOR Netzwerk</h4>
-        <p class="footer-subtext">Folge den Fortschritten aus Auritan und der Dachmarke BAALPHEMOR:</p>
+        <p class="footer-subtext">Folge den Fortschritten aus Auritan, unseren TTRPG-Releases und BAALPHEMOR:</p>
         <div class="footer-social-links">
-          <a href="https://www.baalphemor.de/discord/?world=gaming&amp;from=baalphemor-gaming.de" target="_blank" rel="noopener noreferrer" class="footer-pill-link footer-pill-discord">🛡️ Beitritt zur Discord Community anfragen</a>
+          <a href="https://www.patreon.com/baalphemor" target="_blank" rel="noopener" class="footer-pill-link">⭐ patreon.com/baalphemor</a>
+          <a href="https://baalphemor.itch.io" target="_blank" rel="noopener" class="footer-pill-link">🎲 baalphemor.itch.io</a>
           <a href="https://www.baalphemor.de" target="_blank" rel="noopener" class="footer-pill-link">🌐 www.baalphemor.de</a>
           <a href="https://www.band-portal.de" target="_blank" rel="noopener" class="footer-pill-link">🎸 www.band-portal.de</a>
           <a href="https://auritan.de" target="_blank" rel="noopener" class="footer-pill-link">⚔️ auritan.de</a>
@@ -747,7 +1046,7 @@
 
     <div class="footer-bottom">
       <div class="footer-bottom-inner">
-        <p>BAALPHEMOR GAMING © 2026 Michael Stahlschmidt · Alle Rechte vorbehalten · Offizielle Präsenz unter <a href="https://baalphemor-gaming.de">baalphemor-gaming.de</a> & <a href="https://www.baalphemor.de" target="_blank" rel="noopener">www.baalphemor.de</a>.</p>
+        <p>BAALPHEMOR GAMING © 2026 Michael Stahlschmidt · Alle Rechte vorbehalten · Offizielle Präsenz unter <a href="https://baalphemor-gaming.de">baalphemor-gaming.de</a> &amp; <a href="https://www.baalphemor.de" target="_blank" rel="noopener">www.baalphemor.de</a>.</p>
       </div>
     </div>
   </footer>
@@ -775,11 +1074,6 @@
         </p>
         <div style="text-align:center; margin-top:22px; display:flex; flex-direction:column; align-items:center; gap:10px;">
           <a href="#alpha" class="btn-primary modal-action-btn">Jetzt als Playtester vormerken ➔</a>
-          <a href="https://www.baalphemor.de/discord/?world=gaming&amp;from=baalphemor-gaming.de" target="_blank" rel="noopener noreferrer" class="btn-discord-request">
-            <span class="discord-btn-shield">🛡️</span>
-            <span>Beitritt zur Discord Community anfragen</span>
-            <span class="btn-arrow">➔</span>
-          </a>
         </div>
       </div>
     </div>
@@ -800,18 +1094,13 @@
           <strong>Halt ein, Wanderer!</strong> Die Folianten und Chroniken der Inquisition werden derzeit von den Archivaren überarbeitet.
         </p>
         <p>
-          Das offizielle <strong>Online-Kompendium & Welten-Wiki</strong> zu Helden, Fraktionen, Vorhut-Einheiten, Bestiarium und der Geschichte von <strong>Auritan</strong> wird pünktlich zum Start der <strong>Closed Alpha</strong> freigeschaltet.
+          Das offizielle <strong>Online-Kompendium &amp; Welten-Wiki</strong> zu Helden, Fraktionen, Vorhut-Einheiten, Bestiarium und der Geschichte von <strong>Auritan</strong> wird pünktlich zum Start der <strong>Closed Alpha</strong> freigeschaltet.
         </p>
         <p style="margin-top: 16px;">
           Trage dich in die Vormerkung ein (mit einer frühen Alpha ist ab 2027 zu rechnen), um als einer der Ersten Zugriff auf die Archive zu erhalten.
         </p>
         <div style="text-align:center; margin-top:24px; display:flex; flex-direction:column; align-items:center; gap:10px;">
           <a href="#alpha" class="btn-primary modal-action-btn">Jetzt vormerken ➔</a>
-          <a href="https://www.baalphemor.de/discord/?world=gaming&amp;from=baalphemor-gaming.de" target="_blank" rel="noopener noreferrer" class="btn-discord-request">
-            <span class="discord-btn-shield">🛡️</span>
-            <span>Beitritt zur Discord Community anfragen</span>
-            <span class="btn-arrow">➔</span>
-          </a>
         </div>
       </div>
     </div>
@@ -825,7 +1114,7 @@
         <button class="modal-close" aria-label="Schließen">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="legal-stand" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Stand: 27. Oktober 2026</p>
+        <p class="legal-stand" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Stand: 18. November 2026</p>
         <h4>Angaben gemäß § 5 DDG (Digitale-Dienste-Gesetz):</h4>
         <p>
           <strong>Michael Stahlschmidt</strong> (BAALPHEMOR)<br>
@@ -870,7 +1159,7 @@
         <button class="modal-close" aria-label="Schließen">&times;</button>
       </div>
       <div class="modal-body">
-        <p class="legal-stand" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Stand: 27. Oktober 2026 · Informationen gemäß Art. 13 & 14 DSGVO</p>
+        <p class="legal-stand" style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem;">Stand: 18. November 2026 · Informationen gemäß Art. 13 &amp; 14 DSGVO</p>
 
         <h4>1. Verantwortlicher</h4>
         <p>
@@ -881,38 +1170,31 @@
           E-Mail: <a href="mailto:info@baalphemor.de">info@baalphemor.de</a>
         </p>
 
-        <h4>2. Hosting & Auslieferung dieser Website</h4>
+        <h4>2. Hosting &amp; Auslieferung dieser Website</h4>
         <p>
           Diese Pre-Launch-Seite für <strong>BAALPHEMOR GAMING</strong> und die Spielewelt <em>Auritan</em> wird über <strong>GitHub Pages</strong> (GitHub, Inc., USA – EU-US Data Privacy Framework) ausgeliefert; DNS und CDN können über <strong>Cloudflare</strong> (Cloudflare, Inc. / Cloudflare Germany GmbH, München – EU-US Data Privacy Framework) erfolgen.
-          Die interaktive Web-App <em>Auritan</em> wird zusätzlich über <strong>Vercel Inc.</strong> (Covina, CA, USA – EU-US Data Privacy Framework & Standardvertragsklauseln) bereitgestellt.
+          Die interaktive Web-App <em>Auritan</em> wird zusätzlich über <strong>Vercel Inc.</strong> (Covina, CA, USA – EU-US Data Privacy Framework &amp; Standardvertragsklauseln) bereitgestellt.
           Beim Aufruf werden technisch erforderliche Verbindungs- und Server-Logdaten verarbeitet.
           Rechtsgrundlage: Art. 6 Abs. 1 lit. f DSGVO.
         </p>
 
-        <h4>3. Zentrale Warteschlange, Alpha-Vormerkung & Newsletter</h4>
+        <h4>3. Zentrale Warteschlange, Alpha-Vormerkung &amp; Newsletter</h4>
         <p>
-          Bei freiwilliger Vormerkung, Playtester-Interesse (z. B. 3D-Rigging, Storywriting), Newsletter (z. B. „Die Balurea-Depesche“) oder zentraler Warteschlange verarbeiten wir E-Mail-Adresse, optional Namen, Interessensgebiete und Quelle über das BAALPHEMOR-Backend (Vercel Serverless & verschlüsselte EU-Datenbank <strong>Upstash Redis</strong>, Upstash, Inc., Region Frankfurt/EU).
+          Bei freiwilliger Vormerkung, Playtester-Interesse (z. B. 3D-Rigging, Storywriting), Newsletter (z. B. „Die Balurea-Depesche“) oder zentraler Warteschlange verarbeiten wir E-Mail-Adresse, optional Namen, Interessensgebiete und Quelle über das BAALPHEMOR-Backend (Vercel Serverless &amp; verschlüsselte EU-Datenbank <strong>Upstash Redis</strong>, Upstash, Inc., Region Frankfurt/EU).
           Rechtsgrundlage: Art. 6 Abs. 1 lit. a DSGVO. Widerruf und Abmeldung jederzeit per E-Mail an <a href="mailto:info@baalphemor.de">info@baalphemor.de</a> oder Abmeldelink im Newsletter (Art. 7 Abs. 3 DSGVO).
         </p>
 
-        <h4>4. Discord-Community & Einladungs-Warteschlange</h4>
+        <h4>4. Externe Vertriebsplattformen, Patreon &amp; SL – Supporter-Liste</h4>
         <p>
-          Unter <a href="https://www.baalphemor.de/discord/" target="_blank" rel="noopener">baalphemor.de/discord/</a> (Bot „Titanenwächter“) verarbeiten wir bei freiwilliger Beitrittsanfrage Name/Alias, E-Mail und gewählte Themenwelt für einen persönlichen Einmal-Einladungslink nach manueller Freigabe.
-          Rechtsgrundlage: Art. 6 Abs. 1 lit. a & b DSGVO. Ergänzend gelten die Datenschutzbestimmungen der Discord Inc. / Discord Netherlands B.V.
+          Digitale Käufe, Gratis-Token-Downloads und Unterstützer-Mitgliedschaften auf externen Plattformen (<strong>DriveThruRPG</strong>, <strong>Itch.io</strong>, <strong>Foundry Virtual Tabletop</strong> sowie <a href="https://www.patreon.com/baalphemor" target="_blank" rel="noopener">patreon.com/baalphemor</a>, Patreon Ireland Limited / Patreon, Inc.) erfolgen eigenverantwortlich nach den Datenschutzbestimmungen der jeweiligen Plattform. In unserer zentralen <a href="https://www.baalphemor.de/supporter-liste/" target="_blank" rel="noopener">SL – Supporter-Liste</a> werden alle Unterstützer standardmäßig anonym als „Supporter“ geführt; eine namentliche Nennung (dort, im YouTube-Abspann oder in den Projekt-Credits) erfolgt ausschließlich auf ausdrücklichen eigenen Wunsch (Opt-in, Art. 6 Abs. 1 lit. a &amp; b DSGVO). Widerruf oder Änderung jederzeit über die zentrale <a href="https://www.baalphemor.de/contact/" target="_blank" rel="noopener">Kontaktseite auf baalphemor.de</a>.
         </p>
 
-        <h4>5. Patreon-Mitgliedschaften & Loyalitäts-Punkte (LP)</h4>
-        <p>
-          Bei optionaler Patreon-Verknüpfung (Patreon Ireland Limited / Patreon, Inc.) verarbeiten wir Unterstützer-Status, kumulierte LP zur Treue-Rang-/Rabattberechnung sowie nach Opt-in den Anzeigenamen für Credits/Ehrentafeln.
-          Rechtsgrundlage: Art. 6 Abs. 1 lit. a & b DSGVO.
-        </p>
-
-        <h4>6. Kein Werbe-Tracking & lokale Speicherung</h4>
+        <h4>5. Kein Werbe-Tracking &amp; lokale Speicherung</h4>
         <p>
           Kein Google Analytics, kein Meta-Pixel, keine Profiling-Cookies. Technisch notwendige <code>localStorage</code>-Speicherung (§ 25 Abs. 2 Nr. 2 TDDDG) für Cookie-Einwilligung und lokale Vormerkung.
         </p>
 
-        <h4>7. Betroffenenrechte & Aufsichtsbehörde</h4>
+        <h4>6. Betroffenenrechte &amp; Aufsichtsbehörde</h4>
         <p>
           Rechte auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung (Art. 18), Datenübertragbarkeit (Art. 20) und Widerspruch (Art. 21) DSGVO.
           Beschwerderecht bei der <strong>LDI NRW</strong>, Postfach 20 04 44, 40102 Düsseldorf. Kontakt: <a href="mailto:info@baalphemor.de">info@baalphemor.de</a>.
@@ -925,13 +1207,13 @@
   <div class="modal-overlay" id="modal-disclaimer" role="dialog" aria-modal="true" aria-labelledby="modal-disclaimer-title">
     <div class="modal-card">
       <div class="modal-header">
-        <h3 id="modal-disclaimer-title">Haftungsausschluss & Urheberrecht</h3>
+        <h3 id="modal-disclaimer-title">Haftungsausschluss &amp; Urheberrecht</h3>
         <button class="modal-close" aria-label="Schließen">&times;</button>
       </div>
       <div class="modal-body">
-        <h4>Marken- & Urheberrecht</h4>
+        <h4>Marken- &amp; Urheberrecht</h4>
         <p>
-          Sämtliche durch Michael Stahlschmidt unter den Marken <strong>BAALPHEMOR</strong>, <strong>BAALPHEMOR GAMING</strong> und <strong>AURITAN</strong> (insbesondere <em>Auritan: Vanguard</em> sowie alle zugehörigen Welten- und Systemkonzepte) erstellten Spielkonzepte, 3D-Modelle, Grafiken, Regelwerke und Texte unterliegen dem deutschen Urheberrecht. Alle Rechte vorbehalten.
+          Sämtliche durch Michael Stahlschmidt unter den Marken <strong>BAALPHEMOR</strong>, <strong>BAALPHEMOR GAMING</strong> und <strong>AURITAN</strong> (insbesondere <em>Auritan: Vanguard</em>, <em>Die Hogrur / The Hogrur</em> sowie alle zugehörigen Welten-, VTT- und Systemkonzepte) erstellten Spielkonzepte, 3D-Modelle, Tokens, Audio-Assets, Grafiken, Regelwerke und Texte unterliegen dem deutschen Urheberrecht. Unsere 5E-kompatiblen Quellenhefte erscheinen unter Angabe der <em>System Reference Document 5.1 (CC-BY-4.0)</em> Lizenz. Alle Rechte vorbehalten.
         </p>
       </div>
     </div>
@@ -963,7 +1245,7 @@
       </div>
       <div class="cookie-buttons">
         <button type="button" id="cookie-necessary-btn" class="btn-secondary btn-sm">Nur Notwendige</button>
-        <button type="button" id="cookie-accept-all-btn" class="btn-primary btn-sm">Verstanden & Akzeptieren</button>
+        <button type="button" id="cookie-accept-all-btn" class="btn-primary btn-sm">Verstanden &amp; Akzeptieren</button>
       </div>
     </div>
   </div>

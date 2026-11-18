@@ -32,8 +32,14 @@ for (const relJs of ['script.js', 'schmiede/schmiede.js']) {
   }
 }
 
-// 2. HTML Asset- & Link-Integrität + Markenkanon
-for (const relHtml of ['index.html', 'schmiede/index.html', 'loyalitaet/index.html']) {
+// 2. HTML Asset- & Link-Integrität + Markenkanon + SL-Supporter-Liste Migration
+if (fs.existsSync(path.join(ROOT, 'loyalitaet'))) {
+  fail('Veralteter Ordner "loyalitaet/" existiert noch auf baalphemor-gaming (muss entfernt sein; Umzug nach baalphemor.de/supporter-liste/)');
+} else {
+  pass('Alte Unterseite loyalitaet/ sauber entfernt (Umzug nach baalphemor.de/supporter-liste/)');
+}
+
+for (const relHtml of ['index.html', 'schmiede/index.html', 'datenschutz/index.html', 'impressum/index.html']) {
   const fullHtml = path.join(ROOT, relHtml);
   if (!fs.existsSync(fullHtml)) {
     fail(`HTML-Datei fehlt: ${relHtml}`);
@@ -64,6 +70,12 @@ for (const relHtml of ['index.html', 'schmiede/index.html', 'loyalitaet/index.ht
   }
   if (/Tabletop-Schmiede/i.test(visibleText)) {
     fail(`${relHtml}: Veralteter Name "Tabletop-Schmiede" gefunden (Pflicht: Miniaturen-Schmiede)`);
+  }
+  if (/loyalitaet/i.test(html)) {
+    fail(`${relHtml}: Veralteter Link auf "loyalitaet" gefunden (Pflicht: https://www.baalphemor.de/supporter-liste/)`);
+  }
+  if (/discord/i.test(html)) {
+    fail(`${relHtml}: Veralteter Discord-Verweis gefunden`);
   }
 }
 
