@@ -1,0 +1,16 @@
+{
+  "name": "BAALPHEMOR GAMING — 5E Vault",
+  "version": "1.1.0",
+  "manifest_version": 1,
+  "author": "Michael Stahlschmidt (BAALPHEMOR)",
+  "homepage_url": "https://baalphemor-gaming.de",
+  "description": "Quad-lingual (DE/EN/ES/FR) 5E Large Creature & Character Vault: 1-click 2x2 map token spawner, statblocks, oversized gear rules & SFX sample.",
+  "icon": "https://baalphemor-gaming.de/vtt/owlbear/baalphemor-vault/icon.png",
+  "action": {
+    "title": "BAALPHEMOR 5E Vault",
+    "icon": "https://baalphemor-gaming.de/vtt/owlbear/baalphemor-vault/icon.svg",
+    "popover": "https://baalphemor-gaming.de/vtt/owlbear/baalphemor-vault/index.html",
+    "width": 420,
+    "height": 620
+  }
+}

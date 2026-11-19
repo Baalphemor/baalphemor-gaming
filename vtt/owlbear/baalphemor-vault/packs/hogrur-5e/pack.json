@@ -1,0 +1,1342 @@
+{
+  "packId": "hogrur-5e",
+  "version": "1.1.0",
+  "gridCells": {
+    "width": 2,
+    "height": 2,
+    "imagePx": 512,
+    "obrDpi": 256
+  },
+  "sfxSample": "sfx/hogrur_cannon_tribarrel_blast.ogg",
+  "upgradeLinks": {
+    "patreon": "https://www.patreon.com/baalphemor",
+    "itchVtt": "https://baalphemor.itch.io/the-hogrur-5e-foundry-vtt",
+    "itchBook": "https://baalphemor.itch.io/the-hogrur-5e"
+  },
+  "locales": {
+    "de": {
+      "title": "Die Hogrur (5E)",
+      "actors": [
+        {
+          "name": "Korvak „Rußstirn“",
+          "ac": 16,
+          "hp": 31,
+          "hd": "3d10 + 9",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 16,
+            "DEX": 15,
+            "CON": 16,
+            "INT": 10,
+            "WIS": 12,
+            "CHA": 8
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/korvak_cannoneer_bronze_oath_round.png",
+          "portrait": "portraits/korvak_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Massige Standfestigkeit",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Vorteil auf Attributs- und Rettungswürfe gegen erzwungenes Bewegen, Packen oder Zu-Boden-Werfen; ignoriert die Eigenschaft Rückstoß."
+            },
+            {
+              "name": "Engpass-Routine",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Durchzwängen durch Felder mittelgroßer Kreaturen kostet nur 1 zusätzlichen Fuß Bewegung pro Fuß und verursacht keinen Nachteil auf GES-Rettungswürfe."
+            },
+            {
+              "name": "Kampfstil: Schießkunst",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "+2 Bonus auf Angriffswürfe mit Fernkampfwaffen (bereits im Dreilauf-Geschütz eingerechnet)."
+            },
+            {
+              "name": "Kein Zittern im Nahkampf",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Kein Nachteil auf Fernkampfangriffe mit Handkanonen oder schweren Armbrüsten, wenn sich ein Feind innerhalb von 5 Fuß befindet."
+            },
+            {
+              "name": "Tatendrang (1/Kurze oder Lange Rast)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Kann in seinem Zug eine zusätzliche Aktion ausführen."
+            },
+            {
+              "name": "Tragbares Dreilauf-Geschütz",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Fernkampfwaffenangriff: +6 zum Treffen, Reichweite 40/120 Fuß, ein Ziel. Treffer: 13 (2W10 + 2) Stichschaden. Eigenschaften: Schwer, Zweihändig, Dreilauf-Magazin (3 Schuss pro Trommel), Rückstoß (ignoriert)."
+            },
+            {
+              "name": "Entermesser",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Nahkampfwaffenangriff: +5 zum Treffen, Reichweite 5 Fuß, ein Ziel. Treffer: 6 (1W6 + 3) Hiebschaden."
+            },
+            {
+              "name": "Pulver-Salve (2/Kurze oder Lange Rast, SG 13)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Kartätschen-Schuss: Ersetzt Angriff durch 15-Fuß-Kegel (GES-Rettungswurf SG 13; 2W10 + 2 Stichschaden bei Fehlschlag, halb bei Erfolg). Brecher-Geschoss: Bei Treffer mit Handkanone Ziel bis zu 10 Fuß zurückstoßen und dem nächsten Verbündeten-Angriff vor Korvaks nächstem Zug Vorteil verleihen."
+            },
+            {
+              "name": "Schnelles Stopfen",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "1/Zug das Tragbare Dreilauf-Geschütz nachladen oder eine geladene Ersatztrommel einsetzen."
+            },
+            {
+              "name": "Durchschnaufen (1/Kurze oder Lange Rast)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Gewinnt 1W10 + 3 Trefferpunkte zurück."
+            },
+            {
+              "name": "Eiserner Schwur-Tross (2/Lange Rast)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Wird ein sichtbarer Verbündeter innerhalb von 5 Fuß getroffen, reduziert Korvak dessen erlittenen Schaden um 1W8 + 3."
+            }
+          ]
+        },
+        {
+          "name": "Bramm „Eisenkiel“",
+          "ac": 17,
+          "hp": 34,
+          "hd": "3d10 + 12",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 18,
+            "INT": 9,
+            "WIS": 12,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/bramm_ironkeel_gold_champion_round.png",
+          "portrait": "portraits/bramm_ironkeel_portrait.png",
+          "features": [
+            {
+              "name": "Massige Standfestigkeit",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Vorteil auf Attributs- und Rettungswürfe gegen erzwungenes Bewegen, Packen oder Zu-Boden-Werfen; ignoriert die Eigenschaft Rückstoß."
+            },
+            {
+              "name": "Engpass-Routine",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Durchzwängen durch Felder mittelgroßer Kreaturen kostet nur 1 zusätzlichen Fuß Bewegung pro Fuß und verursacht keinen Nachteil auf GES-Rettungswürfe."
+            },
+            {
+              "name": "Kampfstil: Zweihandwaffenkampf",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Würfelt eine 1 oder 2 auf einem Schadenswürfel des Schiffsanker-Streithammers einmal neu (das neue Ergebnis muss verwendet werden)."
+            },
+            {
+              "name": "Verbesserter Kritischer Treffer (19–20)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Waffenangriffe erzielen bereits bei einem Wurf von 19 oder 20 auf dem W20 einen kritischen Treffer (löst beim Streithammer sofort Wuchtstoß aus)."
+            },
+            {
+              "name": "Tatendrang (1/Kurze oder Lange Rast)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Kann in seinem Zug eine zusätzliche Aktion ausführen."
+            },
+            {
+              "name": "Schiffsanker-Streithammer",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Nahkampfwaffenangriff: +5 zum Treffen, Reichweite 5 Fuß, ein Ziel. Treffer: 10 (2W6 + 3) Wuchtschaden (1er/2er einmal neu würfeln). Wuchtstoß: Bei einem kritischen Treffer (19–20) wird ein mittelgroßes oder kleineres Ziel 10 Fuß weit zurückgestoßen."
+            },
+            {
+              "name": "Schwere Armbrust",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Fernkampfwaffenangriff: +3 zum Treffen, Reichweite 100/400 Fuß, ein Ziel. Treffer: 6 (1W10 + 1) Stichschaden. Eigenschaften: Munition, Laden, Schwer, Zweihändig."
+            },
+            {
+              "name": "Durchschnaufen (1/Kurze oder Lange Rast)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Gewinnt 1W10 + 3 Trefferpunkte zurück."
+            },
+            {
+              "name": "Eiserner Schwur-Tross (2/Lange Rast)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Wird ein sichtbarer Verbündeter innerhalb von 5 Fuß getroffen, reduziert Bramm dessen erlittenen Schaden um 1W8 + 4."
+            }
+          ]
+        },
+        {
+          "name": "Hogrur-Trosswache",
+          "ac": 15,
+          "hp": 52,
+          "hd": "7d10 + 14",
+          "cr": 2.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 15,
+            "INT": 10,
+            "WIS": 11,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_train_guard_iron_guard_round.png",
+          "portrait": "portraits/hogrur_train_guard_portrait.png",
+          "features": [
+            {
+              "name": "Massige Standfestigkeit",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Die Trosswache hat Vorteil auf Attributs- und Rettungswürfe gegen erzwungenes Bewegen, Packen oder Zu-Boden-Werfen und ignoriert die Eigenschaft Rückstoß."
+            },
+            {
+              "name": "Mehrfachangriff",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Die Hogrur-Trosswache führt zwei Nahkampfangriffe mit ihrem Schiffsanker-Streithammer aus."
+            },
+            {
+              "name": "Schiffsanker-Streithammer",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Nahkampfwaffenangriff: +5 zum Treffen, Reichweite 5 Fuß, ein Ziel. Treffer: 10 (2W6 + 3) Wuchtschaden. Bei einem kritischen Treffer wird ein mittelgroßes oder kleineres Ziel 10 Fuß weit geradlinig zurückgestoßen."
+            },
+            {
+              "name": "Einlauf-Handkanone",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Fernkampfwaffenangriff: +3 zum Treffen, Reichweite 30/90 Fuß, ein Ziel. Treffer: 12 (2W10 + 1) Stichschaden. Nach dem Schuss erfordert das Nachladen der Waffe 1 Aktion."
+            },
+            {
+              "name": "Eiserner Schwur-Tross (1/Tag)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Wird ein Verbündeter innerhalb von 5 Fuß von einem Angriff getroffen, wirft sich die Trosswache dazwischen und verringert den erlittenen Schaden des Verbündeten um 6 (1W8 + 2)."
+            }
+          ]
+        },
+        {
+          "name": "Hogrur-Belagerungskanonier",
+          "ac": 17,
+          "hp": 119,
+          "hd": "14d10 + 42",
+          "cr": 6.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 18,
+            "DEX": 14,
+            "CON": 16,
+            "INT": 11,
+            "WIS": 12,
+            "CHA": 11
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_siege_cannoneer_round.png",
+          "portrait": "portraits/hogrur_siege_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Massige Standfestigkeit",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Der Belagerungskanonier hat Vorteil auf Attributs- und Rettungswürfe gegen erzwungenes Bewegen, Packen oder Zu-Boden-Werfen, ignoriert Rückstoß und erleidet keinen Nachteil auf Fernkampfangriffe mit Handkanonen im Nahkampf (5 Fuß)."
+            },
+            {
+              "name": "Bollwerk-Stellung",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Solange der Belagerungskanonier nicht kampfunfähig ist, gewährt er Verbündeten innerhalb von 5 Fuß hinter ihm halbe Deckung (+2 auf RK und GES-Rettungswürfe)."
+            },
+            {
+              "name": "Belagerungs-Kaliber",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Fernkampfangriffe des Kanoniers ignorieren halbe und Dreivierteldeckung, verursachen doppelten Schaden an Objekten und Bauwerken und gelten zum Überwinden von Resistenzen als magisch."
+            },
+            {
+              "name": "Mehrfachangriff",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Der Hogrur-Belagerungskanonier führt zwei Angriffe mit seinem Tragbaren Dreilauf-Geschütz oder zwei Nahkampfangriffe mit seinem Verstärkten Geschützkolben aus."
+            },
+            {
+              "name": "Tragbares Dreilauf-Geschütz",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Fernkampfwaffenangriff: +5 zum Treffen, Reichweite 40/120 Fuß, ein Ziel. Treffer: 13 (2W10 + 2) Stichschaden (Dreilauf-Magazin: 3 Schuss)."
+            },
+            {
+              "name": "Verstärkter Geschützkolben",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Nahkampfwaffenangriff: +7 zum Treffen, Reichweite 5 Fuß, ein Ziel. Treffer: 13 (2W8 + 4) Wuchtschaden."
+            },
+            {
+              "name": "Kartätschen-Salve (Aufladung 5–6)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Der Kanonier feuert eine geballte Schrotladung in einem 15-Fuß-Kegel ab. Jede Kreatur im Kegel muss einen Geschicklichkeits-Rettungswurf gegen SG 14 ablegen. Bei einem Fehlschlag erleidet sie 22 (4W10) Stichschaden und wird bis zu 10 Fuß weit geradlinig zurückgestoßen; bei einem Erfolg erleidet sie halb so viel Schaden und wird nicht gestoßen."
+            },
+            {
+              "name": "Schnelles Stopfen",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Der Belagerungskanonier lädt sein Dreilauf-Geschütz vollständig nach oder setzt eine frische 3-Schuss-Trommel ein."
+            },
+            {
+              "name": "Eiserner Schwur-Tross (2/Tag)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Wird ein Verbündeter innerhalb von 5 Fuß von einem Angriff getroffen, verringert der Belagerungskanonier dessen erlittenen Schaden um 7 (1W8 + 3)."
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "name": "Hogrur",
+          "desc": "Als Hogrur-Abenteurer bringst du die unerschütterliche Präsenz einer lebenden Belagerungsmaschine und die bedingungslose Loyalität des Schwur-Trosses in deine Heldengruppe ein. Bei der Charaktererschaffung erhöhst du nach gängigem 5E-Standard einen Attributswert um 2 und einen anderen um 1 (oder drei verschiedene Werte um je 1) – die meisten Hogrur setzen dabei auf Stärke und Konstitution. Kreaturentyp: Du bist ein Humanoider. Alter: Hogrur reifen etwas langsamer als Menschen, gelten mit etwa 20 Jahren als erwachsen und erreichen trotz ihres rauen Handwerks meist ein Alter von 90 bis 110 Jahren. Gesinnung: Die Bräuche des Schwur-Trosses prägen einen tiefen Sinn für Verlässlichkeit, Kameradschaft und Worttreue. Die meisten Hogrur neigen zu einer rechtschaffenen Gesinnung (häufig Rechtschaffen Gut oder Rechtschaffen Neutral). Größe: Du bist Groß (Large) – zwischen 2,50 und 2,90 Meter groß, 220 bis 320 Kilogramm schwer und belegst im Kampf eine Fläche von 2×2 Feldern (10×10 Fuß). Zufällige Bestimmung: Grundgröße 2,40 m + (2W8 × 2,5 cm); Grundgewicht 210 kg + (Größenwurf × 2W6 Pfund). Deine natürliche Nahkampfreichweite beträgt wie bei anderen spielbaren Charakteren 5 Fuß, sofern deine geführte Waffe nicht über die Eigenschaft Weitreichend verfügt. Bewegungsrate: Deine Grundbewegungsrate zu Fuß beträgt 30 Fuß (9 Meter). Massige Standfestigkeit: Du hast Vorteil auf alle Attributswürfe und Rettungswürfe, um nicht gegen deinen Willen bewegt, gepackt (grappled) oder zu Boden geworfen (prone) zu werden. Darüber hinaus ignorierst du die Eigenschaft Rückstoß schwerer Schwarzpulver- und Belagerungswaffen. Engpass-Routine: Jahrzehnte unter engen Schiffsdecks und in schmalen Minenstollen haben dich gelehrt, deine Schultern geschickt einzudrehen: Wenn du dich durch einen Bereich zwängen musst, der nur für mittelgroße Kreaturen groß genug ist (Durchzwängen / Squeezing), kostet dich jeder Fuß Bewegung dort nur 1 zusätzlichen Fuß (statt 2), und du erleidest durch das Durchzwängen keinen Nachteil auf Geschicklichkeits-Rettungswürfe. Meister der schweren Mechanik: Du bist geübt in einer Fertigkeit deiner Wahl aus Athletik, Einschüchtern oder Wahrnehmung. Außerdem bist du geübt im Umgang mit Schmiedewerkzeug oder Tüftlerwerkzeug (nach deiner Wahl). Eiserner Schwur-Tross: Wenn ein Verbündeter, den du sehen kannst und der sich innerhalb von 5 Fuß um dich befindet, von einem Angriff getroffen wird, kannst du deine Reaktion nutzen, um deine gepanzerte Schulter oder deine Waffe dazwischenzuschieben. Der vom Verbündeten erlittene Schaden sinkt um 1W8 + deinen Konstitutionsmodifikator (Minimum 1). Du kannst dieses Merkmal so oft einsetzen, wie es deinem Übungsbonus entspricht, und erhältst alle verbrauchten Anwendungen nach einer langen Rast zurück. Sprachen: Du kannst Gemeinsprache sprechen, lesen und schreiben. Zudem beherrschst du Hogrur-Signale – eine Verbindung aus tiefen Kehllauten und einem präzisen System aus Kampf- und Arbeits-Handzeichen, mit dem du einfachen taktischen Austausch (wie „Deckung“, „Feuer frei“, „Flanke halten“ oder „Nachladen“) lautlos auf Sichtweite übermitteln kannst. Hogrur-Namen: Jeder Hogrur führt einen kurzen Rufnamen, einen durch Taten verdienten Beinamen und den Namen seines Schwur-Trosses. Rufnamen: Bramm, Dorak, Grolm, Hargas, Korvak, Murg, Orka, Runa, Thorg, Varka. Tat-Beinamen: Eisenkiel, Kesselbrecher, Pulverfaust, Rußstirn, Salzniete, Sturmachse. Tross-Namen: Donnerachse, Eisengespann, Graubrandung, Siebter Kiel."
+        },
+        {
+          "name": "Hogrur: Massige Standfestigkeit",
+          "desc": "Du hast Vorteil auf alle Attributswürfe und Rettungswürfe, um nicht gegen deinen Willen bewegt, gepackt (grappled) oder zu Boden geworfen (prone) zu werden. Darüber hinaus ignorierst du die Eigenschaft Rückstoß schwerer Schwarzpulver- und Belagerungswaffen."
+        },
+        {
+          "name": "Hogrur: Engpass-Routine",
+          "desc": "Jahrzehnte unter engen Schiffsdecks und in schmalen Minenstollen haben dich gelehrt, deine Schultern geschickt einzudrehen: Wenn du dich durch einen Bereich zwängen musst, der nur für mittelgroße Kreaturen groß genug ist (Durchzwängen / Squeezing), kostet dich jeder Fuß Bewegung dort nur 1 zusätzlichen Fuß (statt 2), und du erleidest durch das Durchzwängen keinen Nachteil auf Geschicklichkeits-Rettungswürfe."
+        },
+        {
+          "name": "Hogrur: Meister der schweren Mechanik",
+          "desc": "Du bist geübt in einer Fertigkeit deiner Wahl aus Athletik, Einschüchtern oder Wahrnehmung. Außerdem bist du geübt im Umgang mit Schmiedewerkzeug oder Tüftlerwerkzeug (nach deiner Wahl)."
+        },
+        {
+          "name": "Hogrur: Eiserner Schwur-Tross",
+          "desc": "Wenn ein Verbündeter, den du sehen kannst und der sich innerhalb von 5 Fuß um dich befindet, von einem Angriff getroffen wird, kannst du deine Reaktion nutzen, um deine gepanzerte Schulter oder deine Waffe dazwischenzuschieben. Der vom Verbündeten erlittene Schaden sinkt um 1W8 + deinen Konstitutionsmodifikator (Minimum 1). Du kannst dieses Merkmal so oft einsetzen, wie es deinem Übungsbonus entspricht, und erhältst alle verbrauchten Anwendungen nach einer langen Rast zurück."
+        },
+        {
+          "name": "Der Hogrur-Kanonier",
+          "desc": "Wo gewöhnliche Bogenschützen Deckung suchen, rückt der Hogrur-Kanonier mit geschultertem Schiffsgeschütz unaufhaltsam vor. Diese Kämpfer vereinen eiserne Belagerungs-Disziplin mit der rohen Feuerkraft mehrläufiger Handkanonen: Sie brechen feindliche Schildwälle mit donnernden Kartätschen auf, dienen ihren Gefährten als wandelnde Brustwehr aus Kesselblech und verwandeln jedes Gefechtsfeld in eine rußgeschwängerte Todeszone. Level 3 — Geschütz-Meister & Schwarzpulver-DrillAb der 3. Stufe beherrschst du Wartung, Ladetakt und Nahdistanz-Einsatz schwerster Fernkampfwaffen im Schlaf: Schwere Geschütz-Übung: Du erhältst Übung mit Belagerungswaffen sowie allen schweren Schwarzpulver- und Armbrustwaffen (einschließlich des Tragbaren Dreilauf-Geschützes und der Einlauf-Handkanone). Falls du noch nicht mit Tüftlerwerkzeug geübt bist, erhältst du zusätzlich Übung damit, um Schwarzpulver-Ladungen und Kugeln im Feld herzustellen.Schnelles Stopfen: Einmal pro Zug kannst du die Eigenschaft Laden (Loading) einer Fernkampfwaffe ignorieren oder das Nachladen bzw. den Trommelwechsel eines Dreilauf-Magazins als Bonusaktion statt als Aktion durchführen.Kein Zittern im Nahkampf: Befindet sich eine feindliche Kreatur innerhalb von 5 Fuß um dich, erleidest du dadurch keinen Nachteil auf deine Fernkampfangriffswürfe mit schweren Armbrüsten oder Handkanonen.Level 3 — Pulver-SalveEbenfalls ab der 3. Stufe führst du spezialisierte Treibladungen und Geschosse mit dir. Du kannst Pulver-Salve so oft einsetzen, wie es deinem Übungsbonus entspricht, und erhältst alle verbrauchten Anwendungen nach einer kurzen oder langen Rast zurück. Erfordert eine Option einen Rettungswurf, berechnet sich der Schwierigkeitsgrad wie folgt: SG = 8 + dein Übungsbonus + dein Stärke- oder Geschicklichkeitsmodifikator (nach deiner Wahl). Kartätschen-Schuss: Einmal in deinem Zug kannst du, wenn du die Angriffsaktion nutzt, einen einzelnen Fernkampfangriff mit einer geladenen Handkanone durch einen 15-Fuß-Kegel aus Eisenschrot ersetzen, der von dir ausgeht (verbraucht 1 Schuss Munition). Jede Kreatur in diesem Kegel muss einen Geschicklichkeits-Rettungswurf gegen deinen Pulver-Salven-SG ablegen. Bei einem Fehlschlag erleidet sie den vollen normalen Waffenschaden deiner Handkanone (2W10 + Geschicklichkeitsmodifikator Stichschaden), bei einem Erfolg halb so viel Schaden.Brecher-Geschoss: Wenn du eine Kreatur mit einem Fernkampfwaffenangriff einer schweren Armbrust oder Handkanone triffst, kannst du eine Anwendung von Pulver-Salve aufwenden, um einen massiven Eisenbolzen ins Ziel zu treiben. Das Ziel erleidet den normalen Waffenschaden, wird – sofern es höchstens Riesig (Huge) ist – bis zu 10 Fuß geradlinig von dir weggestoßen, und der nächste Angriffswurf eines Verbündeten gegen dieses Ziel vor Beginn deines nächsten Zuges hat Vorteil.Level 7 — Geschütz-Deckung (Bollwerk-Stellung)Ab der 7. Stufe machst du deine breite Silhouette zum Schutzschild deines Trosses: Solange du schwere Rüstung trägst, eine zweihändige Fernkampfwaffe führst und nicht kampfunfähig bist, gewährst du Verbündeten innerhalb von 5 Fuß hinter dir die Vorteile von halber Deckung (+2 Bonus auf RK und Geschicklichkeits-Rettungswürfe) gegen Angriffe und Effekte, die von deiner Vorderseite ausgehen. Wenn du selbst einem Flächeneffekt ausgesetzt bist, der dir einen Geschicklichkeits-Rettungswurf für halben Schaden erlaubt, und du diesen Rettungswurf verfehlst, kannst du deine Reaktion nutzen, um dich hinter Geschütz und Panzerplatte zu stemmen und dennoch nur halben Schaden zu erleiden. Level 10 — Durchschlagendes KaliberAb der 10. Stufe schlagen deine schwer kalibrierten Geschosse selbst durch Schießscharten und Steinmauern. Deine Fernkampfwaffenangriffe mit schweren Schwarzpulverwaffen, schweren Armbrüsten und Belagerungswaffen ignorieren halbe Deckung und Dreivierteldeckung. Darüber hinaus richten sie doppelten Schaden gegen unbelebte Objekte, Türen, Schiffsplanken und Befestigungen an und gelten zum Überwinden von Resistenzen und Immunitäten gegen nichtmagische Angriffe und Schaden als magisch. Level 15 — Donnernder RückstoßAb der 15. Stufe hüllt jede deiner Spezialsalven deine Stellung in schützenden Pulverdampf. Jedes Mal, wenn du eine Anwendung von Pulver-Salve einsetzt, breitet sich bis zum Beginn deines nächsten Zuges eine dichte Rauchwolke in einem Radius von 10 Fuß um dich herum aus (sofern kein mäßiger oder starker Wind ab 10 Meilen pro Stunde sie verweht). Das Gebiet innerhalb der Rauchwolke gilt für alle anderen Kreaturen als stark verschleiert; deine eigene Sicht durch diesen Pulverdampf bleibt dank deiner Kanonendeck-Erfahrung vollkommen unbeeinträchtigt. Level 18 — Lebende BatterieAuf der 18. Stufe wirst du selbst zum unerschöpflichen Herzstück einer Belagerung. Wenn du Initiative würfelst und über keine verbleibenden Anwendungen von Pulver-Salve verfügst, gewinnst du sofort 2 Anwendungen zurück. Zudem kannst du einmal pro Zug, wenn du ein Ziel mit einer mehrläufigen Handkanone triffst (mindestens 2 geladene Läufe erforderlich), zwei Läufe gleichzeitig zünden: Der Angriff verursacht einen zusätzlichen Waffenschadenswürfel (+1W10 Stichschaden beim Dreilauf-Geschütz) und verbraucht 2 Schuss aus der Trommel."
+        },
+        {
+          "name": "Tragbares Dreilauf-Geschütz (Handkanone)",
+          "desc": "Kriegs-Fernkampfwaffe — Munition (Reichweite 40/120 Fuß), Schwer, Zweihändig, Dreilauf-Magazin (3 Schuss), Rückstoß"
+        },
+        {
+          "name": "Einlauf-Handkanone",
+          "desc": "Kriegs-Fernkampfwaffe — Munition (Reichweite 30/90 Fuß), Laden (Aktion), Schwer, Zweihändig, Rückstoß"
+        },
+        {
+          "name": "Schiffsanker-Streithammer / Kettenkeule",
+          "desc": "Kriegs-Nahkampfwaffe — Schwer, Zweihändig, Wuchtstoß"
+        }
+      ]
+    },
+    "en": {
+      "title": "The Hogrur (5E)",
+      "actors": [
+        {
+          "name": "Korvak “Soot-Brow”",
+          "ac": 16,
+          "hp": 31,
+          "hd": "3d10 + 9",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 16,
+            "DEX": 15,
+            "CON": 16,
+            "INT": 10,
+            "WIS": 12,
+            "CHA": 8
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/korvak_cannoneer_bronze_oath_round.png",
+          "portrait": "portraits/korvak_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Massive Stability",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Advantage on ability checks and saving throws against being moved against his will, grappled, or knocked prone; ignores the Recoil property."
+            },
+            {
+              "name": "Close-Quarters Drill",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Squeezing through Medium spaces costs only 1 extra foot per foot moved and imposes no disadvantage on Dexterity saving throws."
+            },
+            {
+              "name": "Fighting Style: Archery",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "+2 bonus to attack rolls made with ranged weapons (already included in Tri-Barrel Hand Cannon attack)."
+            },
+            {
+              "name": "Steady Under Fire",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "No disadvantage on ranged attack rolls with hand cannons or heavy crossbows while within 5 feet of a hostile creature."
+            },
+            {
+              "name": "Action Surge (1/Short or Long Rest)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Can take one additional action on his turn."
+            },
+            {
+              "name": "Portable Tri-Barrel Hand Cannon",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ranged Weapon Attack: +6 to hit, range 40/120 ft., one target. Hit: 13 (2d10 + 2) piercing damage. Properties: Heavy, Two-Handed, Tri-Barrel Drum (3 shots per drum), Recoil (ignored)."
+            },
+            {
+              "name": "Boarding Shortsword",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 6 (1d6 + 3) piercing damage."
+            },
+            {
+              "name": "Powder Volley (2/Short or Long Rest, DC 13)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Grapeshot Blast: Replace one hand-cannon attack with a 15-ft. cone (Dex save DC 13; 2d10 + 2 piercing on fail, half on success). Breacher Shot: On hit with hand cannon, push Huge or smaller target up to 10 ft. back and grant advantage on the next ally attack against it before Korvak's next turn."
+            },
+            {
+              "name": "Rapid Ramming",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Once per turn, reload the Portable Tri-Barrel Hand Cannon or swap in a loaded spare drum."
+            },
+            {
+              "name": "Second Wind (1/Short or Long Rest)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Regains 1d10 + 3 hit points."
+            },
+            {
+              "name": "Iron Oath-Train (2/Long Rest)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "When a visible ally within 5 ft. is hit by an attack, Korvak reduces the damage taken by 1d8 + 3."
+            }
+          ]
+        },
+        {
+          "name": "Bramm “Ironkeel”",
+          "ac": 17,
+          "hp": 34,
+          "hd": "3d10 + 12",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 18,
+            "INT": 9,
+            "WIS": 12,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/bramm_ironkeel_gold_champion_round.png",
+          "portrait": "portraits/bramm_ironkeel_portrait.png",
+          "features": [
+            {
+              "name": "Massive Stability",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Advantage on ability checks and saving throws against being moved against his will, grappled, or knocked prone; ignores the Recoil property."
+            },
+            {
+              "name": "Close-Quarters Drill",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Squeezing through Medium spaces costs only 1 extra foot per foot moved and imposes no disadvantage on Dexterity saving throws."
+            },
+            {
+              "name": "Fighting Style: Great Weapon Fighting",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Rerolls 1s and 2s on damage dice with his Anchor-Head Warhammer (must use the new roll)."
+            },
+            {
+              "name": "Improved Critical (19–20)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Weapon attacks score a critical hit on a d20 roll of 19 or 20 (triggering Crushing Momentum on his warhammer)."
+            },
+            {
+              "name": "Action Surge (1/Short or Long Rest)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Can take one additional action on his turn."
+            },
+            {
+              "name": "Anchor-Head Warhammer",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage (reroll 1s and 2s once). Crushing Momentum: On a critical hit (19–20), a Medium or smaller target is pushed 10 ft. straight back."
+            },
+            {
+              "name": "Heavy Crossbow",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ranged Weapon Attack: +3 to hit, range 100/400 ft., one target. Hit: 6 (1d10 + 1) piercing damage. Properties: Ammunition, Loading, Heavy, Two-Handed."
+            },
+            {
+              "name": "Second Wind (1/Short or Long Rest)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Regains 1d10 + 3 hit points."
+            },
+            {
+              "name": "Iron Oath-Train (2/Long Rest)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "When a visible ally within 5 ft. is hit by an attack, Bramm reduces the damage taken by 1d8 + 4."
+            }
+          ]
+        },
+        {
+          "name": "Hogrur Train Guard",
+          "ac": 15,
+          "hp": 52,
+          "hd": "7d10 + 14",
+          "cr": 2.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 15,
+            "INT": 10,
+            "WIS": 11,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_train_guard_iron_guard_round.png",
+          "portrait": "portraits/hogrur_train_guard_portrait.png",
+          "features": [
+            {
+              "name": "Massive Stability",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "The train guard has advantage on ability checks and saving throws made to avoid being moved against its will, grappled, or knocked prone, and ignores the Recoil weapon property."
+            },
+            {
+              "name": "Multiattack",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "The Hogrur train guard makes two melee attacks with its Anchor-Head Warhammer."
+            },
+            {
+              "name": "Anchor-Head Warhammer",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Melee Weapon Attack: +5 to hit, reach 5 ft., one target. Hit: 10 (2d6 + 3) bludgeoning damage, and on a critical hit, a Medium or smaller target is pushed 10 feet straight back."
+            },
+            {
+              "name": "Single-Barrel Hand Cannon",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ranged Weapon Attack: +3 to hit, range 30/90 ft., one target. Hit: 12 (2d10 + 1) piercing damage. Reloading this weapon after firing requires 1 action."
+            },
+            {
+              "name": "Iron Oath-Train (1/Day)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "When an ally within 5 feet of the train guard is hit by an attack, the guard interposes itself, reducing the damage taken by the ally by 6 (1d8 + 2)."
+            }
+          ]
+        },
+        {
+          "name": "Hogrur Siege Cannoneer",
+          "ac": 17,
+          "hp": 119,
+          "hd": "14d10 + 42",
+          "cr": 6.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 18,
+            "DEX": 14,
+            "CON": 16,
+            "INT": 11,
+            "WIS": 12,
+            "CHA": 11
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_siege_cannoneer_round.png",
+          "portrait": "portraits/hogrur_siege_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Massive Stability",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "The siege cannoneer has advantage on ability checks and saving throws against being moved against its will, grappled, or knocked prone, ignores Recoil, and suffers no disadvantage on ranged hand-cannon attacks while within 5 feet of a hostile creature."
+            },
+            {
+              "name": "Bulwark Stance",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "While not incapacitated, the siege cannoneer grants half cover (+2 to AC and Dexterity saving throws) to allies within 5 feet behind it."
+            },
+            {
+              "name": "Siege Caliber",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "The cannoneer's ranged attacks ignore half and three-quarters cover, deal double damage to objects and structures, and count as magical for overcoming resistances."
+            },
+            {
+              "name": "Multiattack",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "The Hogrur siege cannoneer makes two attacks with its Portable Tri-Barrel Hand Cannon or two melee attacks with its Reinforced Gunstock."
+            },
+            {
+              "name": "Portable Tri-Barrel Hand Cannon",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ranged Weapon Attack: +5 to hit, range 40/120 ft., one target. Hit: 13 (2d10 + 2) piercing damage (Tri-Barrel Drum: 3 shots)."
+            },
+            {
+              "name": "Reinforced Gunstock",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Melee Weapon Attack: +7 to hit, reach 5 ft., one target. Hit: 13 (2d8 + 4) bludgeoning damage."
+            },
+            {
+              "name": "Grapeshot Volley (Recharge 5–6)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "The cannoneer blasts shrapnel in a 15-foot cone. Each creature in that area must make a DC 14 Dexterity saving throw. On a failed save, a creature takes 22 (4d10) piercing damage and is pushed up to 10 feet straight back. On a successful save, a creature takes half as much damage and isn't pushed."
+            },
+            {
+              "name": "Rapid Ramming",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "The siege cannoneer reloads its Portable Tri-Barrel Hand Cannon or seats a fresh 3-shot drum."
+            },
+            {
+              "name": "Iron Oath-Train (2/Day)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "When an ally within 5 feet is hit by an attack, the siege cannoneer reduces the damage taken by 7 (1d8 + 3)."
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "name": "Hogrur",
+          "desc": "As a Hogrur adventurer, you bring the immovable presence of a walking siege engine and the unshakeable loyalty of the Oath-Train to your party. When determining your character's ability scores under standard 5E creation rules, increase one ability score by 2 and increase a different score by 1 (or increase three different scores by 1 each)—most Hogrur favor Strength and Constitution. Creature Type: You are a Humanoid. Age: Hogrur mature slightly slower than humans, reaching adulthood around age 20 and typically living between 90 and 110 years despite their demanding trade. Alignment: The traditions of the Oath-Train instill a deep respect for reliability, camaraderie, and keeping one's word. Most Hogrur lean toward a lawful alignment (most commonly lawful good or lawful neutral). Size: You are Large—standing between 8 and 9.5 feet tall, weighing 480 to 700 pounds, and occupying a 10-by-10-foot space (2×2 squares) in combat. Random Height & Weight: Base height 7 ft. 10 in. + 2d8 inches; base weight 460 lb. + (height roll × 2d6 lb.). Your natural melee reach remains 5 feet unless you wield a weapon with the Reach property. Speed: Your base walking speed is 30 feet. Massive Stability: You have advantage on ability checks and saving throws made to avoid being moved against your will, grappled, or knocked prone. In addition, you ignore the Recoil property of heavy black-powder and siege weapons. Close-Quarters Drill: Generations spent below low ship decks and inside narrow mine adits have taught you how to angle your shoulders cleanly: when squeezing through a space large enough for a Medium creature, every foot of movement costs you only 1 extra foot (instead of 2), and squeezing does not impose disadvantage on your Dexterity saving throws. Master of Heavy Mechanics: You gain proficiency in one skill of your choice from Athletics, Intimidation, or Perception. You also gain proficiency with your choice of Smith's Tools or Tinker's Tools. Iron Oath-Train: When an ally you can see within 5 feet of you is hit by an attack, you can use your reaction to interpose your armored shoulder or weapon, reducing the damage the ally takes by 1d8 + your Constitution modifier (minimum of 1). You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest. Languages: You can speak, read, and write Common, and you know Hogrur Sign—a combination of low guttural calls and crisp combat and labor hand signals that lets you convey concise tactical concepts (such as “take cover,” “fire at will,” “hold flank,” or “reloading”) silently within line of sight. Hogrur Names: Every Hogrur bears a short guttural given name, a deed-earned byname bestowed by companions, and the name of their Oath-Train. Given Names: Bramm, Dorak, Grolm, Hargas, Korvak, Murg, Orka, Runa, Thorg, Varka. Deed Bynames: Boilerbreaker, Ironkeel, Powderfist, Salt-Rivet, Soot-Brow, Storm-Axle. Oath-Train Names: Gray Surf, Iron Team, Seventh Keel, Thunder-Axle."
+        },
+        {
+          "name": "Hogrur: Massive Stability",
+          "desc": "You have advantage on ability checks and saving throws made to avoid being moved against your will, grappled, or knocked prone. In addition, you ignore the Recoil property of heavy black-powder and siege weapons."
+        },
+        {
+          "name": "Hogrur: Close-Quarters Drill",
+          "desc": "Generations spent below low ship decks and inside narrow mine adits have taught you how to angle your shoulders cleanly: when squeezing through a space large enough for a Medium creature, every foot of movement costs you only 1 extra foot (instead of 2), and squeezing does not impose disadvantage on your Dexterity saving throws."
+        },
+        {
+          "name": "Hogrur: Master of Heavy Mechanics",
+          "desc": "You gain proficiency in one skill of your choice from Athletics, Intimidation, or Perception. You also gain proficiency with your choice of Smith's Tools or Tinker's Tools."
+        },
+        {
+          "name": "Hogrur: Iron Oath-Train",
+          "desc": "When an ally you can see within 5 feet of you is hit by an attack, you can use your reaction to interpose your armored shoulder or weapon, reducing the damage the ally takes by 1d8 + your Constitution modifier (minimum of 1). You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest."
+        },
+        {
+          "name": "Hogrur Cannoneer",
+          "desc": "Where ordinary archers duck behind ramparts, a Hogrur Cannoneer advances with a shortened naval gun slung across their chest. These martial specialists fuse ironclad siege discipline with the devastating firepower of multi-barreled hand cannons: shattering shield walls with thunderous grapeshot, shielding smaller companions behind boiler-iron plate, and turning every choke point into a smoke-choked kill zone. Level 3 — Ordnance Master & Powder DrillStarting at 3rd level, maintaining, ramming, and firing heavy artillery in the thick of melee is second nature to you: Heavy Ordnance Proficiency: You gain proficiency with siege weapons as well as heavy black-powder and crossbow weapons (including the Portable Tri-Barrel Hand Cannon and Single-Barrel Hand Cannon). If you are not already proficient with Tinker's Tools, you gain proficiency with them to craft black-powder charges and shot in the field.Rapid Ramming: Once per turn, you can ignore the Loading property of a ranged weapon, or reload / swap a Tri-Barrel Drum as a bonus action instead of an action.Steady Under Fire: Being within 5 feet of a hostile creature doesn't impose disadvantage on your ranged attack rolls made with heavy crossbows or hand cannons.Level 3 — Powder VolleyAlso at 3rd level, you prepare specialized powder charges and shot. You can use Powder Volley a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a short or long rest. If an option requires a saving throw, its DC equals 8 + your proficiency bonus + your Strength or Dexterity modifier (your choice). Grapeshot Blast: Once on your turn when you take the Attack action, you can replace one ranged attack with a loaded hand cannon to unleash a 15-foot cone of iron shot originating from you (expending 1 shot of ammunition). Each creature in that cone must make a Dexterity saving throw against your Powder Volley save DC, taking the hand cannon's full normal weapon damage (2d10 + Dexterity modifier piercing damage) on a failed save, or half as much damage on a successful one.Breacher Shot: When you hit a creature with a ranged weapon attack using a heavy crossbow or hand cannon, you can expend one use of Powder Volley to drive a heavy iron slug into the target. The target takes normal weapon damage, is pushed up to 10 feet straight away from you (provided it is Huge or smaller), and the next attack roll made by one of your allies against that target before the start of your next turn has advantage.Level 7 — Bulwark StanceBy 7th level, your broad armored frame serves as a mobile parapet for your Oath-Train. While you are wearing heavy armor, wielding a two-handed ranged weapon, and not incapacitated, friendly creatures within 5 feet behind you gain the benefits of half cover (+2 bonus to AC and Dexterity saving throws) against attacks and effects originating in front of you. Furthermore, when you fail a Dexterity saving throw against an area effect that deals half damage on a success, you can use your reaction to brace behind your gun and plate, taking only half damage instead. Level 10 — Armor-Piercing CaliberAt 10th level, your heavy-caliber rounds punch straight through embrasures and reinforced timber. Your ranged weapon attacks with heavy firearms, heavy crossbows, and siege weapons ignore half cover and three-quarters cover, deal double damage to inanimate objects, doors, hulls, and structures, and count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage. Level 15 — Thunderous RecoilStarting at 15th level, unleashing your specialty ordnance shrouds your position in protective gunsmoke. Whenever you expend a use of Powder Volley, a 10-foot-radius sphere of thick black smoke billows out centered on you until the start of your next turn (unless dispersed by a wind of at least 10 miles per hour). The sphere's area is heavily obscured for all other creatures, while your own vision through this smoke remains completely unaffected. Level 18 — Living BatteryAt 18th level, you become an unstoppable siege battery unto yourself. When you roll initiative and have 0 uses of Powder Volley remaining, you immediately regain 2 expended uses. In addition, once per turn when you hit a target with a multi-barreled hand cannon (requiring at least 2 loaded barrels in the drum), you can fire two barrels simultaneously: the attack deals one extra weapon damage die (+1d10 piercing damage with a Tri-Barrel Hand Cannon) and expends 2 shots from the drum."
+        },
+        {
+          "name": "Portable Tri-Barrel Hand Cannon",
+          "desc": "Martial Ranged Weapon — Ammunition (range 40/120 ft.), Heavy, Two-Handed, Tri-Barrel Drum (3 shots), Recoil"
+        },
+        {
+          "name": "Single-Barrel Hand Cannon",
+          "desc": "Martial Ranged Weapon — Ammunition (range 30/90 ft.), Loading (action), Heavy, Two-Handed, Recoil"
+        },
+        {
+          "name": "Anchor-Head Warhammer / Chain Maul",
+          "desc": "Martial Melee Weapon — Heavy, Two-Handed, Crushing Momentum"
+        }
+      ]
+    },
+    "es": {
+      "title": "Los Hogrur (5E)",
+      "actors": [
+        {
+          "name": "Korvak «Frente de Hollín»",
+          "ac": 16,
+          "hp": 31,
+          "hd": "3d10 + 9",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 16,
+            "DEX": 15,
+            "CON": 16,
+            "INT": 10,
+            "WIS": 12,
+            "CHA": 8
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/korvak_cannoneer_bronze_oath_round.png",
+          "portrait": "portraits/korvak_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Estabilidad Masiva",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Ventaja en pruebas de característica y tiradas de salvación contra ser movido contra su voluntad, agarrado o derribado; ignora la propiedad Retroceso."
+            },
+            {
+              "name": "Instrucción en Espacios Estrechos",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Escurrirse por espacios para criaturas Medianas solo cuesta 1 pie adicional por cada pie movido y no impone desventaja en las tiradas de salvación de Destreza."
+            },
+            {
+              "name": "Estilo de Combate: Tiro con Arco",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Bonificador de +2 a las tiradas de ataque realizadas con armas a distancia (ya incluido en el ataque del Cañón de Mano Portátil de Tres Cañones)."
+            },
+            {
+              "name": "Firme Bajo el Fuego",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Sin desventaja en tiradas de ataque a distancia con cañones de mano o ballestas pesadas por tener una criatura hostil a 5 pies o menos."
+            },
+            {
+              "name": "Oleada de Acción (1/descanso corto o largo)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Puede realizar una acción adicional en su turno."
+            },
+            {
+              "name": "Cañón de Mano Portátil de Tres Cañones",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma a distancia: +6 a impactar, alcance 40/120 pies, un objetivo. Impacto: 13 (2d10 + 2) de daño perforante. Propiedades: Pesada, A dos manos, Tambor de tres cañones (3 disparos por tambor), Retroceso (ignorado)."
+            },
+            {
+              "name": "Espada Corta de Abordaje",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma cuerpo a cuerpo: +5 a impactar, alcance 5 pies, un objetivo. Impacto: 6 (1d6 + 3) de daño perforante."
+            },
+            {
+              "name": "Salva de Pólvora (2/descanso corto o largo, CD 13)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Descarga de Metralla: sustituye un ataque de cañón de mano por un cono de 15 pies (salvación de DES CD 13; 2d10 + 2 de daño perforante si falla, la mitad si tiene éxito). Disparo Rompedor: al impactar con el cañón de mano, empuja a un objetivo Enorme o inferior hasta 10 pies hacia atrás y otorga ventaja a la siguiente tirada de ataque de un aliado contra él antes del próximo turno de Korvak."
+            },
+            {
+              "name": "Baqueteo Rápido",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Una vez por turno, recarga el Cañón de Mano Portátil de Tres Cañones o encaja un tambor de repuesto cargado."
+            },
+            {
+              "name": "Tomar Aliento (1/descanso corto o largo)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Recupera 1d10 + 3 puntos de golpe."
+            },
+            {
+              "name": "Caravana del Juramento de Hierro (2/descanso largo)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Cuando un aliado visible a 5 pies o menos recibe el impacto de un ataque, Korvak reduce el daño sufrido en 1d8 + 3."
+            }
+          ]
+        },
+        {
+          "name": "Bramm «Quilla de Hierro»",
+          "ac": 17,
+          "hp": 34,
+          "hd": "3d10 + 12",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 18,
+            "INT": 9,
+            "WIS": 12,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/bramm_ironkeel_gold_champion_round.png",
+          "portrait": "portraits/bramm_ironkeel_portrait.png",
+          "features": [
+            {
+              "name": "Estabilidad Masiva",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Ventaja en pruebas de característica y tiradas de salvación contra ser movido contra su voluntad, agarrado o derribado; ignora la propiedad Retroceso."
+            },
+            {
+              "name": "Instrucción en Espacios Estrechos",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Escurrirse por espacios para criaturas Medianas solo cuesta 1 pie adicional por cada pie movido y no impone desventaja en las tiradas de salvación de Destreza."
+            },
+            {
+              "name": "Estilo de Combate: Combate con Armas Grandes",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Vuelve a tirar una vez los resultados de 1 y 2 en los dados de daño con su Martillo de Guerra Cabeza de Ancla (debe usar el nuevo resultado)."
+            },
+            {
+              "name": "Crítico Mejorado (19–20)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Sus ataques con arma logran un impacto crítico con un resultado de 19 o 20 en el d20 (activando Inercia aplastante con su martillo de guerra)."
+            },
+            {
+              "name": "Oleada de Acción (1/descanso corto o largo)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Puede realizar una acción adicional en su turno."
+            },
+            {
+              "name": "Martillo de Guerra Cabeza de Ancla",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma cuerpo a cuerpo: +5 a impactar, alcance 5 pies, un objetivo. Impacto: 10 (2d6 + 3) de daño contundente (repite una vez los 1 y 2). Inercia aplastante: en un impacto crítico (19–20), un objetivo Mediano o inferior es empujado 10 pies en línea recta hacia atrás."
+            },
+            {
+              "name": "Ballesta Pesada",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma a distancia: +3 a impactar, alcance 100/400 pies, un objetivo. Impacto: 6 (1d10 + 1) de daño perforante. Propiedades: Munición, Recarga, Pesada, A dos manos."
+            },
+            {
+              "name": "Tomar Aliento (1/descanso corto o largo)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Recupera 1d10 + 3 puntos de golpe."
+            },
+            {
+              "name": "Caravana del Juramento de Hierro (2/descanso largo)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Cuando un aliado visible a 5 pies o menos recibe el impacto de un ataque, Bramm reduce el daño sufrido en 1d8 + 4."
+            }
+          ]
+        },
+        {
+          "name": "Guardia de la Caravana Hogrur",
+          "ac": 15,
+          "hp": 52,
+          "hd": "7d10 + 14",
+          "cr": 2.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 15,
+            "INT": 10,
+            "WIS": 11,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_train_guard_iron_guard_round.png",
+          "portrait": "portraits/hogrur_train_guard_portrait.png",
+          "features": [
+            {
+              "name": "Estabilidad Masiva",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "El guardia de la caravana tiene ventaja en las pruebas de característica y tiradas de salvación para evitar ser movido contra su voluntad, agarrado o derribado, e ignora la propiedad de arma Retroceso."
+            },
+            {
+              "name": "Ataque múltiple",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "El guardia de la caravana Hogrur realiza dos ataques cuerpo a cuerpo con su Martillo de Guerra Cabeza de Ancla."
+            },
+            {
+              "name": "Martillo de Guerra Cabeza de Ancla",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma cuerpo a cuerpo: +5 a impactar, alcance 5 pies, un objetivo. Impacto: 10 (2d6 + 3) de daño contundente y, en un impacto crítico, un objetivo Mediano o inferior es empujado 10 pies en línea recta hacia atrás."
+            },
+            {
+              "name": "Cañón de Mano de Un Cañón",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma a distancia: +3 a impactar, alcance 30/90 pies, un objetivo. Impacto: 12 (2d10 + 1) de daño perforante. Recargar esta arma tras disparar requiere 1 acción."
+            },
+            {
+              "name": "Caravana del Juramento de Hierro (1/día)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Cuando un aliado situado a 5 pies o menos del guardia de la caravana recibe el impacto de un ataque, el guardia se interpone y reduce el daño sufrido por el aliado en 6 (1d8 + 2)."
+            }
+          ]
+        },
+        {
+          "name": "Artillero de Asedio Hogrur",
+          "ac": 17,
+          "hp": 119,
+          "hd": "14d10 + 42",
+          "cr": 6.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 18,
+            "DEX": 14,
+            "CON": 16,
+            "INT": 11,
+            "WIS": 12,
+            "CHA": 11
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_siege_cannoneer_round.png",
+          "portrait": "portraits/hogrur_siege_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Estabilidad Masiva",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "El artillero de asedio tiene ventaja en las pruebas de característica y tiradas de salvación contra ser movido contra su voluntad, agarrado o derribado, ignora la propiedad Retroceso y no sufre desventaja en tiradas de ataque a distancia con cañones de mano por tener una criatura hostil a 5 pies o menos."
+            },
+            {
+              "name": "Posición de Baluarte",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Mientras no esté incapacitado, el artillero de asedio otorga cobertura media (+2 a la Clase de Armadura y a las tiradas de salvación de Destreza) a los aliados situados a 5 pies o menos detrás de él."
+            },
+            {
+              "name": "Calibre de Asedio",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Los ataques a distancia del artillero ignoran la cobertura media y la de tres cuartos, infligen el doble de daño a objetos y estructuras, y cuentan como mágicos para superar resistencias."
+            },
+            {
+              "name": "Ataque múltiple",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "El artillero de asedio Hogrur realiza dos ataques con su Cañón de Mano Portátil de Tres Cañones o dos ataques cuerpo a cuerpo con su Culata Reforzada."
+            },
+            {
+              "name": "Cañón de Mano Portátil de Tres Cañones",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma a distancia: +5 a impactar, alcance 40/120 pies, un objetivo. Impacto: 13 (2d10 + 2) de daño perforante (Tambor de tres cañones: 3 disparos)."
+            },
+            {
+              "name": "Culata Reforzada",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Ataque con arma cuerpo a cuerpo: +7 a impactar, alcance 5 pies, un objetivo. Impacto: 13 (2d8 + 4) de daño contundente."
+            },
+            {
+              "name": "Salva de Metralla (Recarga 5–6)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "El artillero dispara una densa carga de metralla en un cono de 15 pies. Cada criatura en esa área debe realizar una tirada de salvación de Destreza CD 14. Si falla, sufre 22 (4d10) de daño perforante y es empujada hasta 10 pies en línea recta hacia atrás; si tiene éxito, sufre la mitad de daño y no es empujada."
+            },
+            {
+              "name": "Baqueteo Rápido",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "El artillero de asedio recarga por completo su Cañón de Mano Portátil de Tres Cañones o encaja un tambor nuevo de 3 disparos."
+            },
+            {
+              "name": "Caravana del Juramento de Hierro (2/día)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Cuando un aliado situado a 5 pies o menos recibe el impacto de un ataque, el artillero de asedio reduce el daño sufrido en 7 (1d8 + 3)."
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "name": "Hogrur",
+          "desc": "Como aventurero Hogrur, aportas a tu grupo la presencia inamovible de una máquina de asedio viviente y la lealtad inquebrantable de la Caravana del Juramento. Al determinar tus puntuaciones de característica según las reglas estándar de creación de personajes de 5E, aumenta una puntuación de característica en 2 y otra distinta en 1 (o aumenta tres puntuaciones diferentes en 1 cada una); la mayoría de los Hogrur priorizan Fuerza y Constitución. Tipo de criatura: Eres un Humanoide. Edad: Los Hogrur maduran algo más despacio que los humanos: alcanzan la edad adulta en torno a los 20 años y suelen vivir entre 90 y 110 años pese a la dureza de su oficio. Alineamiento: Las costumbres de la Caravana del Juramento inculcan un profundo respeto por la fiabilidad, la camaradería y el cumplimiento de la palabra dada. La mayoría de los Hogrur tienden hacia un alineamiento legal (con frecuencia legal bueno o legal neutral). Tamaño: Eres Grande: mides entre 8 y 9,5 pies de altura (2,50 a 2,90 m), pesas entre 480 y 700 lb. (220 a 320 kg) y ocupas un espacio de 10×10 pies (2×2 casillas) en combate. Altura y peso aleatorios: altura base 7 pies y 10 pulgadas (2,40 m) + 2d8 pulgadas (× 2,5 cm); peso base 460 lb. (210 kg) + (tirada de altura × 2d6 lb.). Tu alcance natural cuerpo a cuerpo sigue siendo de 5 pies, salvo que empuñes un arma con la propiedad Alcance. Velocidad: Tu velocidad base caminando es de 30 pies (9 metros). Estabilidad Masiva: Tienes ventaja en las pruebas de característica y tiradas de salvación para evitar ser movido contra tu voluntad, agarrado o derribado. Además, ignoras la propiedad Retroceso de las armas pesadas de pólvora negra y de asedio. Instrucción en Espacios Estrechos: Generaciones trabajando bajo cubiertas navales bajas y en galerías mineras angostas te han enseñado a perfilar los hombros con soltura: cuando debes escurrirte por un espacio que solo es lo bastante amplio para una criatura Mediana, cada pie de movimiento allí te cuesta solo 1 pie adicional (en lugar de 2), y escurrirte no te impone desventaja en las tiradas de salvación de Destreza. Maestro de la Mecánica Pesada: Ganas competencia en una habilidad a tu elección entre Atletismo, Intimidación o Percepción. También ganas competencia con herramientas de herrero o herramientas de manitas (a tu elección). Caravana del Juramento de Hierro: Cuando un aliado que puedas ver a 5 pies o menos de ti recibe el impacto de un ataque, puedes usar tu reacción para interponer tu hombro acorazado o tu arma, reduciendo el daño que sufre el aliado en 1d8 + tu modificador por Constitución (mínimo 1). Puedes usar este rasgo tantas veces como tu bonificador por competencia, y recuperas todos los usos gastados al finalizar un descanso largo. Idiomas: Puedes hablar, leer y escribir Común, y dominas las Señales Hogrur: una combinación de graves llamadas guturales y un preciso sistema de señas manuales de combate y trabajo que te permite transmitir conceptos tácticos concisos (como «a cubierto», «fuego a discreción», «mantened el flanco» o «recargando») en silencio dentro de tu línea de visión. Nombres Hogrur: Todo Hogrur lleva un nombre de pila breve y gutural, un sobrenombre ganado por sus hazañas y otorgado por sus compañeros, y el nombre de su Caravana del Juramento. Nombres de pila: Bramm, Dorak, Grolm, Hargas, Korvak, Murg, Orka, Runa, Thorg, Varka. Sobrenombres de hazaña: Eje de Tormenta, Frente de Hollín, Puño de Pólvora, Quilla de Hierro, Remache de Sal, Rompecalderas. Nombres de Caravana: Eje del Trueno, Oleaje Gris, Séptima Quilla, Tiro de Hierro."
+        },
+        {
+          "name": "Hogrur: Estabilidad Masiva",
+          "desc": "Tienes ventaja en las pruebas de característica y tiradas de salvación para evitar ser movido contra tu voluntad, agarrado o derribado. Además, ignoras la propiedad Retroceso de las armas pesadas de pólvora negra y de asedio."
+        },
+        {
+          "name": "Hogrur: Instrucción en Espacios Estrechos",
+          "desc": "Generaciones trabajando bajo cubiertas navales bajas y en galerías mineras angostas te han enseñado a perfilar los hombros con soltura: cuando debes escurrirte por un espacio que solo es lo bastante amplio para una criatura Mediana, cada pie de movimiento allí te cuesta solo 1 pie adicional (en lugar de 2), y escurrirte no te impone desventaja en las tiradas de salvación de Destreza."
+        },
+        {
+          "name": "Hogrur: Maestro de la Mecánica Pesada",
+          "desc": "Ganas competencia en una habilidad a tu elección entre Atletismo, Intimidación o Percepción. También ganas competencia con herramientas de herrero o herramientas de manitas (a tu elección)."
+        },
+        {
+          "name": "Hogrur: Caravana del Juramento de Hierro",
+          "desc": "Cuando un aliado que puedas ver a 5 pies o menos de ti recibe el impacto de un ataque, puedes usar tu reacción para interponer tu hombro acorazado o tu arma, reduciendo el daño que sufre el aliado en 1d8 + tu modificador por Constitución (mínimo 1). Puedes usar este rasgo tantas veces como tu bonificador por competencia, y recuperas todos los usos gastados al finalizar un descanso largo."
+        },
+        {
+          "name": "Artillero Hogrur",
+          "desc": "Allí donde los arqueros comunes buscan parapeto, el Artillero Hogrur avanza sin detenerse con un cañón naval recortado cruzado sobre el pecho. Estos especialistas marciales funden una férrea disciplina de asedio con la devastadora potencia de fuego de los cañones de mano multicañón: destrozan muros de escudos con atronadoras descargas de metralla, protegen a sus compañeros tras planchas de hierro de caldera y convierten cada paso estrecho en una zona letal envuelta en humo. Level 3 — Maestro de Artillería e Instrucción de PólvoraA partir del nivel 3, el mantenimiento, la carga a baqueta y el disparo de artillería pesada en pleno fragor del combate son instintivos para ti: Competencia con Artillería Pesada: Ganas competencia con armas de asedio, así como con todas las armas pesadas de pólvora negra y ballestas (incluidos el Cañón de Mano Portátil de Tres Cañones y el Cañón de Mano de Un Cañón). Si aún no tienes competencia con herramientas de manitas, también la adquieres para fabricar cargas de pólvora negra y proyectiles sobre el terreno.Baqueteo Rápido: Una vez por turno, puedes ignorar la propiedad Recarga de un arma a distancia, o bien recargar / cambiar un Tambor de tres cañones como acción adicional en lugar de como acción.Firme Bajo el Fuego: Tener una criatura hostil a 5 pies o menos de ti no te impone desventaja en tus tiradas de ataque a distancia realizadas con ballestas pesadas o cañones de mano.Level 3 — Salva de PólvoraTambién en el nivel 3, preparas cargas impulsoras y proyectiles especializados. Puedes usar Salva de Pólvora tantas veces como tu bonificador por competencia, y recuperas todos los usos gastados al finalizar un descanso corto o largo. Si una opción requiere una tirada de salvación, su CD es igual a 8 + tu bonificador por competencia + tu modificador por Fuerza o Destreza (a tu elección). Descarga de Metralla: Una vez en tu turno, cuando realizas la acción de Ataque, puedes sustituir un ataque a distancia con un cañón de mano cargado para desatar un cono de 15 pies de posta de hierro que se origina en ti (consume 1 disparo de munición). Cada criatura situada en el cono debe realizar una tirada de salvación de Destreza contra la CD de tu Salva de Pólvora: sufre todo el daño normal del cañón de mano (2d10 + modificador por Destreza de daño perforante) si falla la salvación, o la mitad de daño si tiene éxito.Disparo Rompedor: Cuando impactas a una criatura con un ataque con arma a distancia usando una ballesta pesada o un cañón de mano, puedes gastar un uso de Salva de Pólvora para clavar un pesado proyectil de hierro en el blanco. El objetivo sufre el daño normal del arma, es empujado hasta 10 pies en línea recta lejos de ti (siempre que sea Enorme o inferior), y la siguiente tirada de ataque realizada por uno de tus aliados contra ese objetivo antes del comienzo de tu próximo turno tiene ventaja.Level 7 — Posición de BaluarteEn el nivel 7, tu ancha silueta acorazada sirve como parapeto móvil para tu Caravana del Juramento. Mientras lleves armadura pesada, empuñes un arma a distancia a dos manos y no estés incapacitado, las criaturas aliadas situadas a 5 pies o menos detrás de ti obtienen los beneficios de cobertura media (+2 de bonificador a la Clase de Armadura y a las tiradas de salvación de Destreza) frente a ataques y efectos que se originen frente a ti. Además, cuando falles una tirada de salvación de Destreza contra un efecto de área que inflija la mitad de daño en caso de éxito, puedes usar tu reacción para afianzarte tras tu cañón y tu placa pectoral, sufriendo únicamente la mitad de daño. Level 10 — Calibre PerforanteEn el nivel 10, tus proyectiles de gran calibre atraviesan aspilleras y maderamen reforzado. Tus ataques con arma a distancia realizados con armas pesadas de pólvora negra, ballestas pesadas y armas de asedio ignoran la cobertura media y la cobertura de tres cuartos, infligen el doble de daño a objetos inanimados, puertas, cascos de navío y estructuras, y cuentan como mágicos a efectos de superar la resistencia y la inmunidad a ataques y daños no mágicos. Level 15 — Retroceso AtronadorA partir del nivel 15, desatar tus salvas especiales envuelve tu posición en una densa humareda protectora. Cada vez que gastes un uso de Salva de Pólvora, una esfera de 10 pies de radio de espeso humo negro de pólvora se extiende centrada en ti hasta el comienzo de tu próximo turno (a menos que un viento moderado o fuerte de al menos 10 millas por hora la disipe). El área de la esfera está muy oscurecida para todas las demás criaturas, mientras que tu propia visión a través de este humo permanece completamente intacta. Level 18 — Batería VivienteEn el nivel 18 te conviertes por derecho propio en una batería de asedio imparable. Cuando tires iniciativa y te queden 0 usos de Salva de Pólvora, recuperas inmediatamente 2 usos gastados. Además, una vez por turno, cuando impactes a un objetivo con un cañón de mano de varios cañones (requiere al menos 2 recámaras cargadas en el tambor), puedes disparar dos cañones simultáneamente: el ataque inflige un dado de daño de arma adicional (+1d10 de daño perforante con un Cañón de Mano Portátil de Tres Cañones) y consume 2 disparos del tambor."
+        },
+        {
+          "name": "Cañón de Mano Portátil de Tres Cañones",
+          "desc": "Arma marcial a distancia — Munición (alcance 40/120 pies), Pesada, A dos manos, Tambor de tres cañones (3 disparos), Retroceso"
+        },
+        {
+          "name": "Cañón de Mano de Un Cañón",
+          "desc": "Arma marcial a distancia — Munición (alcance 30/90 pies), Recarga (acción), Pesada, A dos manos, Retroceso"
+        },
+        {
+          "name": "Martillo de Guerra Cabeza de Ancla / Mazo de Cadena",
+          "desc": "Arma marcial cuerpo a cuerpo — Pesada, A dos manos, Inercia aplastante"
+        }
+      ]
+    },
+    "fr": {
+      "title": "Les Hogrur (5E)",
+      "actors": [
+        {
+          "name": "Korvak « Front-de-Suie »",
+          "ac": 16,
+          "hp": 31,
+          "hd": "3d10 + 9",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 16,
+            "DEX": 15,
+            "CON": 16,
+            "INT": 10,
+            "WIS": 12,
+            "CHA": 8
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/korvak_cannoneer_bronze_oath_round.png",
+          "portrait": "portraits/korvak_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Stabilité massive",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Avantage aux tests de caractéristique et aux jets de sauvegarde pour éviter d'être déplacé contre son gré, empoigné ou jeté à terre ; ignore la propriété Recul."
+            },
+            {
+              "name": "Routine des coursives",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Se faufiler dans un espace prévu pour une créature de taille Moyenne ne coûte qu'1 pied supplémentaire par pied parcouru et n'impose aucun désavantage aux jets de sauvegarde de DEX."
+            },
+            {
+              "name": "Style de combat : Archerie",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Bonus de +2 aux jets d'attaque effectués avec des armes à distance (déjà inclus dans le Canon à main tri-tube portable)."
+            },
+            {
+              "name": "Sang-froid à bout portant",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Aucun désavantage aux jets d'attaque à distance avec des canons à main ou des arbalètes lourdes lorsqu'un ennemi se trouve à 5 pieds ou moins."
+            },
+            {
+              "name": "Fougue (1/repos court ou long)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Peut effectuer une action supplémentaire lors de son tour."
+            },
+            {
+              "name": "Canon à main tri-tube portable",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque à distance avec une arme : +6 au toucher, portée 40/120 pieds, une cible. Touché : 13 (2d10 + 2) dégâts perforants. Propriétés : Lourde, À deux mains, Barillet tri-tube (3 coups par barillet), Recul (ignoré)."
+            },
+            {
+              "name": "Sabre d'abordage",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque au corps à corps avec une arme : +5 au toucher, allonge 5 pieds, une cible. Touché : 6 (1d6 + 3) dégâts tranchants."
+            },
+            {
+              "name": "Salve de Poudre (2/repos court ou long, DD 13)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Tir à mitraille : remplace une attaque au canon à main par un cône de 15 pieds (jet de sauvegarde de DEX DD 13 ; 2d10 + 2 dégâts perforants en cas d'échec, moitié en cas de réussite). Boulet de brèche : en touchant avec un canon à main, repousse une cible TG ou inférieure jusqu'à 10 pieds et confère un avantage au prochain jet d'attaque d'un allié contre elle avant le prochain tour de Korvak."
+            },
+            {
+              "name": "Bourrage rapide",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "1/tour, recharge le Canon à main tri-tube portable ou enclenche un barillet de rechange chargé."
+            },
+            {
+              "name": "Second souffle (1/repos court ou long)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Récupère 1d10 + 3 points de vie."
+            },
+            {
+              "name": "Convoi du Serment de Fer (2/repos long)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Lorsqu'un allié visible à 5 pieds ou moins est touché par une attaque, Korvak réduit les dégâts subis par cet allié de 1d8 + 3."
+            }
+          ]
+        },
+        {
+          "name": "Bramm « Quille-de-Fer »",
+          "ac": 17,
+          "hp": 34,
+          "hd": "3d10 + 12",
+          "cr": 3.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 18,
+            "INT": 9,
+            "WIS": 12,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/bramm_ironkeel_gold_champion_round.png",
+          "portrait": "portraits/bramm_ironkeel_portrait.png",
+          "features": [
+            {
+              "name": "Stabilité massive",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Avantage aux tests de caractéristique et aux jets de sauvegarde pour éviter d'être déplacé contre son gré, empoigné ou jeté à terre ; ignore la propriété Recul."
+            },
+            {
+              "name": "Routine des coursives",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Se faufiler dans un espace prévu pour une créature de taille Moyenne ne coûte qu'1 pied supplémentaire par pied parcouru et n'impose aucun désavantage aux jets de sauvegarde de DEX."
+            },
+            {
+              "name": "Style de combat : Combat à l'arme à deux mains",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Relance une fois les résultats de 1 ou 2 sur les dés de dégâts de son Marteau de guerre à tête d'ancre (le nouveau résultat doit être conservé)."
+            },
+            {
+              "name": "Critique amélioré (19–20)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Ses attaques avec une arme infligent un coup critique sur un résultat de 19 ou 20 au d20 (déclenchant aussitôt Élan écrasant avec son marteau)."
+            },
+            {
+              "name": "Fougue (1/repos court ou long)",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Peut effectuer une action supplémentaire lors de son tour."
+            },
+            {
+              "name": "Marteau de guerre à tête d'ancre",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque au corps à corps avec une arme : +5 au toucher, allonge 5 pieds, une cible. Touché : 10 (2d6 + 3) dégâts contondants (relancer les 1 et 2 une fois). Élan écrasant : sur un coup critique (19–20), une cible de taille Moyenne ou inférieure est repoussée de 10 pieds en ligne droite."
+            },
+            {
+              "name": "Arbalète lourde",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque à distance avec une arme : +3 au toucher, portée 100/400 pieds, une cible. Touché : 6 (1d10 + 1) dégâts perforants. Propriétés : Munitions, Chargement, Lourde, À deux mains."
+            },
+            {
+              "name": "Second souffle (1/repos court ou long)",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Récupère 1d10 + 3 points de vie."
+            },
+            {
+              "name": "Convoi du Serment de Fer (2/repos long)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Lorsqu'un allié visible à 5 pieds ou moins est touché par une attaque, Bramm réduit les dégâts subis par cet allié de 1d8 + 4."
+            }
+          ]
+        },
+        {
+          "name": "Garde du Convoi Hogrur",
+          "ac": 15,
+          "hp": 52,
+          "hd": "7d10 + 14",
+          "cr": 2.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 17,
+            "DEX": 12,
+            "CON": 15,
+            "INT": 10,
+            "WIS": 11,
+            "CHA": 10
+          },
+          "tokenTopDown": "tokens/hogrur_shieldbreaker_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_train_guard_iron_guard_round.png",
+          "portrait": "portraits/hogrur_train_guard_portrait.png",
+          "features": [
+            {
+              "name": "Stabilité massive",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Le garde du convoi bénéficie d'un avantage aux tests de caractéristique et aux jets de sauvegarde effectués pour éviter d'être déplacé contre son gré, empoigné ou jeté à terre, et il ignore la propriété Recul."
+            },
+            {
+              "name": "Attaques multiples",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Le Garde du Convoi Hogrur effectue deux attaques au corps à corps avec son Marteau de guerre à tête d'ancre."
+            },
+            {
+              "name": "Marteau de guerre à tête d'ancre",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque au corps à corps avec une arme : +5 au toucher, allonge 5 pieds, une cible. Touché : 10 (2d6 + 3) dégâts contondants, et sur un coup critique, une cible de taille Moyenne ou inférieure est repoussée de 10 pieds en ligne droite."
+            },
+            {
+              "name": "Canon à main monotube",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque à distance avec une arme : +3 au toucher, portée 30/90 pieds, une cible. Touché : 12 (2d10 + 1) dégâts perforants. Recharger cette arme après un tir nécessite 1 action."
+            },
+            {
+              "name": "Convoi du Serment de Fer (1/jour)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Lorsqu'un allié situé à 5 pieds ou moins du garde du convoi est touché par une attaque, le garde s'interpose et réduit les dégâts subis par cet allié de 6 (1d8 + 2)."
+            }
+          ]
+        },
+        {
+          "name": "Canonnier de Siège Hogrur",
+          "ac": 17,
+          "hp": 119,
+          "hd": "14d10 + 42",
+          "cr": 6.0,
+          "speed": "30 ft.",
+          "abilities": {
+            "STR": 18,
+            "DEX": 14,
+            "CON": 16,
+            "INT": 11,
+            "WIS": 12,
+            "CHA": 11
+          },
+          "tokenTopDown": "tokens/hogrur_cannoneer_topdown_bronze_oath.png",
+          "tokenRound": "tokens/hogrur_siege_cannoneer_round.png",
+          "portrait": "portraits/hogrur_siege_cannoneer_portrait.png",
+          "features": [
+            {
+              "name": "Stabilité massive",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Le canonnier de siège bénéficie d'un avantage aux tests de caractéristique et aux jets de sauvegarde contre le déplacement forcé, l'empoignade et la mise à terre, ignore la propriété Recul et ne subit aucun désavantage à ses jets d'attaque à distance au canon à main lorsqu'un ennemi se trouve à 5 pieds ou moins."
+            },
+            {
+              "name": "Posture de Rempart",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Tant qu'il n'est pas neutralisé, le canonnier de siège confère un abri partiel (+2 à la CA et aux jets de sauvegarde de Dextérité) aux alliés situés à 5 pieds ou moins derrière lui."
+            },
+            {
+              "name": "Calibre de siège",
+              "kind": "feat",
+              "activation": "passive",
+              "desc": "Les attaques à distance du canonnier ignorent les abris partiels et les abris aux trois quarts, infligent le double de dégâts aux objets et structures, et comptent comme magiques pour surmonter les résistances."
+            },
+            {
+              "name": "Attaques multiples",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Le Canonnier de Siège Hogrur effectue deux attaques avec son Canon à main tri-tube portable ou deux attaques au corps à corps avec sa Crosse ferrée renforcée."
+            },
+            {
+              "name": "Canon à main tri-tube portable",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque à distance avec une arme : +5 au toucher, portée 40/120 pieds, une cible. Touché : 13 (2d10 + 2) dégâts perforants (Barillet tri-tube : 3 coups)."
+            },
+            {
+              "name": "Crosse ferrée renforcée",
+              "kind": "weapon",
+              "activation": "action",
+              "desc": "Attaque au corps à corps avec une arme : +7 au toucher, allonge 5 pieds, une cible. Touché : 13 (2d8 + 4) dégâts contondants."
+            },
+            {
+              "name": "Salve de mitraille (Recharge 5–6)",
+              "kind": "feat",
+              "activation": "action",
+              "desc": "Le canonnier déchaîne une gerbe d'éclats de fonte dans un cône de 15 pieds (4,50 m). Chaque créature dans la zone doit effectuer un jet de sauvegarde de Dextérité DD 14. En cas d'échec, elle subit 22 (4d10) dégâts perforants et est repoussée jusqu'à 10 pieds en ligne droite. En cas de réussite, elle subit la moitié de ces dégâts et n'est pas repoussée."
+            },
+            {
+              "name": "Bourrage rapide",
+              "kind": "feat",
+              "activation": "bonus",
+              "desc": "Le canonnier de siège recharge intégralement son Canon à main tri-tube portable ou enclenche un barillet neuf à 3 coups."
+            },
+            {
+              "name": "Convoi du Serment de Fer (2/jour)",
+              "kind": "feat",
+              "activation": "reaction",
+              "desc": "Lorsqu'un allié situé à 5 pieds ou moins est touché par une attaque, le canonnier de siège réduit les dégâts subis par cet allié de 7 (1d8 + 3)."
+            }
+          ]
+        }
+      ],
+      "rules": [
+        {
+          "name": "Hogrur",
+          "desc": "En incarnant un aventurier hogrur, vous apportez à votre groupe la présence inébranlable d'une machine de siège vivante et la fidélité absolue du Convoi du Serment. Lors de la détermination de vos valeurs de caractéristique selon les règles standard de création 5E, augmentez une valeur de caractéristique de 2 et une autre de 1 (ou trois valeurs différentes de 1 chacune) — la plupart des Hogrur privilégient la Force et la Constitution. Type de créature: Vous êtes un Humanoïde. Âge: Les Hogrur mûrissent légèrement plus lentement que les humains : ils atteignent l'âge adulte vers 20 ans et vivent généralement entre 90 et 110 ans malgré la rudesse de leur métier. Alignement: Les traditions du Convoi du Serment inculquent un sens profond de la fiabilité, de la camaraderie et du respect de la parole donnée. La majorité des Hogrur penchent vers un alignement loyal (le plus souvent Loyal Bon ou Loyal Neutre). Taille: Vous êtes de taille Grande (G) — vous mesurez entre 2,50 et 2,90 mètres (8 à 9,5 pieds), pesez de 220 à 320 kilogrammes (480 à 700 lb) et occupez au combat un espace de 10×10 pieds (3×3 m, soit 2×2 cases). Taille et poids aléatoires : taille de base 2,40 m (7 pieds 10 pouces) + (2d8 × 2,5 cm / 2d8 pouces) ; poids de base 210 kg (460 lb) + (jet de taille × 2d6 lb). Votre allonge naturelle au corps à corps demeure de 5 pieds (1,50 m), sauf si vous maniez une arme dotée de la propriété Allonge. Vitesse: Votre vitesse de base au sol est de 30 pieds (9 mètres). Stabilité massive: Vous bénéficiez d'un avantage aux tests de caractéristique et aux jets de sauvegarde effectués pour éviter d'être déplacé contre votre gré, empoigné ou jeté à terre. De plus, vous ignorez la propriété Recul des armes lourdes à poudre noire et des armes de siège. Routine des coursives: Des décennies passées sous des entreponts bas et dans d'étroites galeries de mine vous ont appris à pivoter habilement les épaules : lorsque vous devez vous faufiler dans un passage tout juste assez large pour une créature de taille Moyenne, chaque pied (30 cm) de déplacement ne vous coûte qu'un seul pied supplémentaire (au lieu de 2), et le fait de vous faufiler ne vous impose aucun désavantage aux jets de sauvegarde de Dextérité. Maître de la mécanique lourde: Vous gagnez la maîtrise d'une compétence de votre choix parmi Athlétisme, Intimidation ou Perception. Vous gagnez également la maîtrise des outils de forgeron ou des outils de bricoleur (au choix). Convoi du Serment de Fer: Lorsqu'un allié que vous pouvez voir et qui se trouve à 5 pieds (1,50 m) ou moins de vous est touché par une attaque, vous pouvez utiliser votre réaction pour interposer votre épaulière cuirassée ou votre arme, réduisant les dégâts subis par cet allié de 1d8 + votre modificateur de Constitution (minimum 1). Vous pouvez utiliser ce trait un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées à la fin d'un repos long. Langues: Vous pouvez parler, lire et écrire le commun. Vous maîtrisez en outre les Signes hogrur — l'alliance d'appels gutturaux graves et d'un code rigoureux de signaux manuels de chantier et de combat permettant de transmettre silencieusement à portée de vue des consignes tactiques concises (telles que « à couvert », « feu à volonté », « tenez le flanc » ou « rechargement »). Noms hogrur: Chaque Hogrur porte un prénom court et guttural, un surnom gagné par ses actes et le nom de son Convoi du Serment. Prénoms : Bramm, Dorak, Grolm, Hargas, Korvak, Murg, Orka, Runa, Thorg, Varka. Surnoms de hauts faits : Brise-Chaudière, Essieu-d'Orage, Front-de-Suie, Poing-de-Poudre, Quille-de-Fer, Rivet-de-Sel. Noms de Convoi : Écume-Grise, Essieu-Tonnerre, Septième-Quille, Train-de-Fer."
+        },
+        {
+          "name": "Hogrur: Stabilité massive",
+          "desc": "Vous bénéficiez d'un avantage aux tests de caractéristique et aux jets de sauvegarde effectués pour éviter d'être déplacé contre votre gré, empoigné ou jeté à terre. De plus, vous ignorez la propriété Recul des armes lourdes à poudre noire et des armes de siège."
+        },
+        {
+          "name": "Hogrur: Routine des coursives",
+          "desc": "Des décennies passées sous des entreponts bas et dans d'étroites galeries de mine vous ont appris à pivoter habilement les épaules : lorsque vous devez vous faufiler dans un passage tout juste assez large pour une créature de taille Moyenne, chaque pied (30 cm) de déplacement ne vous coûte qu'un seul pied supplémentaire (au lieu de 2), et le fait de vous faufiler ne vous impose aucun désavantage aux jets de sauvegarde de Dextérité."
+        },
+        {
+          "name": "Hogrur: Maître de la mécanique lourde",
+          "desc": "Vous gagnez la maîtrise d'une compétence de votre choix parmi Athlétisme, Intimidation ou Perception. Vous gagnez également la maîtrise des outils de forgeron ou des outils de bricoleur (au choix)."
+        },
+        {
+          "name": "Hogrur: Convoi du Serment de Fer",
+          "desc": "Lorsqu'un allié que vous pouvez voir et qui se trouve à 5 pieds (1,50 m) ou moins de vous est touché par une attaque, vous pouvez utiliser votre réaction pour interposer votre épaulière cuirassée ou votre arme, réduisant les dégâts subis par cet allié de 1d8 + votre modificateur de Constitution (minimum 1). Vous pouvez utiliser ce trait un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées à la fin d'un repos long."
+        },
+        {
+          "name": "Canonnier Hogrur",
+          "desc": "Là où les archers ordinaires cherchent refuge derrière un parapet, le Canonnier Hogrur progresse d'un pas lourd, une pièce navale raccourcie sanglée en bandoulière. Ces spécialistes martiaux marient une discipline de siège inflexible à la puissance dévastatrice des canons à main multitubes : ils pulvérisent les murs de boucliers sous des salves de mitraille, abritent leurs compagnons derrière leur cuirasse de chaudière et transforment chaque goulet d'étranglement en une zone de tir saturée de fumée noire. Level 3 — Maître d'Artillerie & Drill de PoudreDès le niveau 3, l'entretien, la cadence de bourrage et le tir d'artillerie lourde au cœur de la mêlée n'ont plus aucun secret pour vous : Maîtrise de l'artillerie lourde: Vous gagnez la maîtrise des armes de siège ainsi que de toutes les armes lourdes à poudre noire et arbalètes lourdes (y compris le Canon à main tri-tube portable et le Canon à main monotube). Si vous ne maîtrisez pas encore les outils de bricoleur, vous gagnez également leur maîtrise afin de confectionner vos charges de poudre noire et vos balles sur le terrain.Bourrage rapide: Une fois par tour, vous pouvez ignorer la propriété Chargement d'une arme à distance, ou recharger / remplacer un Barillet tri-tube par une action bonus au lieu d'une action.Sang-froid à bout portant: Le fait de vous trouver à 5 pieds (1,50 m) ou moins d'une créature hostile ne vous impose pas de désavantage aux jets d'attaque à distance effectués avec une arbalète lourde ou un canon à main.Level 3 — Salve de PoudreÉgalement au niveau 3, vous préparez des charges propulsives et des projectiles spécialisés. Vous pouvez utiliser Salve de Poudre un nombre de fois égal à votre bonus de maîtrise, et vous récupérez toutes les utilisations dépensées à la fin d'un repos court ou long. Si une option demande un jet de sauvegarde, son degré de difficulté se calcule ainsi : DD = 8 + votre bonus de maîtrise + votre modificateur de Force ou de Dextérité (au choix). Tir à mitraille: Une fois lors de votre tour lorsque vous effectuez l'action Attaquer, vous pouvez remplacer une attaque à distance avec un canon à main chargé par un cône de grenaille de fer de 15 pieds (4,50 m) émanant de vous (consomme 1 munition). Chaque créature située dans ce cône doit effectuer un jet de sauvegarde de Dextérité contre le DD de votre Salve de Poudre : elle subit les dégâts normaux complets de votre canon à main (2d10 + modificateur de Dextérité dégâts perforants) en cas d'échec, ou la moitié de ces dégâts en cas de réussite.Boulet de brèche: Lorsque vous touchez une créature avec une attaque à distance avec une arme utilisant une arbalète lourde ou un canon à main, vous pouvez dépenser une utilisation de Salve de Poudre pour ficher un lourd lingot de fer dans la cible. Celle-ci subit les dégâts normaux de l'arme, est repoussée jusqu'à 10 pieds (3 m) en ligne droite à l'opposé de vous (à condition d'être de taille Très grande (TG) ou inférieure), et le prochain jet d'attaque effectué par l'un de vos alliés contre cette cible avant le début de votre prochain tour bénéficie d'un avantage.Level 7 — Posture de RempartAu niveau 7, votre large carrure cuirassée devient un parapet mobile pour votre Convoi du Serment. Tant que vous portez une armure lourde, maniez une arme à distance à deux mains et n'êtes pas neutralisé, les créatures alliées situées à 5 pieds (1,50 m) ou moins derrière vous bénéficient d'un abri partiel (bonus de +2 à la CA et aux jets de sauvegarde de Dextérité) contre les attaques et effets provenant de l'avant. De plus, lorsque vous ratez un jet de sauvegarde de Dextérité contre un effet de zone infligeant la moitié des dégâts en cas de réussite, vous pouvez utiliser votre réaction pour vous arc-bouter derrière votre fût et vos plaques d'acier afin de ne subir malgré tout que la moitié des dégâts. Level 10 — Calibre PerforantAu niveau 10, vos projectiles de gros calibre traversent meurtrières et madriers renforcés. Vos attaques à distance avec une arme utilisant des armes lourdes à poudre noire, des arbalètes lourdes ou des armes de siège ignorent les abris partiels (+2) et les abris aux trois quarts (+5). En outre, elles infligent le double de dégâts aux objets inanimés, portes, coques de navire et fortifications, et comptent comme magiques lorsqu'il s'agit de surmonter les résistances et immunités aux attaques et dégâts non magiques. Level 15 — Recul TonitruantÀ partir du niveau 15, chaque salve spéciale enveloppe votre position d'un épais nuage protecteur de fumée de poudre. Chaque fois que vous dépensez une utilisation de Salve de Poudre, une sphère de fumée noire dense de 10 pieds (3 m) de rayon se déploie autour de vous jusqu'au début de votre prochain tour (à moins qu'un vent modéré ou fort d'au moins 15 km/h / 10 mph ne la dissipe). La zone de la sphère est à visibilité nulle (fortement obscurcie) pour toutes les autres créatures, tandis que votre propre vision à travers cette fumée reste parfaitement intacte grâce à votre habitude des ponts d'artillerie. Level 18 — Batterie VivanteAu niveau 18, vous incarnez à vous seul une batterie de siège inépuisable. Lorsque vous lancez l'initiative et qu'il ne vous reste aucune utilisation de Salve de Poudre, vous récupérez immédiatement 2 utilisations dépensées. De plus, une fois par tour, lorsque vous touchez une cible avec un canon à main multitube (nécessitant au moins 2 tubes chargés dans le barillet), vous pouvez mettre à feu deux chambres simultanément : l'attaque inflige un dé de dégâts d'arme supplémentaire (+1d10 dégâts perforants avec un Canon à main tri-tube) et consomme 2 coups du barillet."
+        },
+        {
+          "name": "Canon à main tri-tube portable",
+          "desc": "Arme de guerre à distance — Munitions (portée 40/120 pieds / 12–36 m), Lourde, À deux mains, Barillet tri-tube (3 coups), Recul"
+        },
+        {
+          "name": "Canon à main monotube",
+          "desc": "Arme de guerre à distance — Munitions (portée 30/90 pieds / 9–27 m), Chargement (action), Lourde, À deux mains, Recul"
+        },
+        {
+          "name": "Marteau de guerre à tête d'ancre / Maillet à chaîne",
+          "desc": "Arme de guerre de corps à corps — Lourde, À deux mains, Élan écrasant"
+        }
+      ]
+    }
+  }
+}

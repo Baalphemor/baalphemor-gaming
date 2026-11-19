@@ -1,0 +1,37 @@
+{
+  "id": "baalphemor-<asset-slug>-5e",
+  "title": "BAALPHEMOR GAMING — <Titel DE / EN> (5e Companion Pack)",
+  "description": "Quad-lingual (DE/EN/ES/FR) 5e VTT Module by BAALPHEMOR GAMING.",
+  "version": "1.0.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Michael Stahlschmidt \"BAALPHEMOR\"",
+      "email": "info@baalphemor.de",
+      "url": "https://baalphemor-gaming.de",
+      "patreon": "baalphemor"
+    }
+  ],
+  "url": "https://baalphemor-gaming.de",
+  "manifest": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-<asset-slug>-5e/module.json",
+  "download": "https://pub-c383b4e0b43d4191ae726141ddfc8db5.r2.dev/vtt/foundry/modules/baalphemor-<asset-slug>-5e/releases/v1.0.0/baalphemor-<asset-slug>-5e-v1.0.0.zip",
+  "esmodules": [
+    "scripts/init.mjs"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "4.3.0"
+        }
+      }
+    ]
+  }
+}

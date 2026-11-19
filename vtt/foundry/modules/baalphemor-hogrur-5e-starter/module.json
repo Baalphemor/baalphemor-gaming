@@ -1,0 +1,53 @@
+{
+  "id": "baalphemor-hogrur-5e-starter",
+  "title": "BAALPHEMOR GAMING — Die Hogrur / The Hogrur (5e Free Starter Pack)",
+  "description": "Free quad-lingual (DE/EN/ES/FR) 5e VTT Starter Module: 4 ready-to-play 2x2 Large Hogrur Actors, playable Hogrur species, Cannoneer fighter subclass, siege weapons, oversized gear rules, 10 static 512x512 tokens & cannon blast SFX sample. Full 60-WebM + 136-PNG pack available on Patreon & Itch.io.",
+  "version": "1.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Michael Stahlschmidt \"BAALPHEMOR\"",
+      "email": "info@baalphemor.de",
+      "url": "https://baalphemor-gaming.de",
+      "patreon": "baalphemor",
+      "flags": {}
+    }
+  ],
+  "url": "https://baalphemor-gaming.de",
+  "manifest": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-hogrur-5e-starter/module.json",
+  "download": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-hogrur-5e-starter/releases/v1.1.0/baalphemor-hogrur-5e-starter-v1.1.0.zip",
+  "readme": "https://baalphemor.itch.io/the-hogrur-5e-foundry-vtt",
+  "bugs": "mailto:info@baalphemor.de",
+  "esmodules": [
+    "scripts/hogrur_foundry_init.mjs"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "4.3.0"
+        }
+      }
+    ]
+  },
+  "flags": {
+    "baalphemor-hogrur-5e-starter": {
+      "defaultTokenFootprint": {
+        "width": 2,
+        "height": 2,
+        "size": "lg",
+        "gridFeet": "10x10"
+      },
+      "fullPackModuleId": "baalphemor-hogrur-5e",
+      "patreonUrl": "https://www.patreon.com/baalphemor",
+      "itchUrl": "https://baalphemor.itch.io/the-hogrur-5e-foundry-vtt"
+    }
+  }
+}

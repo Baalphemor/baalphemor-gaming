@@ -1,0 +1,28 @@
+{
+  "packId": "<asset-slug>-5e",
+  "version": "1.0.0",
+  "gridCells": {
+    "width": 1,
+    "height": 1,
+    "imagePx": 512,
+    "obrDpi": 512
+  },
+  "note": "Für Medium (1x1) obrDpi=512 bei 512px setzen; für Large (2x2) obrDpi=256; für Huge (3x3) obrDpi=170.",
+  "sfxSample": "sfx/sample.ogg",
+  "upgradeLinks": {
+    "patreon": "https://www.patreon.com/baalphemor",
+    "itchVtt": "https://baalphemor.itch.io"
+  },
+  "locales": {
+    "de": {
+      "title": "",
+      "actors": [],
+      "rules": []
+    },
+    "en": {
+      "title": "",
+      "actors": [],
+      "rules": []
+    }
+  }
+}

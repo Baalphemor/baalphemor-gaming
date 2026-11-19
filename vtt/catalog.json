@@ -1,0 +1,77 @@
+{
+  "publisher": "BAALPHEMOR GAMING",
+  "domain": "https://baalphemor-gaming.de",
+  "r2AssetCdn": "https://pub-c383b4e0b43d4191ae726141ddfc8db5.r2.dev/vtt",
+  "contact": "info@baalphemor.de",
+  "patreon": "https://www.patreon.com/baalphemor",
+  "itch": "https://baalphemor.itch.io",
+  "drivethrurpgPublisherId": 36807,
+  "updatedAt": "2026-11-19",
+  "owlbearVaultExtension": {
+    "name": "BAALPHEMOR GAMING — 5E Vault",
+    "manifestUrl": "https://baalphemor-gaming.de/vtt/owlbear/baalphemor-vault/manifest.json",
+    "packsIndexUrl": "https://baalphemor-gaming.de/vtt/owlbear/baalphemor-vault/packs_index.json"
+  },
+  "packages": [
+    {
+      "id": "baalphemor-hogrur-5e-starter",
+      "series": "5e-species-and-foes",
+      "slug": "hogrur-5e",
+      "tier": "free-starter",
+      "version": "1.1.0",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr"
+      ],
+      "vttPlatforms": [
+        "foundry-vtt",
+        "fantasy-grounds-forge",
+        "owlbear-rodeo"
+      ],
+      "manifestUrl": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-hogrur-5e-starter/module.json",
+      "downloadUrl": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-hogrur-5e-starter/releases/v1.1.0/baalphemor-hogrur-5e-starter-v1.1.0.zip",
+      "fantasyGroundsStarterModUrl": "https://baalphemor-gaming.de/vtt/fantasygrounds/releases/v1.1.0/BAALPHEMOR_Hogrur_5E_Starter_v1.1.0.mod",
+      "owlbearStarterZipUrl": "https://baalphemor-gaming.de/vtt/owlbear/releases/v1.1.0/Hogrur_5E_OwlbearRodeo_Starter_2x2_v1.1.0.zip",
+      "zipBytes": 1972943,
+      "status": "ready-for-submission"
+    },
+    {
+      "id": "baalphemor-hogrur-5e",
+      "series": "5e-species-and-foes",
+      "slug": "hogrur-5e",
+      "tier": "premium-companion",
+      "version": "1.1.0",
+      "languages": [
+        "de",
+        "en",
+        "es",
+        "fr"
+      ],
+      "vttPlatforms": [
+        "foundry-vtt",
+        "moulinette-cloud",
+        "fantasy-grounds-forge",
+        "owlbear-rodeo",
+        "roll20-manual-import"
+      ],
+      "manifestUrl": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-hogrur-5e/module.json",
+      "protected": true,
+      "storeLinks": {
+        "itchPdf": "https://baalphemor.itch.io/the-hogrur-5e",
+        "itchVtt": "https://baalphemor.itch.io/the-hogrur-5e-foundry-vtt",
+        "patreon": "https://www.patreon.com/baalphemor",
+        "drivethrurpgPdf": "https://www.drivethrurpg.com/en/product/594592",
+        "drivethrurpgVtt": "https://www.drivethrurpg.com/en/product/594593"
+      },
+      "status": "live"
+    }
+  ],
+  "plannedPipeline": [
+    "baalphemor-grolme-5e",
+    "baalphemor-riese-skelettriese-5e",
+    "baalphemor-der-offizier-5e",
+    "baalphemor-auritan-bestiarium"
+  ]
+}

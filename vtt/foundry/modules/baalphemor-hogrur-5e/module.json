@@ -1,0 +1,49 @@
+{
+  "id": "baalphemor-hogrur-5e",
+  "title": "BAALPHEMOR GAMING — Die Hogrur / The Hogrur (5e Companion Pack)",
+  "description": "Quad-lingual (DE/EN/ES/FR) 5e VTT Companion Pack: 2x2 Large static & animated VP9-Alpha top-down tokens (6 armor colors + downed/dead), 5 custom 44.1 kHz OGG sound effects, ready-to-play 5e Actors, playable Hogrur species, Cannoneer subclass & weapon items. Contact: info@baalphemor.de",
+  "version": "1.1.0",
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13",
+    "maximum": "14"
+  },
+  "authors": [
+    {
+      "name": "Michael Stahlschmidt \"BAALPHEMOR\"",
+      "email": "info@baalphemor.de",
+      "url": "https://baalphemor-gaming.de",
+      "patreon": "baalphemor",
+      "flags": {}
+    }
+  ],
+  "url": "https://baalphemor-gaming.de",
+  "readme": "README_FOUNDRY_VTT.md",
+  "esmodules": [
+    "scripts/hogrur_foundry_init.mjs"
+  ],
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system",
+        "compatibility": {
+          "minimum": "3.0.0",
+          "verified": "4.3.0"
+        }
+      }
+    ]
+  },
+  "flags": {
+    "baalphemor-hogrur-5e": {
+      "defaultTokenFootprint": {
+        "width": 2,
+        "height": 2,
+        "size": "lg",
+        "gridFeet": "10x10"
+      }
+    }
+  },
+  "manifest": "https://baalphemor-gaming.de/vtt/foundry/modules/baalphemor-hogrur-5e/module.json",
+  "protected": true
+}

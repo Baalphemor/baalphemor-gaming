@@ -1,0 +1,26 @@
+{
+  "publisher": "BAALPHEMOR GAMING",
+  "updatedAt": "2026-11-19",
+  "packs": [
+    {
+      "id": "hogrur-5e",
+      "label": "🔥 Die Hogrur / The Hogrur (5E · v1.1.0)",
+      "disabled": false
+    },
+    {
+      "id": "grolme-5e",
+      "label": "⏳ Grolme (5E · Demnächst / Coming Soon)",
+      "disabled": true
+    },
+    {
+      "id": "riese-skelettriese-5e",
+      "label": "⏳ Riese & Skelettriese (5E · Demnächst)",
+      "disabled": true
+    },
+    {
+      "id": "der-offizier-5e",
+      "label": "⏳ Der Offizier (5E · Demnächst)",
+      "disabled": true
+    }
+  ]
+}

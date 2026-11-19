@@ -22,7 +22,7 @@ function pass(msg) {
 }
 
 // 1. JS Syntax Check
-for (const relJs of ['script.js', 'schmiede/schmiede.js']) {
+for (const relJs of ['script.js', 'schmiede/schmiede.js', 'vtt/owlbear/baalphemor-vault/vault.js']) {
   const fullJs = path.join(ROOT, relJs);
   try {
     execFileSync(process.execPath, ['--check', fullJs], { stdio: 'pipe' });
@@ -120,6 +120,95 @@ if (
   );
 } else {
   pass('schmiede.js: ES-Modul Initialisierung ist gegen DOMContentLoaded-Race geschützt');
+}
+
+// 5. Foundry VTT Hub & Manifest-Integrität (vtt/)
+const vttCatalogPath = path.join(ROOT, 'vtt/catalog.json');
+if (!fs.existsSync(vttCatalogPath)) {
+  fail('vtt/catalog.json fehlt (VTT-Asset-Hub nicht initialisiert)');
+} else {
+  try {
+    const catalog = JSON.parse(fs.readFileSync(vttCatalogPath, 'utf8'));
+    pass(`vtt/catalog.json gültig (${(catalog.packages || []).length} registrierte VTT-Pakete)`);
+    for (const pkg of catalog.packages || []) {
+      const modJsonPath = path.join(ROOT, 'vtt/foundry/modules', pkg.id, 'module.json');
+      if (!fs.existsSync(modJsonPath)) {
+        fail(`Foundry-Manifest fehlt für ${pkg.id}: ${modJsonPath}`);
+        continue;
+      }
+      const modJson = JSON.parse(fs.readFileSync(modJsonPath, 'utf8'));
+      if (modJson.id !== pkg.id) {
+        fail(`Manifest-ID-Mismatch in ${modJsonPath}: erwartet "${pkg.id}", gefunden "${modJson.id}"`);
+      }
+      const expectedManifestUrl = `https://baalphemor-gaming.de/vtt/foundry/modules/${pkg.id}/module.json`;
+      if (modJson.manifest !== expectedManifestUrl) {
+        fail(`Manifest-URL-Mismatch in ${modJsonPath}: erwartet "${expectedManifestUrl}", gefunden "${modJson.manifest}"`);
+      }
+      if (!modJson.protected) {
+        const expectedZipRel = `vtt/foundry/modules/${pkg.id}/releases/v${modJson.version}/${pkg.id}-v${modJson.version}.zip`;
+        const fullZipPath = path.join(ROOT, expectedZipRel);
+        if (!fs.existsSync(fullZipPath)) {
+          fail(`Öffentliches Foundry-Release-ZIP fehlt: ${expectedZipRel}`);
+        } else {
+          pass(`Foundry-Modul bereit: ${pkg.id} v${modJson.version} (${(fs.statSync(fullZipPath).size / (1024 * 1024)).toFixed(2)} MiB)`);
+        }
+      } else {
+        pass(`Geschütztes Foundry-Manifest bereit: ${pkg.id} v${modJson.version} (protected=true)`);
+      }
+    }
+
+    // 5b. Fantasy Grounds Starter .mod & Owlbear Rodeo 2.0 Vault Extension prüfen
+    const fgStarterMod = path.join(ROOT, 'vtt/fantasygrounds/releases/v1.1.0/BAALPHEMOR_Hogrur_5E_Starter_v1.1.0.mod');
+    if (!fs.existsSync(fgStarterMod)) {
+      fail('Fantasy Grounds Starter .mod fehlt unter vtt/fantasygrounds/releases/v1.1.0/');
+    } else {
+      pass(`Fantasy Grounds Starter .mod bereit (${(fs.statSync(fgStarterMod).size / (1024 * 1024)).toFixed(2)} MiB)`);
+    }
+
+    const obrVaultDir = path.join(ROOT, 'vtt/owlbear/baalphemor-vault');
+    const obrManifestPath = path.join(obrVaultDir, 'manifest.json');
+    if (!fs.existsSync(obrManifestPath)) {
+      fail('Owlbear Rodeo Vault manifest.json fehlt');
+    } else {
+      const obrMan = JSON.parse(fs.readFileSync(obrManifestPath, 'utf8'));
+      if (obrMan.manifest_version !== 1 || !obrMan.action?.popover) {
+        fail('Owlbear Rodeo manifest.json hat ungültiges Schema');
+      } else {
+        pass(`Owlbear Rodeo Vault Extension bereit: "${obrMan.name}" v${obrMan.version}`);
+      }
+      const vaultJs = fs.readFileSync(path.join(obrVaultDir, 'vault.js'), 'utf8');
+      if (vaultJs.includes('DOMContentLoaded') && !vaultJs.includes('document.readyState')) {
+        fail('vault.js nutzt DOMContentLoaded ohne document.readyState-Guard');
+      }
+      const pIndex = JSON.parse(fs.readFileSync(path.join(obrVaultDir, 'packs_index.json'), 'utf8'));
+      for (const entry of (pIndex.packs || []).filter((p) => !p.disabled)) {
+        const packDir = path.join(obrVaultDir, 'packs', entry.id);
+        const packData = JSON.parse(fs.readFileSync(path.join(packDir, 'pack.json'), 'utf8'));
+        if (packData.sfxSample && !fs.existsSync(path.join(packDir, packData.sfxSample))) {
+          fail(`Owlbear Pack ${entry.id}: fehlende SFX-Datei ${packData.sfxSample}`);
+        }
+        for (const loc of Object.values(packData.locales || {})) {
+          for (const act of loc.actors || []) {
+            for (const relKey of ['tokenTopDown', 'tokenRound', 'portrait']) {
+              if (act[relKey] && !fs.existsSync(path.join(packDir, act[relKey]))) {
+                fail(`Owlbear Pack ${entry.id}: fehlendes Asset ${act[relKey]}`);
+              }
+            }
+          }
+        }
+        pass(`Owlbear Vault Pack verifiziert: ${entry.id} (DE/EN/ES/FR Assets komplett)`);
+      }
+    }
+
+    const headersTxt = fs.readFileSync(path.join(ROOT, '_headers'), 'utf8');
+    if (!headersTxt.includes('owlbear.rodeo')) {
+      fail('_headers erlaubt kein Iframe-Embedding für owlbear.rodeo (Pflicht für Owlbear Rodeo Extensions!)');
+    } else {
+      pass('_headers: Owlbear Rodeo Iframe-Freigabe & VTT-CORS aktiv');
+    }
+  } catch (err) {
+    fail(`Fehler beim Prüfen von vtt/catalog.json: ${err.message}`);
+  }
 }
 
 if (errors > 0) {

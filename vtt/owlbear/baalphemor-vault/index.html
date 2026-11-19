@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BAALPHEMOR GAMING — 5E VTT Vault</title>
+  <link rel="stylesheet" href="vault.css" />
+</head>
+<body>
+  <header class="vault-header">
+    <div class="brand-row">
+      <div class="brand-title">
+        <span class="brand-kicker">BAALPHEMOR GAMING</span>
+        <h1 id="pack-heading">5E Token &amp; Statblock Vault</h1>
+      </div>
+      <div class="lang-bar" id="lang-bar" role="group" aria-label="Language">
+        <button type="button" data-lang="de" class="active">DE</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+        <button type="button" data-lang="fr">FR</button>
+      </div>
+    </div>
+
+    <div class="controls-row">
+      <select id="pack-select" aria-label="Paket wählen"></select>
+      <button type="button" id="sfx-btn" class="btn-sfx" title="Dreilauf-Kanonensalve abspielen">🔊 SFX</button>
+    </div>
+
+    <nav class="tab-bar">
+      <button type="button" data-tab="actors" class="tab-btn active" id="tab-lbl-actors">2×2 Tokens &amp; Werte</button>
+      <button type="button" data-tab="rules" class="tab-btn" id="tab-lbl-rules">Spezies &amp; Arsenal</button>
+    </nav>
+  </header>
+
+  <main id="vault-content" class="vault-main" aria-live="polite"></main>
+
+  <footer class="vault-footer">
+    <div id="obr-status" class="status-pill">Vorschau-Modus (außerhalb Owlbear Rodeo)</div>
+    <div class="upgrade-row">
+      <a id="link-patreon" href="https://www.patreon.com/baalphemor" target="_blank" rel="noopener">Patreon (60 WebMs + 136 PNGs)</a>
+      <span>·</span>
+      <a id="link-itch" href="https://baalphemor.itch.io/the-hogrur-5e-foundry-vtt" target="_blank" rel="noopener">Itch.io</a>
+      <span>·</span>
+      <a href="https://baalphemor-gaming.de" target="_blank" rel="noopener">Portal</a>
+    </div>
+  </footer>
+
+  <script type="module" src="vault.js"></script>
+</body>
+</html>
