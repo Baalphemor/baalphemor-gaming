@@ -114,6 +114,8 @@ Jeder Durchlauf von `tts_forge_pipeline.py` erzeugt vollautomatisch ein geordnet
   * Durchgängige Umbenennung auf **`Miniaturen-Schmiede`** über alle Seiten, Metadaten, Formulare und Linter-Regeln.
   * Neuer Tab **„1. Eigene Datei prüfen & umbauen (360°)“** mit lokalem `.STL`/`.OBJ`/`.GLB`-Viewer (DSGVO-konform im Browser) + schlanker Fokus auf die **3 vollautomatischen Standard-Transformationen** (*All-VTT & Wunschfarben*, *Living-Miniature-Atmung*, *Dual-STL mit frontfreien Auto-Baumstützen*).
   * Lokale 1-Klick-Auftrags-Werkbank unter `H:\3D-Modelle\miniaturen_schmiede\` (`miniaturen_schmiede_auftrag.py`, `Miniaturen_Schmiede_Auftrag_Starten.cmd`, `SPEC.md`, `AGENTS.md`, `BEDIENUNGSANLEITUNG_BAAL.md`) inkl. interner 72h-Reserve für Monster/Spinnen/Scans (`--groesse auto`, `--sockel_abschneiden`, `--ki_scan_fix` & Colab-A100 `MoCapAnything V2`) fest eingerichtet; eigene Spiel-Exporte nachrangig geparkt.
+* **Update (19.11.2026):**
+  * **Entfernung der Portal-Warteschlange (`baalphemor-gaming.de`):** Pre-Launch-Vormerkungs-Panel (`#alpha` / `#portal-signup-form`), sämtliche In-Page-Sprungmarken (`#alpha`, `#rigging-box`), Hintergrund-Lead-Sync (`syncHistoricalLeads` in `script.js`) sowie veraltete Warteschlangen-Passagen in den Datenschutzerklärungen sauber entfernt und im 0-Token-Linter (`scripts/portal_lint.mjs`) inkl. In-Page-Anker-Prüfung abgesichert.
 * **Nächste optionale Ausbauschritte:**
   1. Vorstellungsvideo („Baal vor der Miniaturen-Vitrine“) drehen und in `assets/schmiede/` hinterlegen.
   2. Erste 15 Gratis-Beta-Tester über Tanelorn, Drachenzwinge, deutschen Foundry-VTT-Discord und TabletopWelt einladen.

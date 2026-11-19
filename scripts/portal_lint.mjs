@@ -60,8 +60,17 @@ for (const relHtml of ['index.html', 'schmiede/index.html', 'datenschutz/index.h
   }
   if (missingCount === 0) pass(`${relHtml}: alle ${refs.length} lokalen Links & Assets vorhanden`);
 
+  // In-Page-Anker-Integrität (keine toten #hash-Sprungziele im aktiven DOM)
+  const activeHtml = html.replace(/<!--[\s\S]*?-->/g, '');
+  const pageIds = new Set([...activeHtml.matchAll(/\bid=["']([^"']+)["']/g)].map((m) => m[1]));
+  const hashTargets = [...new Set([...activeHtml.matchAll(/href=["']#([^"']+)["']/g)].map((m) => m[1]))];
+  const brokenHashes = hashTargets.filter((h) => !pageIds.has(h));
+  if (brokenHashes.length > 0) {
+    fail(`${relHtml}: tote In-Page-Anker gefunden: #${brokenHashes.join(', #')}`);
+  }
+
   // Markenkanon-Check (keine STT-Varianten im sichtbaren Text, kein "Minispiel" bei Flottenschlachten)
-  const visibleText = html.replace(/<[^>]+>/g, ' ');
+  const visibleText = activeHtml.replace(/<[^>]+>/g, ' ');
   if (/\b(Balfomor|Balvemor|Balfemor|Balphamor)\b/i.test(visibleText)) {
     fail(`${relHtml}: fehlerhafte Markenschreibweise gefunden (Pflicht: BAALPHEMOR)`);
   }
@@ -77,6 +86,16 @@ for (const relHtml of ['index.html', 'schmiede/index.html', 'datenschutz/index.h
   if (/discord/i.test(html)) {
     fail(`${relHtml}: Veralteter Discord-Verweis gefunden`);
   }
+  if (/(?:portal-signup-form|lead-capture-section|PRE-LAUNCH VORMERKUNG|#alpha\b|#rigging-box\b)/i.test(html)) {
+    fail(`${relHtml}: Veraltete Portal-Warteschlange / Pre-Launch-Vormerkung gefunden (muss entfernt sein)`);
+  }
+}
+
+const rootScriptJs = fs.readFileSync(path.join(ROOT, 'script.js'), 'utf8');
+if (/(?:portal-signup-form|baalphemor_gaming_leads|syncHistoricalLeads)/i.test(rootScriptJs)) {
+  fail('script.js enthält noch veralteten Portal-Warteschlangen-Code');
+} else {
+  pass('script.js: Portal-Warteschlange sauber entfernt');
 }
 
 // 3. DOM-ID Abgleich zwischen schmiede/index.html und schmiede/schmiede.js
