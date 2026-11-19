@@ -198,9 +198,9 @@ def stage_owlbear_hub(owlbear_dir: Path, tokens_keep: list[str], portraits_keep:
         "name": "BAALPHEMOR GAMING — 5E Vault",
         "version": VERSION,
         "manifest_version": 1,
-        "author": "Michael Stahlschmidt (BAALPHEMOR)",
+        "author": "BAALPHEMOR GAMING",
         "homepage_url": "https://baalphemor-gaming.de",
-        "description": "Quad-lingual (DE/EN/ES/FR) 5E Large Creature & Character Vault: 1-click 2x2 map token spawner, statblocks, oversized gear rules & SFX sample.",
+        "description": "Quad-lingual (DE/EN/ES/FR) 5E Vault: 1-click 2x2 Large token spawner, statblocks & SFX.",
         "icon": f"{BASE_URL}/owlbear/baalphemor-vault/icon.png",
         "action": {
             "title": "BAALPHEMOR 5E Vault",
@@ -328,7 +328,7 @@ def main() -> None:
 
     starter_manifest = {
         "id": STARTER_ID,
-        "title": "BAALPHEMOR GAMING — Die Hogrur / The Hogrur (5e Free Starter Pack)",
+        "title": "BAALPHEMOR GAMING — Die Hogrur / The Hogrur (5e Starter)",
         "description": "Free quad-lingual (DE/EN/ES/FR) 5e VTT Starter Module: 4 ready-to-play 2x2 Large Hogrur Actors, playable Hogrur species, Cannoneer fighter subclass, siege weapons, oversized gear rules, 10 static 512x512 tokens & cannon blast SFX sample. Full 60-WebM + 136-PNG pack available on Patreon & Itch.io.",
         "version": VERSION,
         "compatibility": {"minimum": "12", "verified": "13", "maximum": "14"},
@@ -422,7 +422,7 @@ def main() -> None:
 
     # 2. Foundry Vollpaket-Manifest (`protected: true`) & Template
     full_manifest = json.loads((HOGRUR_PACK_SRC / "module.json").read_text(encoding="utf-8"))
-    full_manifest["title"] = "BAALPHEMOR GAMING — Die Hogrur / The Hogrur (5e Companion Pack)"
+    full_manifest["title"] = "BAALPHEMOR GAMING — Die Hogrur / The Hogrur (5e Pack)"
     full_manifest["authors"] = [
         {
             "name": 'Michael Stahlschmidt "BAALPHEMOR"',

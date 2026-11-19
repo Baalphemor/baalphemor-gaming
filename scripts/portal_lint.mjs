@@ -140,6 +140,9 @@ if (!fs.existsSync(vttCatalogPath)) {
       if (modJson.id !== pkg.id) {
         fail(`Manifest-ID-Mismatch in ${modJsonPath}: erwartet "${pkg.id}", gefunden "${modJson.id}"`);
       }
+      if (modJson.title && modJson.title.length > 64) {
+        fail(`Foundry-Titel in ${modJsonPath} überschreitet 64 Zeichen (${modJson.title.length})`);
+      }
       const expectedManifestUrl = `https://baalphemor-gaming.de/vtt/foundry/modules/${pkg.id}/module.json`;
       if (modJson.manifest !== expectedManifestUrl) {
         fail(`Manifest-URL-Mismatch in ${modJsonPath}: erwartet "${expectedManifestUrl}", gefunden "${modJson.manifest}"`);
@@ -173,8 +176,10 @@ if (!fs.existsSync(vttCatalogPath)) {
       const obrMan = JSON.parse(fs.readFileSync(obrManifestPath, 'utf8'));
       if (obrMan.manifest_version !== 1 || !obrMan.action?.popover) {
         fail('Owlbear Rodeo manifest.json hat ungültiges Schema');
+      } else if (obrMan.description && obrMan.description.length > 128) {
+        fail(`Owlbear Rodeo manifest.json description überschreitet 128 Zeichen (${obrMan.description.length})`);
       } else {
-        pass(`Owlbear Rodeo Vault Extension bereit: "${obrMan.name}" v${obrMan.version}`);
+        pass(`Owlbear Rodeo Vault Extension bereit: "${obrMan.name}" v${obrMan.version} (desc=${(obrMan.description || '').length}/128)`);
       }
       const vaultJs = fs.readFileSync(path.join(obrVaultDir, 'vault.js'), 'utf8');
       if (vaultJs.includes('DOMContentLoaded') && !vaultJs.includes('document.readyState')) {
